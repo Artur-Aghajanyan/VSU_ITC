@@ -1,0 +1,4 @@
+git checkout Name   -տեղափոխվում ենք Name անունով branch-ի տակ։
+git checkout -b name   -ստեղծում է name անունով branch։
+git checkout -B Name  -ստուգում է եթե չկա  Name անունով branch նոր ստեղծում է։
+
