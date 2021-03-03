@@ -1,3 +1,5 @@
 1. git chechout -b branch_name - ստեղծում է նոր բռենչ ․․․ անունով
-2. git chechout -d branch_name ֊ ջնջում է ․․․ բռենչը լոկալից
 3. git checkout branch_name - փոխում է նեռկա բռենչը
+4. git checkout . - ֆայլեռը բերվում են default վիճակի
+5. git chechout filname - տրված ֆայլն է բերում default վիճակի
+
