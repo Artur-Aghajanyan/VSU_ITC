@@ -1,4 +1,4 @@
-# Project Title
+# Online lessons
 
 * Thanks to our program you have the opportunity to have enough knowledge to find a job in the field of programming 
 * In our program you can learn linux, network, c ++, vim, git, etc.
