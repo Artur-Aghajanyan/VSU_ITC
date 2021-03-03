@@ -1,5 +1,3 @@
-# NASA website
-
 ## What is NASA website
 
 The NASA website will tell you avout NASA, show you new images from the Universe, new images of stars and etc.
@@ -18,7 +16,6 @@ This site was created by VuJs, using plugins
 * [Vue-Router](https://router.vuejs.org/ru/installation.html)
 * [Vue-Cookies](https://www.npmjs.com/package/vue-cookies)
 
-## Installetion
 
 ### Clone repo
 
