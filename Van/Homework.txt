@@ -1,4 +1,5 @@
 git checkout Name   -տեղափոխվում ենք Name անունով branch-ի տակ։
 git checkout -b name   -ստեղծում է name անունով branch։
 git checkout -B Name  -ստուգում է եթե չկա  Name անունով branch նոր ստեղծում է։
-
+git checkout --filename   այս հրամանը կորցնում է բոլոր փոփոխությունները, եթե ֆայլը add արված չի։
+git checkout commit id    վերադառնում ենք այդ id-ով commit ին։
