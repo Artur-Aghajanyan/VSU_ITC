@@ -1,0 +1,35 @@
+1.UU-terminal֊ում և github-ում նույն ֆայլի նույն տողի վրա փոփոխություններ անելուց հետո կոնֆլիկտ է արաջանում։
+Փոփոխություններ ենք անում ֆայլի 1 տողում։(github)
+terminal:
+1.Փոփոխություններ ենք անում ֆայլի 1 տողում։
+2.git add file_name 
+3.git commit
+4.git pull origin master(Բերում է կոնֆլիկտ)
+6.git status -s(Ցույց է տալիս UU տիպի կոնֆլիկտ 
+
+2.DU-github-ում փոփոխություններ ենք կատարում ֆայլի մեջ, իսկ terminal֊ից ուզում ենք ջնջել։
+Փոփոխություններ ենք անում ֆայլում։(github)
+terminal:
+1.rm file
+2.git add file
+3.git commit
+4.git pull origin master(Բերում է կոնֆլիկտ)
+6.git status -s(Ցույց է տալիս DU տիպի կոնֆլիկտ))
+
+3.UD-github-ում ֆայլը ջնջում ենք, իսկ terminal֊ում ուզում ենք փոփոխություններ կատարել։
+Ջնջում ենք ֆայլը։(github)
+terminal:
+1.vim file
+2.git add file
+3.git commit
+4.git pull origin master(Բերում է կոնֆլիկտ)
+6.git status -s(Ցույց է տալիս UD տիպի կոնֆլիկտ))
+
+4.AA-Terminal-ով և  github֊ով ստեղծում ենք նույն անունով ֆայլ։
+Ստեղծում ենք ֆայլ՝ Nvard անունով։(github)
+1.> Nvard
+2.git add Nvard
+3.git commit
+4.git pull origin master(Բերում է կոնֆլիկտ)
+6.git status -s(Ցույց է տալիս AA տիպի կոնֆլիկտ))
+
