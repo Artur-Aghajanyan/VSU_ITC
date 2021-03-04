@@ -19,8 +19,8 @@ our app are shown in the form of the video.
 * Java
 
 # Installation 
-[From the App Store](ssjdj)
-[From the Google Play](sdhflbljgsbljgs)
+* [From the App Store](ssjdj)
+* [From the Google Play](sdhflbljgsbljgs)
 
 
 
