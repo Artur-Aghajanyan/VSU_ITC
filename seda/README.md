@@ -2,11 +2,11 @@
 This app contains recipes
 
 # Table of Contents
-*Description
-*Technologies
-*Installation
-*Requirements
-*License
+* Description
+* Technologies
+* Installation
+* Requirements
+* License
 
 # Description 
 This program includes recipes from the world's best chefs. 
@@ -15,20 +15,20 @@ You will never spoil your meal ass all the cooking steps in
 our app are shown in the form of the video.
 
 # Technologies
-*Objective-C
-*Java
+* Objective-C
+* Java
 
 # Installation 
-From the App Store:[ssjdj]
-From the Google Play:[dnvgmsv]
+[From the App Store](ssjdj)
+[From the Google Play](sdhflbljgsbljgs)
 
 
 
 
 
 # Requirements
-*IOS
-*Android
+* IOS
+* Android
 
 
 
