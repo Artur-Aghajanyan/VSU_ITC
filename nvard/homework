@@ -1,0 +1,3 @@
+1.git checkout -b name - ստեղծում է branch
+2.git chechout name - ներկայիս branch֊ից տեղափոխվում է նշված  branch
+3.git checkout . - ֆայլերը բերում է նախնական կարգավորումների
