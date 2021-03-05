@@ -1,0 +1,31 @@
+Git checkout
+
+OPTIONS 
+
+1.-q, --quiet
+
+2.-f, --force - git-in stipum a branchnery poxel, daje ete indexy kam ashxatox cary tarbervum en HEADic . himnakanum den e netum local popoxutyunnery
+
+3.--ours, --theirs - erb vor stugum enq mer pathy indexic ,merge chexac patheri hamar  #2 (ours), #(theirs)
+
+4.-b - nor branch enq sarqum 
+
+5.-t, --track - nor branchi reflog  (reference log) a stexcum 
+
+6.--no-track
+
+7.-l
+
+8.-m,--merge - kpcnuma branchnery
+
+9.--conflict=<style>
+
+10.-p, --patch
+ 
+11.<branch>
+
+12.<new_branch>
+
+13.<start_point>
+
+14.<tree-ish>
