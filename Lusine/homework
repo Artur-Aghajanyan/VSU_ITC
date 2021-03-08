@@ -1,4 +1,0 @@
-git checkout -b branch_name - ստեղծել branch_name  անունով ճյուղ
-git checkout branch_name - տեղափեխվել branch_name անունով ճյուղ
-git checkout 8a7b201 index.html - ֆայլի հին վերսիայի վերականգնում
-git checkout HEAD file_name -  ֆայլի վերջին commit արած տարբերակի վերականգնում
