@@ -8,7 +8,7 @@
     The button "Paint/Erase activated" only works when you use mouse down and drag.
     Size can't be greater than 100.
 
-## *** Usage***
+## ***Usage***
     Go to  https://vue-pixel-art.now.sh   and have fun!
 
 ## ***Todo***
