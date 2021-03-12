@@ -1,26 +1,37 @@
-#include <iomanip>
-#include "zina.h"
 #include <iostream>
+#include <memory.h>
 
-double meannum (int *array, int s) {
-        int sum = 0;
-        double mean1;
-        for (int i = 0; i < s; i++) {
-                sum += array[i];
-        }
-        mean1 = (double) sum / s;
-        return mean1;
-}
+class Person {
+	public:
+	int age;
+	double* data;
+	Person () { 
+		age = 15;
+		data = new double[10];
+		for (int i = 1; i <= 10; i++) {
+			data[i - 1] = i;
+	        }
+	}
+	Person (int a) {
+		age = a;
+	}
+	Person (const Person &p) {
+		this -> age = p.age;
+		this -> data = new double [10];
+		memcpy (this -> data, p.data, 80);
+        }	
+};
 
 int main () {
-	int n;
-	std :: cin >> n;
-	std :: cout << "fibonacci number = " << fib (n) << "\nfactorial = " << fact (n);
-	int s;
-	std :: cin >> s;
-	int *a = new int [s];
-	for (int i = 0; i < s; i++) {
-		std :: cin >> a[i];
+	Person p, p1 = p;
+	for (int i = 0; i < 10; i++) {
+		std::cout << p.data[i] << "\n";
 	}
-	std :: cout << std :: setprecision (2) << setiosflags (std :: ios :: fixed | std :: ios :: showpoint) << meannum(a, s) << "\n";
+	std :: cout << p.age << "\n" << p1.age << "\n";
+	p1.data[5] = 30;
+	for (int i = 0; i < 10; i++) {
+                std::cout << p.data[i] << " " << p1.data[i] << "\n";
+        }
+
+	return 0;
 }
