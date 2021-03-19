@@ -2,6 +2,12 @@
 #include "complex.h"
 
 
+/* 
+ * In this file made functionality for class complex without Template
+ * Start making functionality for class Complex 
+ * Without Template
+ * */
+
 // Default constructor
 Complex::Complex() {
 	this->real = 0;
@@ -22,7 +28,7 @@ Complex::Complex(const Complex& c) {
 
 
 // Operator <<
-std::ostream& operator << (std::ostream &out, const Complex& c){
+std::ostream& operator << (std::ostream &out, const Complex& c) {
 	out << c.real << " + " << c.imag <<"i"<< std::endl;
 	return out;
 }
@@ -38,7 +44,7 @@ std::istream& operator >> (std::istream& in, Complex& c) {
 }
 
 // Operator -
-Complex Complex::operator - (const Complex& c1) const{
+Complex Complex::operator - (const Complex& c1) const {
 	Complex c2;
     c2.real += c1.real;
     c2.imag += c1.imag;
@@ -46,7 +52,7 @@ Complex Complex::operator - (const Complex& c1) const{
 }
 
 // Operator +
-Complex Complex::operator + (const Complex& c1) const{
+Complex Complex::operator + (const Complex& c1) const {
     Complex c2;
     c2.real = real - c1.real;
     c2.imag = imag - c1.imag;
@@ -54,10 +60,14 @@ Complex Complex::operator + (const Complex& c1) const{
 }
 
 // Operator *
-Complex Complex::operator * (const Complex& c1) const{
+Complex Complex::operator * (const Complex& c1) const {
     Complex c2;
     c2.real = real * c1.real - imag * c1.imag;
     c2.imag = (real * c1.imag) + (c1.real * imag);
     return c2;
 }
 
+/* 
+ * End making functionality for class Complex 
+ * Without Template
+ * */
