@@ -16,6 +16,12 @@ class Complex {
 		Complex(); // default constructor
 		Complex(const Complex<T>& c1); // copy constructor
 		Complex(T real, T imag); // params constructo
+		
+		T getReal() const; // getter thus->real
+		T getImage() const; // getter this->imag
+
+		void setReal(T r); // setter this->real
+		void setImag(T i); // setter this->imag
 
 		template <class T1>	friend std::ostream& operator << (std::ostream& out, const  Complex<T1>& c); // Operator <<
 	   	template <class T2> friend std::istream& operator >> (std::istream& in, Complex<T2>& c); // Operator >> 
@@ -31,6 +37,17 @@ class Complex {
  * With Template
  * */
 
+// Setter for this->real
+template <class T>
+void Complex<T>::setReal(T r) {
+	this->real = r;
+}
+
+// Setter for this->imag
+template <class T>
+void Complex<T>::setImag(T i) {
+	this->imag = i;
+}
 
 // Default Constructor
 template <class T>

@@ -8,6 +8,17 @@
  * Without Template
  * */
 
+
+// Setter for this->real
+void Complex::setReal(int r) {
+	this->real = r;
+}
+
+// Setter for this->imag
+void Complexint::setImag(int i) {
+	this->imag = i;
+}
+
 // Default constructor
 Complex::Complex() {
 	this->real = 0;
