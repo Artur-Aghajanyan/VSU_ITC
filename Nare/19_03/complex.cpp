@@ -4,7 +4,8 @@
 /*
   Constructor witout paramerts
 */
-Complex::Complex() {
+template <class T>
+Complex<T>::Complex() {
     real = 0;
     image = 0;
 }
@@ -12,7 +13,8 @@ Complex::Complex() {
 /*
   Constructor with parametrs
 */
-Complex::Complex(int a, int b) {
+template <class T>
+Complex<T>::Complex(T a, T b) {
     real = a;
     image = b;
 }
@@ -20,16 +22,18 @@ Complex::Complex(int a, int b) {
 /*
   Copy constructor
 */
-Complex::Complex(const Complex& a) {
+template <class T>
+Complex<T>::Complex(const Complex<T>& a) {
     this -> real = a.real;
     this -> image = a.image;
-}
+} 
 
 /*
  Overload operator+
 */ 
-Complex Complex::operator+(const Complex& a) {
-    Complex c;
+template <class T>
+Complex<T> Complex<T>::operator+(const Complex<T>& a) {
+    Complex<T> c;
     c.real = this -> real + a.real;
     c.image = this -> image + a.image;
     return c;
@@ -38,8 +42,9 @@ Complex Complex::operator+(const Complex& a) {
 /*
  Overload operator-
 */
-Complex Complex::operator-(const Complex& a) {
-    Complex c;
+template <class T>
+Complex<T> Complex<T>::operator-(const Complex<T>& a) {
+    Complex<T> c;
     c.real = this -> real - a.real;
     c.image = this -> image - a.image;
     return c;
@@ -48,9 +53,9 @@ Complex Complex::operator-(const Complex& a) {
 /*
  Overload operator*
 */ 
-
-Complex Complex::operator*(const Complex& a) {
-    Complex c;
+template <class T>
+Complex<T> Complex<T>::operator*(const Complex<T>& a) {
+    Complex<T> c;
     c.real = (this -> real * a.real)  - (this -> image * a.image);
     c.image = (this -> real * a.image) + (this -> image * a.real);
     return c;
@@ -59,39 +64,47 @@ Complex Complex::operator*(const Complex& a) {
 /*
  Overload operator/
 */ 
-Complex Complex::operator/(const Complex& a) {
-    Complex c;
+template <class T>
+Complex<T> Complex<T>::operator/(const Complex<T>& a) {
+    Complex<T> c;
+    if(a.real == 0 && a.image == 0) {
+        std::cout << "Denominator can't be 0" << std::endl;
+        return a;
+    }
 
-    c.real = ((this -> real * a.real)  + (this -> image * a.image))/((a.real * a.real) + (a.image * a.image));
-    c.image = ((this -> real * (-a.image))  + (this -> image * a.real))/((a.real * a.real) + (a.image * a.image));
+    T tr = this -> real;
+    T ti = this -> image;
+    T ar = a.real;
+    T ai = a.image;
+    T denominator = ar * ar + ai * ai;
+
+    c.real = (tr * ar + ti * ai) / denominator;
+    c.image = (tr * (-ai) + ti * ar) / denominator;
     return c;
 }
 
-/*
- Overload operator<<
-*/ 
-std::ostream& operator<<(std::ostream& comp, const Complex& a) {
-    if(a.real != 0) {
-        if(a.image != 0 ) {
-            if(a.image > 0) {
-                return comp << a.real << "+" << a.image << "i";
-            }
-            else
-                return comp << a.real << "" << a.image << "i";
-            }
-        else {
-            return comp << a.real;
-        }
-    }
-    else {
-        return comp << a.image << "i";
-    }
+template <class T>
+void Complex<T>::setReal(T r) {
+    real = r;
+}  
 
+template <class T>
+void Complex<T>::setImage(T im) {
+    image = im;
 }
 
 /*
- Overload operator<<
+ Getters
 */ 
-std::istream& operator>>(std::istream& comp, Complex& a) {
-    return comp >> a.real >> a.image;
+template <class T>
+T Complex<T>::getReal() {
+    return real;
 }
+
+template <class T>
+T Complex<T>::getImage() {
+    return image;
+}
+
+template class Complex<int>;
+template class Complex<double>;
