@@ -25,7 +25,6 @@ class Complex {
 		/*
 		    Functions
 		*/
-		int print();
 		void setReal(int r);
 		void setImage(int i);
 		int getReal();
