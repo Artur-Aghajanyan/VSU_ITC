@@ -71,3 +71,31 @@ Complex Complex :: operator * (const Complex& number) {
 	product.image = real * number.image + number.real * image;
 	return product;
 }
+
+/*
+    Set function for real part of complex number
+*/
+void Complex :: setReal(int r) {
+    real = r;
+}
+
+/*
+    Set function for imagenary part of complex number
+*/
+void Complex :: setImage(int i) {
+    image = i;
+}
+
+/*
+    Get function for real part of complex number
+*/
+int Complex :: getReal() {
+    return real;
+}
+
+/*
+    Get function for imagenary part of complex number
+*/
+int Complex :: getImage() {
+    return image;
+}
