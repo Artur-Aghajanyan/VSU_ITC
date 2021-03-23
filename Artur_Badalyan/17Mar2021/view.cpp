@@ -41,4 +41,7 @@ void View::setColor(std::string color){
 	this->color = color;
 }
 
-
+	
+void View::print(){
+	std::cout<<"x = " << this->x << "\n" << "y = " << this->y << "\n" << "color = " << this->color <<std::endl;
+}
