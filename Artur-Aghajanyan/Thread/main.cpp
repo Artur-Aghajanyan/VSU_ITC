@@ -14,7 +14,7 @@ void* sort1(void* num){
 int main() {
 	int* numbers1 = new int[10000];
 	int* numbers2 = new int[10000];
-	for(int i = 0; i < 10; ++i) {
+	for(int i = 0; i < 10000; ++i) {
 		numbers1[i] = std::rand()%100;
 		numbers2[i] = std::rand()%10;
 	}
@@ -43,11 +43,7 @@ int main() {
 	if(r1 = pthread_create(&t2, NULL, sort1, (void*)numbers2)) {
 		std::cerr << "SOME ERROR 1 " << r2 << "\n";
 	}
-
-	/*if(!init && !r3 && (r2 = pthread_create(&t2, &attr, message, (void*)&m2))) {
-		std::cerr << "Some ERROR  2 " << r2 << "\n";
-	}
-	*/
+	
 	pthread_join(t1, NULL);
 	pthread_join(t2, NULL);
 	auto stop2 = std::chrono::high_resolution_clock::now();
