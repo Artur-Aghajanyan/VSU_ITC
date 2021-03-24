@@ -29,6 +29,7 @@ void* funcSearch1(void* str)
     } else {
         std::cout << "Error! File not found!\n";
     }
+     myFile.close();
 
     pthread_mutex_unlock(&myMutex1);
     pthread_mutex_destroy(&myMutex1);
@@ -57,6 +58,7 @@ void* funcSearch2(void* str)
     } else {
         std::cout << "Error! File not found!\n";
     }
+     myFile.close();
 
     pthread_mutex_unlock(&myMutex2);
     pthread_mutex_destroy(&myMutex2);
