@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdlib>
 #include <time.h>
 #include <fstream>
 #include <pthread.h>
