@@ -2,6 +2,7 @@
 #include <fstream>
 #include <pthread.h>
 #include <string>
+#include <time.h>
 
 int count = 0;
 pthread_mutex_t mutex;
@@ -25,9 +26,11 @@ void* func(void* ch) {
 	std :: cout << count << std :: endl;
 	fin.close();
 	pthread_mutex_unlock(&mutex);
+	pthread_exit(NULL);
 }
 
 int main() {
+	clock_t Start = clock();
     char a, b;
     pthread_t t1, t2;
     pthread_attr_t attr;
@@ -40,5 +43,7 @@ int main() {
     pthread_join(t1, NULL);
     pthread_join(t2, NULL);
     pthread_mutex_destroy(&mutex);
+    printf ("Time: %.2fs\n", (double)(clock() - Start) / CLOCKS_PER_SEC);
+    pthread_exit(NULL);
     return 0;
 }
