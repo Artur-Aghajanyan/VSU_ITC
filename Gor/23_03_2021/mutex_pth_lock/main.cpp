@@ -6,6 +6,8 @@
 #include <time.h>
 
 pthread_mutex_t mutex;
+pthread_cond_t cond;
+int n = 0;
 
 int read(std::string s)
 {
@@ -22,6 +24,15 @@ int read(std::string s)
 
 void* func(void* v)
 {
+	if(n != 0)
+	{
+		++n;
+		pthread_cond_wait(&cond,&mutex);
+	}
+	else
+	{
+		pthread_cond_signal(&cond);
+	}
 	pthread_mutex_lock(&mutex);
 	std::string s = *(std::string*)v;
 	std::cout<<s<<" - "<<read(s)<<std::endl;
