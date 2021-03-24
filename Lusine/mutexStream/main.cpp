@@ -25,7 +25,7 @@ void* funcSearch1(void* str)
         {
             if(myString == candidate) ++count;
         }
-        std::cout << "The word  'C++' " << myString << "' has been found " << count << " times.\n";
+        std::cout << "The word " << myString << " has been found " << count << " times.\n";
     } else {
         std::cout << "Error! File not found!\n";
     }
@@ -54,7 +54,7 @@ void* funcSearch2(void* str)
         {
             if(myString == candidate) ++count;
         }
-        std::cout << "The word  'C++' " << myString << "' has been found " << count << " times.\n";
+        std::cout << "The word " << myString << " has been found " << count << " times.\n";
     } else {
         std::cout << "Error! File not found!\n";
     }
