@@ -54,7 +54,9 @@ void countPrinterWithoutThread(std::string* arr){
 
 	if(readFile.is_open()){
 		while(getline(readFile, text)) {
-			if (text.find(search) != std::string::npos) {
+			size_t nPos = text.find(search, 0);
+			while(nPos != std::string::npos) {
+				nPos = text.find(search, nPos + 1);
 				++counter;
 			}	
 		}
