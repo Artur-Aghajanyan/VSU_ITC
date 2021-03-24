@@ -1,0 +1,364 @@
+Operator overloading
+
++ almost all C operators can be overloaded
+
+new meaning can be defined when one operand is a
+user-defined (class) type
+define operator + for object of type T
+T T::operator+(int n) { ... }
+define regular + for object{s) of type T
+T operator +(T f, int n){...}
+can't redefine operators for built-in types
+int operator +(int n, int m) { ... }is ILLEGAL
+
++ 3 examples
+
+complex numbers  C++ C++ C++ C++ C++ C++ C++ C++ C++  C++   C++ C++ C++ C++ C++ C++ C++ C++ C++ v
+IO streams (very briefly)
+subscripting
+C++    C++ C++C++  C++ C++ C++ C++ C++ C++ C++ C++C++   C++  C++  C++  C++ C++ C++ C++ C++ C++C++ 
+Complex numbers
+
+* a complex number is a pair of doubles
+
+(real part, imaginary part)   C++ C++ C++ C++ C++ C++C++  C++ C++ C++ C++   C++  C++ C++ C++C++  C++ C++ C++ C++ 
+
+* supports arithmetic operations like +, -, *   C++  C++ C++  C++ C++  C++ C++   C++ C++ C++  C++  C++ C++C++C++ 
+
++ a basically arithmetic type for which operator
+overloading makes sense
+— complex added as explicit type in 1999 C standard
+
+in C++, can create it as needed
+
++ also illustrates
+— friend declarations
+C++
+implicit coercions
+default constructors
+Class complex, version 1
+
+class complex {
+private:
+double re, im;
+public:
+complex(double r, double i) {re =r: im = i; }
+
+friend complex cadd(complex, complex);
+friend complex cmul(complex, complex):
+
+complex cadd(complex x, complex y)
+{
+
+complex temp(0, 0): // initial values required
+temp.re = x.re + y.re;
+
+temp.im = x.im + y.im:
+
+return temp;
+
+}
+
++ this uses ordinary (non-class) functions to
+manipulate complex numbers
+
++ friend declaration permits caddQ to access
+private representation info
+
+* awkward notation: for ¢ = a + b* c, write
+c = cadd(a, cmul(b, c));
+
+Version 2: constructors, overloading
+
+class complex {
+
+private:
+double re, im;
+
+public:
+complex(double r, double i) {re =r: im = i; }
+complex(double r) {re=r: im =0;}
+complexQ {re = im = 0;}
+
+friend complex operator +(complex, complex):
+friend complex operator *(complex, complex);
+
+}:
+
+complex operator +(complex x, complex y)
+
+return complex(x.re + y.re, x.im + y.im);
+
+complex a, b, ¢:
+c=a+b*e;
+
+* operator overloading gives natural notation
+
++ multiple constructors permit different kinds of
+initializations
+
+* no such thing as an uninitialized complex
+- Cruntime error is a C++ compile-time error
+Version 3: coercions, default args
+C++
+class complex {
+private:
+double re, im;
+public:
+complex(double r = 0, double i = 0)C++
+{re=r: im =i; }
+
+friend complex operator +(complex, complex):
+friend complex operator *(complex, complex);
+
+comC++plex a(1.1, 2.2), b(3.3), (4), d:
+
+c=2*a+b*e;
+* note coercion of 2 -> 2.0 -> complex(2.0)
+
++ default arguments achieve same results as
+overloaded function definitions
+
+* normally write initializers as
+complex(double r = 0, double i = 0) : re(r), im(i) {}
+
+Version 4: change of representation
+
++ polar coordinates (r,0) instead of (re, im)
++ private part changes but external does not have to
+
+class complex {
+priC++vate:
+double r, theta; // polar coordinates
+public:
+complex(double re = 0, double im = 0)
+{r= sqrt(re*re+im*im);
+theta = atan2(im, re); /* or whatever */ }
+
+friend complex operator +(complex, complex):
+friend complex operator *(complex, complex);
+
++ friend functions that depend on private part have to
+change
+Notes on operator overloading
+
++ applies to all operators except . and ?:
+
+- operator () left-side function calls
+- operator , simulates lists
+- operator -> smart pointers
+
+* works well for algebraic and arithmetic domainsC++
+- complex, bignums, vectors & matrices, ...
+
++ BUT DON'T GET CARRIED AWAY:
+
+* you can't change precedence or associativity of
+existing operators
+
+- €.g., if use * for exponentiation, precedence is still
+low
+
+* you can't define new operators
+
+* meanings should make sense in terms of existing
+operators
+- @.g., don't overload - to mean + and vice versa
+
+Simple vector class (0.c)C++
+
+* based on overloading operator [ ]
+
+class ivec {
+int *v; // pointer to an array
+int size: 7/ wamber of elements
+public:    C++ C++ C++ C++ C++ C++ C++C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++ C++
+
+ivec(int n) { v = new int[size = nj; }
+
+int operator [ ](int n) { // checked access
+assert(n >= 0 && n < size):
+return v{n):
+
+int elem(int n) { return v[nJ;} = // unchecked
+
+}:
+main()
+{
+ivee iv(10); // declaration
+int i:
+i = iv.elem(10): // unchecked access
+i = iv[10): // checked access
+What about Ivalue access?
+
+* vector element as target of assignment
+
+main()
+
+{
+ivee iv(10); // declaration
+iv(10) = 1; // checked access
+iv.elem(10) = 2: // unchecked access
+
+} C++ C++ C++ C++ C++ C++ C++ C++ C++ C++    C++ C++ C++ C++ C++
+
+$ gt+ vic
+
+vl .¢:22: non-Ivalue in assignment
+
+vl .¢:23: non-Ivalue in assignment
+
+$ CC vic
+
+"v1.c", line 22: Error: The left operand cannot be
+assigned to.
+
+"yv1.c", line 23: Error: The left operand cannot be
+assigned to.
+
+* need a way to access object, not a copy of it
++ in C, use pointers
++ in C++, use references
+
+References (swap.c)
+
+* attaching a name to an object
+
+* a way to get "call by reference" (var)
+parameters without using pointers
+
+void swap(int &x, int &y)
+{
+
+int temp;
+
+temp = x;
+
+x= Yr
+
+y = temp;
+}
+
+* a way to access an object without copying it
+
+stack s;
+
+stack t = s; // may not want to copy
+
+£(s); // owes
+
+return s; Sfeowss
+
+stack s, t;
+t= s; // want to control the assignment
+Lvalue access (v2.c)
+
+class ivec {
+int *v; // pointer to an array
+int size: 7/ wamber of elements
+public:
+
+ivec(int n) { v = new int[size = nj; }
+int& operator [](int n) {
+assert(n >= 0 && n < size):
+
+return v{n]; }
+
+int& elem(int n) { return v[n]: } // unchecked
+
+}:
+ivec iv(10): // declaration
+iv.elem(10) = 2: // unchecked access
+iv(10) = 1; // checked access
+
++ reference gives access to object so it can be
+changed
+
+Non-zero origin arrays
+
+class ivec {
+int *v; // pointer to an array
+int size: 7/ wamber of elements
+int orig: // origin: default 0
+public:
+
+ivec(int n) { v = new int[size = n]: orig = 0: }
+// elems are QO .. n-1
+ivec(int 0, int e)
+{v = new int[size = e-o0]: orig = 0; }
+// elems are o .. o+e-1
+
+int& operator [](int n) {
+assert(n >= orig && n < size+orig):
+return v{[n-orig]: }
+
+int& elem(int n) { return v[n-orig]: }
+7/ unchecked
+}:
+main()
+ivee iv(2000, 2010); = // declaration
+
+iv.elem(2000) = 2: // unchecked access
+iv[(2010] = 1: // checked access
+Tostream library (very quick sketch only)
+
+* how can we do I/O of user-defined types with
+non-function syntax
+
+* C printf can be used in C++
+- no type checking
+- no mechanism for I/O of user-defined types
++ Java System.out.print(arg) or equivalent
+- type checking only in trivial sense:
+calls toString method for object
+- bulky, notationally clumsy
+one call per item
+
+* can we do better?
+
++ Tostream library
+- overloads «<< for output, >> for input
+- permits I/O of sequence of expressions
+- type safety for built-in and user-defined types
+- natural integration of I/O for user-defined types
+same syntax and semantics as for built-in types
+
+Basic use
+
++ overload operator << for output, >> for input
+- very low precedence
+- left-associative, so
+cout << el << e2 << 63
+
+- is parsed as
+(({cout << el) << 62) << 63)
+
++ take an [io]stream& and a data item
+* return the reference
+
+#include <iostream.h>
+ostream&
+operator<<(ostream& o, const complex& c)
+{
+oe << "(" << c.real() << ", "
+<< c.imag() << ")";
+
+return o;
+
+‘ jostreams cin, cout, cerr already open
+- correspond to stdin, stdout, stderr
+Input with iostreams
+#include <iostream.h>
+
+main
+
+{
+char name[100]:
+double val:
+
+while (cin >> name >> val) {
+
+cout << name << "=" << val << "An':
+
+}
+
