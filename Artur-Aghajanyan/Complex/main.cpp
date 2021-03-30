@@ -1,6 +1,6 @@
 #include <iostream>
 #include "complex.h"
-#include "function.cpp"
+#include "function.h"
 
 int main() {
 	/*
@@ -21,7 +21,7 @@ int main() {
 	 * */
 		
 	// Creating 2 objects from class Complex
-	Complex<int> c1(10,25), c2(5, 6);
+	Complex c1(10,25), c2(5, 6);
 
 	// Test Complex objects for Sum
 	std::cout << "**************************\n";

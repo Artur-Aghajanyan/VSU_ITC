@@ -15,7 +15,7 @@ void Complex::setReal(int r) {
 }
 
 // Setter for this->imag
-void Complexint::setImag(int i) {
+void Complex::setImag(int i) {
 	this->imag = i;
 }
 

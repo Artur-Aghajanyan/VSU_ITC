@@ -7,9 +7,30 @@
  *	it has 3 constructors: copy, params, default
  *	it has 5 operators integration: <<, >>, -, +, *
 */
-template <class T>
+/*template <class T>*/
 class Complex {
 	private:
+		int real;
+		int imag;
+	public:
+		Complex(); // default constructor
+		Complex(const Complex& c1); // copy constructor
+		Complex(int real, int imag); // params constructo
+		
+		int getReal() const; // getter thus->real
+		int getImage() const; // getter this->imag
+
+		void setReal(int r); // setter this->real
+		void setImag(int i); // setter this->imag
+
+		friend std::ostream& operator << (std::ostream& out, const  Complex& c); // Operator <<
+		friend std::istream& operator >> (std::istream& in, Complex& c); // Operator >> 
+		
+		Complex operator - (const Complex& c1) const; // Operator -
+		Complex operator + (const Complex& c1) const; // Operator +
+		Complex operator * (const Complex& c1) const; // Operator *
+
+/*	private:
 		T real;
 		T imag;
 	public:
@@ -29,6 +50,7 @@ class Complex {
 		Complex<T> operator - (const Complex<T>& c1) const; // Operator -
 		Complex<T> operator + (const Complex<T>& c1) const; // Operator +
 		Complex<T> operator * (const Complex<T>& c1) const; // Operator *
+*/
 };
 
 
@@ -36,7 +58,7 @@ class Complex {
  * Start making functionality for class Complex 
  * With Template
  * */
-
+/*
 // Setter for this->real
 template <class T>
 void Complex<T>::setReal(T r) {
@@ -115,7 +137,7 @@ Complex<T> Complex<T>::operator * (const Complex<T>& c1) const {
     c2.imag = (real * c1.imag) + (c1.real * imag);
     return c2;
 }
-
+*/
 /* 
  * End making functionality for class Complex 
  * With Template
