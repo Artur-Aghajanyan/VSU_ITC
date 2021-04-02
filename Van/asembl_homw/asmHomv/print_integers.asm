@@ -3,7 +3,7 @@ STD_OUT equ 1
 SYS_READ equ 0
 STD_IN equ 0
 
-section .bss
+section .bss   ;section
     digitSpace resb 200
     digitSpacePos resb 20
 

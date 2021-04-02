@@ -8,7 +8,7 @@ section .data
     text3 db   "num1 + num2 = " 
     len3 equ $- text3
               
-    text4 db 10
+    text4 db 10  ;text
    
                                 
 section .bss
