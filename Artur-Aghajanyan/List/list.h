@@ -87,7 +87,7 @@ void List<T>::erase(int index) {
 
 			Node<T>* last = node->next;
 			node->next = last->next;
-				
+			last->prev = node;
 			delete last;
 		}
 	}else {
@@ -97,6 +97,7 @@ void List<T>::erase(int index) {
 		}	
 		Node<T>* last = node->next;
 		node->next = last->next;
+		last->prev = node;
 	}
 
 	--this->size;
@@ -117,7 +118,9 @@ void List<T>::insert(int index, T value) {
 		}	
 
 		temp->next = node->next;
+		node->next->prev = temp;
 		node->next = temp;
+		temp->prev = node;
 	}else {
 		Node<T>* node = bottom;
 		
@@ -126,7 +129,9 @@ void List<T>::insert(int index, T value) {
 		}
 
 		temp->next = node->next;
+		node->next->prev = temp;
 		node->next = temp;
+		temp->prev = node;
 	}
 
 }
