@@ -100,19 +100,16 @@ int main()
         {
                 cout<<"Error!"<<endl;
                 cout<<ui<<endl;
-		a.print();
 	}
 	if(d != 0)
         {
                 cout<<"Error!"<<endl;
                 cout<<di<<endl;
-                a.print();
         }
 	if(k != 0)
         {
                 cout<<"Error!"<<endl;
                 cout<<ki<<endl;
-                a.print();
         }
 	return 0;
 }
