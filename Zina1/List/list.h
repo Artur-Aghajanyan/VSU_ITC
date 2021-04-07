@@ -54,15 +54,6 @@ void List<T> :: push(T val) {
 
 template <class T>
 void List<T> :: pop() {
-/*	Node<T>* node = begin;
-	for(int i = 1; i < size - 1; ++i) {
-		node = node -> next;
-	}
-	
-	Node<T>* newnode = node -> next;
-	delete newnode;
-	node -> next = nullptr;
-	--size;*/
 	Node<T>* node = end -> previous;
 	delete end;
 	node -> next = nullptr;
