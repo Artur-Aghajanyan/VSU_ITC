@@ -7,7 +7,7 @@ using namespace std;
 int main() {
 	
 	Stack<char> s;
-	string text = "assadasd";
+	string text = "}";
 	int z = -1;
 	for (int i = 0; i < text.size();i++){
 		if (text[i] == '[' || text[i] == '{' || text[i] == '('){
