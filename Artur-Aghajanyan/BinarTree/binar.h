@@ -36,9 +36,8 @@ Binar* Binar::insert(Binar* bin, int value) {
 }
 
 void Binar::print(Binar* root) {
-	if(root != nullptr){
-		if(!root) return;
-		std::cout << root->value << " - Value\n";
-		print(root->right);
-	}
+	if(!root) return;
+	print(root->left);
+	std::cout << root->value << " - Value\n";
+	print(root->right);
 }
