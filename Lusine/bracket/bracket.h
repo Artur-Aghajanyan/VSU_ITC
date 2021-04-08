@@ -16,9 +16,9 @@ private:
 
 Stack::Stack(int n)
 {
-	stack_size = 0;
-	array_capacity = n;
-	array = new char[array_capacity];
+    stack_size = 0;
+    array_capacity = n;
+    array = new char[array_capacity];
 }
 
 Stack::Stack(Stack& st)
