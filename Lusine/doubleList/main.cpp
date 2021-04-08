@@ -8,9 +8,8 @@ int main()
     std::string a = "";
     while (a != "end") 
     {
-	    std::cin >> a;
-	    list.push(a);
-// for integer   list.push(atoi(a.data()));
+	 std::cin >> a;
+	 list.push(a);  // for integer   list.push(atoi(a.data()));
     }
     list.print();
     list.pop();
