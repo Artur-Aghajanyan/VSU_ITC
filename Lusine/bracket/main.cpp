@@ -2,7 +2,6 @@
 #include <string>
 #include "bracket.h"
 
-
 void chack(std::string  arr, int n,Stack st)
 {
     bool istrue = true;
@@ -13,7 +12,7 @@ void chack(std::string  arr, int n,Stack st)
         { 
             index = i; 
             st.push(arr[i]);
-        }else if(arr[i] == ')' || arr[i] == '}' || arr[i] == ']')
+        } else if(arr[i] == ')' || arr[i] == '}' || arr[i] == ']')
         {
             if(arr[i] - st.top() == 1 ||  arr[i] - st.top() == 2)
             {
@@ -28,7 +27,7 @@ void chack(std::string  arr, int n,Stack st)
     if(st.empty())
     {
         std::cout << "There is no error" << std::endl;
-    }else {
+    } else {
         std::cout << "index = " << index <<std::endl;
     }
 }
