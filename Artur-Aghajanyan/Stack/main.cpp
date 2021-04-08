@@ -1,7 +1,6 @@
 #include <iostream>
 #include "stack.h"
 
-
 void checkingString(std::string str) {
 	Stack<char> s(10);
 	int index;
@@ -21,8 +20,7 @@ void checkingString(std::string str) {
 				std::cout << "Error in index - " << i << std::endl;
 				return;
 			}
-		}
-		
+		}		
 	}
 	if(s.top() == '(' || s.top() == '{' || s.top() == '[') {
 		std::cout << "Error in index - " << index << std::endl;
@@ -40,9 +38,5 @@ int main() {
 	
 	checkingString(str);
 
-	
 	return 0;
 }
-
-
-
