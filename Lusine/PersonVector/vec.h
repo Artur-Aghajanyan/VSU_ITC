@@ -6,7 +6,7 @@ class Person
         int age;
         int height;
         Person();
-        ~Person();
+        ~Person(){};
         Person(int a, int h);
         void Copy(const Person& obj);
 };
@@ -31,8 +31,6 @@ Person::Person(int a, int h)
     this -> height = h;
 }
 
-Person::~Person(){}
-
 void Person::Copy(const Person &obj)
 {
     Person person;
@@ -50,18 +48,10 @@ void myVector<T>::sortBy(std::string key)
         for(j = i + 1; j < this -> end(); ++j)
         {
             if(i -> age > j -> age && key == "age")
-            {
-            std::swap(*i, *j);
-            }
-        }
-    }
-
-    for(i = this -> begin(); i < this -> end() - 1; ++i)
-    {
-        for(j = i + 1; j < this -> end(); ++j)
-        {
+                std::swap(*i, *j);
+            
             if(i -> height > j -> height && key == "height")
-            std::swap(*i, *j);
+                std::swap(*i, *j);
         }
     }
 }
