@@ -19,7 +19,7 @@ int main() {
 		
 	t.printTree(root);
 		
-		
+	cout << "Search finished " << t.search(root,25)<<endl;		
 		
 	return 0;
 }

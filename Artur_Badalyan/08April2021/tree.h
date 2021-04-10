@@ -7,6 +7,7 @@ class Tree {
 	Tree(int data);
 	Tree* insert(Tree* root,int data);
 	void printTree(Tree* root);
+	int search(Tree* root,int data);
 	private:
 	int data;
 	Tree *left, *right;
@@ -22,6 +23,24 @@ Tree::Tree() {
 Tree::Tree(int data) {
 	this->data = data;
 	this->left = this->right = nullptr;
+}
+
+int Tree::search(Tree* root,int data) {
+	
+	if (!root) {
+		return 0;
+	}
+	if (root->data == data){
+		return root->data;
+	}
+
+	if (data < root->data) {	
+		return search (root->left,data);
+	}
+	
+	if (data > root->data) {
+		return  search(root->right,data);
+	}
 }
 
 Tree* Tree::insert(Tree* root,int data) {
