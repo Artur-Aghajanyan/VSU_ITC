@@ -14,9 +14,9 @@ void merge(int arr[], int left, int mid, int right)
   {
     RIGHT[j] = arr[mid + 1 + j];
   }
-  i = 0;
-  j = 0;
-  k = left;
+  int i = 0;
+  int j = 0;
+  int k = left;
   while (i < size1 && j < size2) 
   { 
     if (LEFT[i] <= RIGHT[j]) 
