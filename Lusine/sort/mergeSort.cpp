@@ -2,16 +2,15 @@
 
 void merge(int arr[], int left, int mid, int right) 
 { 
-  int i, j, k; 
   int size1 = mid - left + 1; 
   int size2 = right - mid; 
   int *LEFT = new int[size1];
   int *RIGHT = new int[size2]; 
-  for (i = 0; i < size1; i++) 
+  for (int i = 0; i < size1; i++) 
   {
     LEFT[i] = arr[left + i];
   }
-  for (j = 0; j < size2; j++) 
+  for (int j = 0; j < size2; j++) 
   {
     RIGHT[j] = arr[mid + 1 + j];
   }
