@@ -19,8 +19,8 @@ int quick(int* arr, int l, int r) {
 void quickSort(int* arr, int start, int end) {
 	if(start < end){
 		int index = quick(arr, start, end);
-//		quickSort(arr, start, index-1);
-//		quickSort(arr, index+1, end);
+		quickSort(arr, start, index-1);
+		quickSort(arr, index+1, end);
 	}
 }
 
