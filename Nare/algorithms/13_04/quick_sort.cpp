@@ -20,7 +20,7 @@ int* quick_sort(int* arr, int l, int r, int s) {
     int size = r - l + 1;
     int j = l;
     int i = s; 
-    if(r == l) {
+    if(l >= r) {
         return  arr;
     }
     while(j < l+size-1) {
