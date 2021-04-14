@@ -9,7 +9,6 @@ int binarySearch(int *arr, int begin, int end, int number)
         {
             return mid;
         }
-       
         else if (arr[mid] > number)
         {
             return binarySearch(arr, begin, mid - 1, number);
@@ -33,11 +32,10 @@ int exponentialSearch(int *arr, int size, int number)
  
 int main(void)
 {
-    int array[10] = {1,2,3,4,5,6,7,8,9,10};
-    int number = 10;
-    int arraySize = 10;
+    int array[20] = {1, 3, 5, 6, 7, 23, 34, 60, 78, 100, 101, 103, 105, 106, 107, 123, 134, 160, 178, 200};
+    int number = 103;
+    int arraySize = 20;
     int result = exponentialSearch(array, arraySize, number);
-   
     if (result == -1)
     {
         std::cout << "Number " << number << " is not present in array";
