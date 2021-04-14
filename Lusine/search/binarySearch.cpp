@@ -1,6 +1,6 @@
 #include <iostream>
 
-int search(int *arr, int begin, int end, int num)
+int binarySearch(int *arr, int begin, int end, int num)
 {
     if(begin <= end)
     {
@@ -12,9 +12,9 @@ int search(int *arr, int begin, int end, int num)
        
         else if (arr[mid] > num)
         {
-            return search(arr, begin, mid - 1, num);
+            return binarySearch(arr, begin, mid - 1, num);
         }
-        return search(arr, mid + 1, end, num);
+        return binarySearch(arr, mid + 1, end, num);
     }
     return -1;
 }
@@ -25,7 +25,7 @@ int main(void)
 
     int number = 103;
     int size = 20;
-    int result = search(array, 0, size - 1, number);
+    int result = binarySearch(array, 0, size - 1, number);
     if (result == -1)
     {
         std::cout << "Number " << number << " is not present in array";
