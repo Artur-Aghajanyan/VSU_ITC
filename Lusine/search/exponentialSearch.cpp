@@ -32,7 +32,7 @@ int exponentialSearch(int *arr, int size, int number)
  
 int main(void)
 {
-    int array[20] = {1, 3, 5, 6, 7, 23, 34, 60, 78, 100, 101, 103, 105, 106, 107, 123, 134, 160, 178, 200};
+    int array[20] = {1, 3, 5, 6, 7, 10, 12, 15, 18, 20, 23, 25, 27, 29, 30, 32, 35, 38, 39, 40};
     int number = 103;
     int arraySize = 20;
     int result = exponentialSearch(array, arraySize, number);
