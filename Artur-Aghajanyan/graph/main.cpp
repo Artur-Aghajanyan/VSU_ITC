@@ -2,10 +2,6 @@
 #define Inf   999999
 #define SIZE  5
 
-void dijskraCounter(int* visited, int* unvisited, int arr[SIZE][SIZE]){
-
-}
-
 void dijskra(int arr[SIZE][SIZE], int key){
 	int unvisited[SIZE];
 	int visited[SIZE];
