@@ -3,15 +3,6 @@
 
 using namespace std;
 
-int min(int a,int b)
-{
-	if(a > b)
-	{
-		return b;
-	}
-	return a;
-}
-
 void print(int* arr,int size)
 {
 	for(int i = 0; i < size; i++)
