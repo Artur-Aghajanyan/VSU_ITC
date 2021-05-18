@@ -1,0 +1,2 @@
+    sed -i '/^#/d' file1.sh
+    sed -i '/^\/\//d' file1.cpp
