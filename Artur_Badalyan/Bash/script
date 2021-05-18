@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#Delete comments in file
+
+sed -i 's:^#.*$::g' $1
+sed -i 's:^//.*$::g' $1
+
+ filenames=`ls`
+   for eachfile in $filenames
+   do
+       DIR=${eachfile:0:4}
+   
+       if [ ! -d "$DIR" ]; then
+           mkdir ${eachfile:0:4}
+      fi
+  
+      mv $eachfile ./$DIR
+  done
+
+
