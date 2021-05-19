@@ -1,0 +1,29 @@
+#!/bin/bash
+
+
+case $1 in
+    "month" )
+          echo $(date +"Year: %Y, Month: %m, Day: %d TIME: %T" -d "+$2 month")
+          ;;
+    "day" )
+          echo $(date +"Year: %Y, Month: %m, Day: %d TIME: %T" -d "+$2 day")   
+          ;;
+    "week" )
+          echo $(date +"Year: %Y, Month: %m, Day: %d TIME: %T" -d "+$2 week")
+          ;;
+    "year" )
+          echo $(date +"Year: %Y, Month: %m, Day: %d TIME: %T" -d "+$2 year")
+          ;;
+    "hour" )
+          echo $(date +"Year: %Y, Month: %m, Day: %d TIME: %T" -d "+$2 hour")
+          ;;
+    "minute" )
+          echo $(date +"Year: %Y, Month: %m, Day: %d TIME: %T" -d "+$2 minute")
+          ;;
+    "second" )
+          echo $(date +"Year: %Y, Month: %m, Day: %d TIME: %T" -d "+$2 second")
+          ;;      
+esac          
+
+
+
