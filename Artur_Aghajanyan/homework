@@ -1,9 +1,0 @@
-All usages for checkout․
-
-1)git checkout -b <nameBranch> ---> սարգում է նոր branche
-2)git checkout -B <nameBranch> ---> սարգում է նոր branche եթե այն գոյություն չունի, հակառակ դեպքում այն զրոյացվում է
-3)git checkout <nameBranch> ---> անցում այդ անունով branche-ին
-4)git checkout -b <nameBranch> --track <remote-branch> ---> --track-ը հնարավորություն է տալիս emote-branch-ը օգտագործել որպես հիմք մեր նոր branche-ի համար, --track-ը կստեղծի նաև "tracking relationship" երկու branche-ների միջև
-5)git checkout <hash code> filename --track <remote-branch> ---> երբ մենք ուզում ենք վերականգնել հին ֆայլի վերանայումը
-6)git checkout HEAD filename --track <remote-branch> ---> եթե մենք որպես վերանայում նշենք «HEAD», մենք կվերականգնենք վերջին կատարած տարբերակը
-7)git checkout -f <nameBranch> ---> այս հրամանը git-ին ստիպում է փոխել branche-ը, եթե նույնիսկ մենք չունենք փուլային փոփոխություններ, այսինքն branche-ի ինդեքսը տարբերվում է HEAD-ից, այն հիմնականում օգտագործվում է local փոփոխությունները չեղարկելու համար
