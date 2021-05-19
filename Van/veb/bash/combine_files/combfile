@@ -1,0 +1,7 @@
+#!/bin/bash
+a=$(find -name 'file*')
+if [$a] && ![comb_folder]; then
+mkdir comb_folder
+fi
+mv ./file_math ./comb_folder
+mv ./fail_nomath ./comb_folder
