@@ -1,0 +1,6 @@
+#!/bin/bash
+rm -rf comb_folder
+a=$(find -name 'file*')
+mkdir comb_folder
+cp ./file_math ./comb_folder
+cp ./file_nomath ./comb_folder
