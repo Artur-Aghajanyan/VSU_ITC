@@ -6,19 +6,19 @@ echo $(date)
 case $1 in
 	month)
 		echo -e $GREEN
-		echo $(date --date="-$x months")
+		echo $(date --date="+$x months")
 		;;
 	day)
 		echo -e $GREEN
-		echo $(date --date="-$x days")
+		echo $(date --date="+$x days")
 		;;
 	hour)
 		echo -e $GREEN
-		echo $GREEN $(date --date="-$x hours")
+		echo $GREEN $(date --date="+$x hours")
 		;;
 	minutes)
 		echo -e $GREEN
-		echo $GREEN $(date --date="-$x minutes")
+		echo $GREEN $(date --date="+$x minutes")
 		;;
 	*)
 		echo -e "${RED}unknown"
