@@ -8,9 +8,9 @@ echo $(cat $file1)
 echo "Befor swap file2 content: "
 echo $(cat $file2)
 
-mv $file1 cop_$file1
-mv $file2 $file1
-mv cop_$file1 $file2
+cp $file1 cop_$file1
+cp $file2 $file1
+cp cop_$file1 $file2
 
 echo ""
 echo -e "${GREEN}After swap file1 content: ${END}"
