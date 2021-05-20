@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#Game
+
+echo "Write a number from 1 to 20 range for game" 
+
+number=$((1 + $RANDOM % 20))
+
+
+for i in {1..3}
+do   
+    read input
+
+    if [[ $input -lt 1 ]] || [[ $input -gt 20 ]]
+    then
+        echo "Please write a number for 1 to 20 range"
+        exit
+    fi         
+
+    if [ $input -eq $number ]
+    then
+        printf "Yes you find number\n"
+    elif [ $input -lt $number ]
+    then        
+        printf "Your input number small in memorable number\n"
+    elif [ $input -gt $number ]
+    then        
+        printf "Your input number great in memorable number\n"        
+    fi
+done
+
+printf "Memorable number is $number\n Try again!!\n"
+
