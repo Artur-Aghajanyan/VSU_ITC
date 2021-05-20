@@ -3,12 +3,16 @@
 number=`echo $((1 + $RANDOM % 20))`
 for (( i=1; i<4; i++ ))
 do
-	echo '-n' Write the number -  
+	echo '-n' 'Write the number(1 - 20) - ' 
 	read 
-	if [ ${REPLY} -eq $number ]
+	if [ -z ${REPLY} ] || [ ${REPLY} -gt 20 ] || [ ${REPLY} -lt 0 ]
 	then
-		echo Yes!You gess!
-		exit
+		echo Plz enter number in space 1-20
+		i=$(($i-1))
+	elif [ ${REPLY} -eq $number ]
+        then
+                echo Yes!You gess!
+                exit
 	elif [ ${REPLY} -gt $number ] && [ $i -ne 3 ]
 	then
 		echo It should be less than the inputting number
