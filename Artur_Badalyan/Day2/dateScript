@@ -5,7 +5,8 @@ echo "Please write 2 parm number"
 
 nm='[0-9]'
 if ! [[ $2 =~ $nm ]] ; then
-   echo "error: 2 params not a number" >&2; exit 1
+   echo "error: 2 params not a number" >&2; 
+   exit
 fi
 
 
