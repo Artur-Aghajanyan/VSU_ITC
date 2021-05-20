@@ -20,11 +20,11 @@ let x=$x
             p=$i
         fi
     done
+    c=$(($c+1))
 z=$(sed "${p}q;d" help2)
    sed -i "${p}d" help1
    sed -i "${p}d" help2
     echo "$z $x" >> file1
-    c=$c+1
 done
 x=$(sed '1q;d' help1)
 let x=$x
