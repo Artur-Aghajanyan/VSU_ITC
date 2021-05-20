@@ -2,7 +2,10 @@
 
 #Game
 
+echo "Write a number from 1 to 20 range"
+
 number=$((1 + $RANDOM % 20))
+
 
 for i in {1..3}
 do

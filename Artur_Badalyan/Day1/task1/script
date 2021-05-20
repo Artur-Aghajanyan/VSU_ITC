@@ -32,21 +32,3 @@ sed -i 's:^//.*$::g' comments.txt
 printf "\n"
 printf "This is a comments file after\n"
 cat comments.txt
-
-
-
-
-#File move in directory
- filenames=`ls`
-   for eachfile in $filenames
-   do
-       DIR=${eachfile:0:4}
-   
-       if [ ! -d "$DIR" ]; then
-           mkdir ${eachfile:0:4}
-      fi
-  
-      mv $eachfile ./$DIR
-  done
-
-
