@@ -1,7 +1,7 @@
 #!/bin/bash
 awk '{print $3}' list.txt > help1
 awk '{print $1}' list.txt > help2
-
+echo "Expected warning\` test.sh: line 17: [: 1500: unary operator expected"
 cat list.txt
 y=$(wc -l < list.txt)
 let y=$y
