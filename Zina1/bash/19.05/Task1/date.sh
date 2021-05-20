@@ -22,6 +22,11 @@ case $1 in
         ;;
 
     *)
-        echo "given wrong value"
+        if [ "$#" -lt 2 ]
+        then
+            echo "enter 2 arguments to get some result"
+        else
+            echo "given wrong value to frequency argument, enter something from mounth, week, day, hour or minutes"
+        fi
         ;;
 esac
