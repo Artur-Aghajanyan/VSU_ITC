@@ -1,4 +1,10 @@
 #!/bin/bash
+
+re='^[0-9]+$'
+if ! [[ $yournumber =~ $re ]] ; then
+   echo "error: Not a number" >&2; exit 1
+fi
+
 echo "Let's play a game."
 echo "You have 3 chances."
 echo "Pick a number between 0 and 20: "
