@@ -1,7 +1,0 @@
-#!/bin/bash
-
-x=$(find . -name 'math*')
-mkdir math
-
-mv math_file_1.txt math 
-mv math_gggg.txt math
