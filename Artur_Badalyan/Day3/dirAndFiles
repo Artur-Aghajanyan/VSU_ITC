@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ -z $1 ] 
+then
+    echo "Your parametr is a empty"
+    exit
+fi    
+
+
+for f in "$1"/*
+do
+   if [ -d "$f" ] 
+   then
+      echo "$f is a directory"
+      echo -e "The folder contains " $(ls -f $1/$f | wc -l) "files\n"
+   elif [ -f "$f" ] 
+   then
+      echo "$f is a file"
+      echo -e "File size "$(stat --printf="%s" $f) " bytes\n"
+   fi
+done    
