@@ -13,7 +13,7 @@ done
 function findIt {
 	if [ -d "${1}" ] ; then
 	    echo -e "This is Directory: ${GREEN}${1}${END}";
-		echo -e "There are: ${GREEN}$(ls -a ${1} | wc -l)${END} elements"
+		echo -e "There are: ${GREEN}$(ls ${1} | wc -l)${END} elements"
 	else
 		if [ -f "${1}" ]; then
 			myfilesize=$(wc -c ${1} | awk '{print $1}')
