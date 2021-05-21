@@ -5,41 +5,41 @@ then
   exit
 fi
 dir() {
-if [[ -d $1 ]]
-then
-  str=$1
-  i=$((${#str}-1))
-  if [[ "${str:$i:1}" != / ]]
-  then 
-    set "$1/" "${@:1}"
-  fi 
-  ls -rt $1 > helper
-  local  lcount=$(wc -l < helper)
-  for (( i=1; i<=lcount; i++ ))
-  do
-    f_or_d=$(sed "${i}q;d" helper)
-    if [[ -d $1$f_or_d ]]
-    then
-      echo "$f_or_d    `ls $1$f_or_d | wc -l`"
-      local j=$i
-      dir $1$f_or_d/
-      ls -rt $1 > helper
-      i=$j
-      continue
-    elif [[ -f $1$f_or_d && $f_or_d != "helper" ]]
-    then
-      echo "$f_or_d    `wc -c < $1$f_or_d`"
-    elif [[ $f_or_d != "helper" ]]
-    then  
-      echo "$f_or_d   isn't file or directory"
-    fi
-  done
-else 
-  echo "Entered command line argument isn't directory"
-rm helper
-  exit
-fi
-rm helper
-return
+  if [[ -d $1 ]]
+  then
+    str=$1
+    i=$((${#str}-1))
+    if [[ "${str:$i:1}" != / ]]
+    then 
+      set "$1/" "${@:1}"
+    fi 
+    ls -rt $1 > helper
+    local  lcount=$(wc -l < helper)
+    for (( i=1; i<=lcount; i++ ))
+    do
+      f_or_d=$(sed "${i}q;d" helper)
+      if [[ -d $1$f_or_d ]]
+      then
+        echo "$f_or_d    `ls $1$f_or_d | wc -l`"
+        local j=$i
+        dir $1$f_or_d/
+        ls -rt $1 > helper
+        i=$j
+        continue
+      elif [[ -f $1$f_or_d && $f_or_d != "helper" ]]
+      then
+        echo "$f_or_d    `wc -c < $1$f_or_d`"
+      elif [[ $f_or_d != "helper" ]]
+      then  
+        echo "$f_or_d   isn't file or directory"
+      fi
+    done
+  else 
+    echo "Entered command line argument isn't directory"
+    rm helper
+    exit
+  fi
+  rm helper
+  return
 }
 dir $1
