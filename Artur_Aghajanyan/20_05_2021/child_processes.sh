@@ -11,7 +11,7 @@ psTree () {
 
 	pid=$(pgrep $namePS)
 
-	if [ -z $pid]
+	if [ -z $pid ]
 	then
 		echo -e "${RED}There is not process like that"
 		exit
