@@ -13,7 +13,7 @@ function directory
     dir='/'	
   fi
 
-  echo $dir contain:$'\n'
+  echo ${dir##*//} contain:$'\n'
   ls $dir
   echo $'\n'
 
@@ -24,7 +24,8 @@ function directory
       echo ${file##*//} - is a file! Size - `stat --printf="%s" $file`
     elif [ -d $file ]
     then
-      echo "${file##*//} - is a directory! Its contain `ls $file | wc -l` files"
+      echo "${file##*//} - is a directory! Its contain `ls $file | wc -l` files"$'\n'
+      directory $file
     fi
   done
 }
