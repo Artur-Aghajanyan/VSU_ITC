@@ -1,8 +1,11 @@
 #!/bin/bash
 
 echo "Enter frequency,that will be month, week, day, hour or minutes, and its value"
-read -p "frequence = " frequency
-read -p "value = " value
+echo "frequency = "
+read frequency
+echo "value = "
+read value
+
 echo "Now is"
 date 
 

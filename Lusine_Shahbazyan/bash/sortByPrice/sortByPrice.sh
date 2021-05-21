@@ -7,7 +7,7 @@ rm -f newtext.txt
 awk '{ print $2, $3 }' text.txt >> newtext.txt
 > sortedList.txt
 
-lineCount=`wc -l text.txt | awk '{ print $1 }'`
+lineCount=`wc -l newtext.txt | awk '{ print $1 }'`
 for (( i=1; i<=$lineCount; ++i ))
 do
     line=$(sed -n '1p' < newtext.txt)
@@ -19,8 +19,8 @@ do
         min1=${line1#* }
         if [ $min -gt $min1 ]
         then
-            min=$min1
-            count=$j
+             min=$min1
+             count=$j
          fi
     done
     sed -n "${count}p" newtext.txt >> sortedList.txt
