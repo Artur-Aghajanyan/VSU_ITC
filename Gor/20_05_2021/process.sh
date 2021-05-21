@@ -8,14 +8,15 @@ function process
     exit
   fi
   pr_id=$(pgrep $1)
-  if [ -z $pr_id ]
+  word=$(echo $pr_id | awk '{print $1;}')
+  if [ -z $word ]
   then
     echo The process is not found!
     exit
   fi
-  echo "$1 PID - $pr_id"$'\n'
+  echo "$1 PIDs - $word"$'\n'
   echo 'Childs'$'\n'
-  ps -p $(pgrep -P $pr_id)
+  ps -p $(pgrep -P $word)
 }
 
 process $1
