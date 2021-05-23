@@ -3,16 +3,12 @@
 function directory
 {
   dir=$1
-  if ! [ -d $1 ]
+  if ! [ -d $1 ] || [ -z $1 ]
   then
     echo "$1 is not directory,plz write directory!"
     exit
   fi
-  if [ -z $1 ]
-  then
-    dir='/'	
-  fi
-
+  
   echo ${dir##*//} contain:$'\n'
   ls $dir
   echo $'\n'
