@@ -116,7 +116,10 @@ do
     while :
     do
 	read -p 'Write "bot" for playing with Bot and "player" for 2 players - ' play
-	if [ $play = "bot" ] || [ $play = "player" ]
+	if [ -z $play ]
+	then
+	    echo Write!
+	elif [ $play = "bot" ] || [ $play = "player" ]
 	then 
 	    break
 	else
@@ -128,7 +131,10 @@ do
 	while :
 	do
 	    read -p "You want to play with X or O - " XO
-	    if [ $XO = X ] || [ $XO = O ]
+	    if [ -z $XO ]
+	    then
+	        echo write!
+	    elif [ $XO = X ] || [ $XO = O ]
 	    then
 		break
 	    fi
@@ -214,7 +220,10 @@ do
     while :
     do
 	read -p 'Would you want start newgame("yes" or "no")? - ' newgame
-	if [ $newgame = "no" ] 
+	if [ -z $newgame ]
+	then
+		echo write!
+	elif [ $newgame = "no" ] 
 	then
 	    exit
 	elif [ $newgame = "yes" ]
