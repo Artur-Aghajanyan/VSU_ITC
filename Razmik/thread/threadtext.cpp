@@ -4,7 +4,6 @@
 #include <pthread.h>
 
 
-
 void* function1(void* first ){
 
 
@@ -24,11 +23,17 @@ int count = 0;
 int x = line1.size();
 for(int i = 0;i< x; ++i){
 
-		if(line1[i] = 'a')
-				count = count + 1;
+		if(line1[i] = 'z')
+		count = count + 1;
 }
 
 		std:: cout << count << std::endl;
+        pthread_exit(NULL);
+
+      
+
+
+
 
 }
 
@@ -44,7 +49,7 @@ void* function2(void* second){
        
  
         object2.close();
-
+pthread_exit(NULL);
 }
 
 
@@ -56,7 +61,8 @@ function2(NULL);
 
  
 printf("Time taken: %.2fs\n", (double)(clock() - tStart1)/CLOCKS_PER_SEC);
-   
+ 
+ 
 
 
 clock_t tStart2 = clock();
@@ -66,6 +72,8 @@ pthread_attr_t attr;
 pthread_attr_init(&attr);
 pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
 
+std::cout << clock() << std::endl;
+std::cout << tStart2 << std::endl; 
 
 
 int x= pthread_create( &id1, &attr, function1,NULL);
@@ -76,5 +84,7 @@ pthread_join(id1,NULL);
 pthread_join(id2,NULL);
 printf("Time taken: %.2fs\n", (double)(clock() - tStart2)/CLOCKS_PER_SEC);
 return 0;
+pthread_exit(NULL);
+
 }
 		

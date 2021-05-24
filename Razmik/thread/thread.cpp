@@ -39,6 +39,8 @@ int count = 0;
  std::cout << count << std::endl;
 
 }
+
+
 int main(){
 clock_t time = clock();
 pthread_t thread1,thread2;
