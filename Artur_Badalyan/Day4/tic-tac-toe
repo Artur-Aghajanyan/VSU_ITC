@@ -1,0 +1,147 @@
+#!/usr/bin/bash
+
+player_1="\e[01;34mX\e[01;33m"
+player_2="\e[01;37mO\e[01;33m"
+
+BLUE='\033[01;34m' 
+LYELLOW='\033[01;33m'
+WHITE='\033[01;37m'
+
+turn=1
+game_on=true
+
+moves=( 1 2 3 4 5 6 7 8 9 )
+
+welcome_message() {
+  clear
+  echo -e ${LYELLOW}"XOXOXOXOXOXOXOXOXOXOXOXOX"
+  echo "XOXOXO TIC-TAC-TOE OXOXOX"
+  echo "XOXOXOXOXOXOXOXOXOXOXOXOX"
+  sleep 2
+
+  echo -ne "\e[01;32m#####                     (33%)\r"
+  sleep 0.5
+  echo -ne '##########                (45%)\r'
+  sleep 0.5
+  echo -ne '################          (70%)\r'
+  sleep 0.5
+  echo -ne '#######################   (100%)\r'
+  sleep 0.5
+  echo -ne "\n\e" 
+}
+
+print_board () {
+  clear
+  echo -e ${LYELLOW}
+  echo -e " ${moves[0]} | ${moves[1]} | ${moves[2]} "
+  echo "-----------"
+  echo -e " ${moves[3]} | ${moves[4]} | ${moves[5]} "
+  echo "-----------"
+  echo -e " ${moves[6]} | ${moves[7]} | ${moves[8]} "
+  echo "============="
+}
+
+player_pick(){
+  if [[ $(($turn % 2)) == 0 ]]
+  then
+    play=$player_2
+    echo -e -n $WHITE "PLAYER 2 YOUR STEP: $LYELLOW"
+  else
+    echo -e -n $BLUE "PLAYER 1 YOUR STEP: $LYELLOW"
+    play=$player_1
+  fi
+
+  read input
+
+  position=${moves[($input-1)]} 
+
+  if [[ ! $input =~ ^-?[0-9]+$ ]] || [[ ! $position =~ ^[0-9]+$  ]]
+  then 
+    echo "Not a valid square."
+    player_pick
+  else
+    moves[($input -1)]=$play
+    ((turn=turn+1))
+  fi
+  position=${moves[($input-1)]} 
+}
+
+check_match() {
+  if  [ ${moves[$1]} == ${moves[$2]} ] && [ ${moves[$2]} == ${moves[$3]} ]; then
+    game_on=false
+
+    if [ ${moves[$1]} == 'X' ];then
+      echo "Player_1 wins!"
+      exitt 
+    else
+      echo "player_2 wins!"
+      exitt
+    fi
+  fi
+}
+
+
+exitt () {
+    echo Do you want play again yes/no
+    read input
+	
+	if [ ${#input} -eq 0 ]; then
+		echo Please input yes/no
+		exitt	
+    elif [ $input == yes ]; then
+            
+            turn=1
+            game_on=true
+
+            moves=( 1 2 3 4 5 6 7 8 9 )
+            print_board
+            while $game_on
+            do
+                player_pick
+                print_board
+                check_winner
+            done  
+    elif [ $input == no ]; then  
+            return	
+    else        
+        echo Your input incorected
+        exitt
+    fi        
+}
+
+check_winner(){
+  if [ $game_on == false ]; then return; fi
+  check_match 0 1 2
+  if [ $game_on == false ]; then return; fi
+  check_match 3 4 5
+  if [ $game_on == false ]; then return; fi
+  check_match 6 7 8
+  if [ $game_on == false ]; then return; fi
+  check_match 0 4 8
+  if [ $game_on == false ]; then return; fi
+  check_match 2 4 6
+  if [ $game_on == false ]; then return; fi
+  check_match 0 3 6
+  if [ $game_on == false ]; then return; fi
+  check_match 1 4 7
+  if [ $game_on == false ]; then return; fi
+  check_match 2 5 8
+  if [ $game_on == false ]; then return; fi
+
+  if [ $turn -gt 9 ]
+  then 
+    game_on=false
+    echo "Its a draw!"
+    sleep 1
+    exitt
+  fi
+}
+
+welcome_message
+print_board
+while $game_on
+do
+  player_pick
+  print_board
+  check_winner
+done
