@@ -13,14 +13,14 @@ You can choose symbols.
 You can restart.
 
 # HOW TO RUN
- - bash tictactoe.sh
+ - bash tic_tac_toe.sh
 or
  - chmod a+x tictactoe.sh
- - ./tictactoe.sh 
+ - ./tic_tac_toe.sh 
 or
  - export PATH="`pwd`:$PATH"
  - chmod a+x tictactoe.sh
- - tictactoe.sh
+ - tic_tac_toe.sh
 
 # HOW TO PLAY
 
