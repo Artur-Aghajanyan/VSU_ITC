@@ -12,7 +12,7 @@ do
    if [ -d "$f" ] 
    then
       echo "$f is a directory"
-      echo -e "The folder contains " $(ls -f $1/$f | wc -l) "files\n"
+      echo -e "The folder contains " $(ls -f $1 $f | wc -l) "files\n"
    elif [ -f "$f" ] 
    then
       echo "$f is a file"
