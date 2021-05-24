@@ -1,0 +1,31 @@
+#!/bin/bash
+
+echo "Please Write proces name for search"
+pName=1
+nm='[0-9]'
+tr=true
+
+while [[ $pName ]]  
+do
+   read pName
+   if [[ $pName =~ $nm ]]
+   then        
+        echo "Input data is a number!!" 
+        continue
+   fi
+   break
+done
+
+function proctree {
+    PID=$(pgrep $pName)
+    if [ -z "$PID" ]
+    then 
+        echo "There is no process with this name"
+        exit
+    fi
+
+    ps --ppid $PID    
+}
+
+
+proctree
