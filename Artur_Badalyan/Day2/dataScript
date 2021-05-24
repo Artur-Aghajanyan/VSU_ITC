@@ -1,0 +1,44 @@
+#!/bin/bash
+
+#Class Work
+
+
+begin=$(grep -Eo '^[^ ]+' data)
+end=$(grep -Eo '[^ ]+$' data)
+
+
+declare -a arr1
+declare -a arr2
+len=${#arr2[@]}
+
+for i in {1..4}
+do
+        x=$(echo $begin | cut -d " " -f $i)  
+        y=$(echo $end | cut -d " " -f $i)
+        arr1[$i]=$x
+        arr2[$i]=$y  
+done
+
+#sorting
+
+for i in {1..$len}
+do
+    for j in {1..$len-$i}
+    do
+        if [ arr2[$j] -lt arr2[$j+1] ]
+        then
+        tmp=arr1[$j]
+        arr1[$j]=arr1[$j+1]
+        arr1[$j+1]=$tmp
+
+        tmp1=arr2[$j]
+        arr2[$j]=arr2[$j+1]
+        arr2[$j+1]=$tmp
+        fi
+    done
+done
+
+printf '%s\n' "${arr1[@]}"
+printf '%s\n' "${arr2[@]}"
+
+
