@@ -1,7 +1,0 @@
-Usages of checkout
-
-git checkout other_branch-տեղափոխվելմեկ այլ բռենչ
-git checkout -b new_branch- եթե ցանկանում ենք ստեղծել նոր լոկալ բռենչ, ավելացնում ենք -b պարամետրը
-git checkout HEAD filename - չեղյալ en  համարվում այդ ֆայլում լոկալ փոփոխությունները. 
-git checkout -f BRANCH-NAME֊ Git- ին ստիպել փոխել ճյուղերը, նույնիսկ եթե  փոփոխություններ ունեք
-git checkout .  -չեղյալ en  համարվում բոլոր ֆայլերի լոկալ  փոփոխությունները.

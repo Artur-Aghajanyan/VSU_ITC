@@ -1,7 +1,0 @@
-1.git checkout -b <branch> - ստեղծում է նոր բրանչ և տեղափոխվում է այդ բրանչի վրա
-  git checkout <branch> - տեղափոխվում է այդ բրանչի վռա
-2.git checkout [--detach] <commit> - բրանչի վերջի վիճակը ցույց է տալիս գլխավոր բրանչի այդ քոմիթի վրա
-  git checkout --detach [<branch>] - բրանչի վերջի վիճակը ցույց է տալիս տրված բրանչի  վրա
-3.git checkout . - բոլոր ֆայլերը բերում է նախնական վիճակի
-  git ckeckout filename - ֆայլը բերում է նախնական վիճակի
-4.git checkout -m [<branch>] - միացնում է այլ բրանչի հետ

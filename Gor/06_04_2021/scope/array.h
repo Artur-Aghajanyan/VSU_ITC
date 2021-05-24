@@ -61,8 +61,14 @@ class Array
                         data = newdata;
 		};
 		int top()
-		{
-			return data[size-1];
+		{	
+			if(size > 0){
+				return data[size-1];
+			}
+			else
+			{
+				cout<<"Empty!"<<endl;
+			}
 		}
 		~Array()
 		{

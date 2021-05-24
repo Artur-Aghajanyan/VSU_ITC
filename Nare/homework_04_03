@@ -1,0 +1,26 @@
+Conflict type				Steps to reproduce
+
+AA - unmerged, both added		1. Created 'test' file and added some content in it while being in main branch.
+					2. git add test, git commit, git pull,git push
+					3. git checkout 1
+					4. Created 'test' file  and added some content in it.
+					5. git add test, git commit, git pull,git push
+					6. git checkout main
+					7. git merge 1
+
+UU - unmerged,both modified		1. changed second line in main branch
+					2. git add test, git commit
+					3. git checkout 1
+					4. Changed second line
+					5. git add test, git commit
+					6. git merge main
+
+ Auto-merge                             1. added line in main branch, git add 'test', git commit
+					2. git checkout 1, git merge main
+
+
+DD    unmerged, both deleted
+AU    unmerged, added by us
+UD    unmerged, deleted by them
+UA    unmerged, added by them
+DU    unmerged, deleted by us
