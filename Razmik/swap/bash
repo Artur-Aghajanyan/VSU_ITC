@@ -1,0 +1,9 @@
+#!/bin bash
+
+file1="$1"
+file2="$2"
+tmp="$3"
+cat file2>tmp
+cat file1>file2	
+>file1
+cat tmp>file1
