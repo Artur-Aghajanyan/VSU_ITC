@@ -84,7 +84,11 @@ check_match() {
 exitt () {
     echo Do you want play again yes/no
     read input
-    if [ $input == yes ]; then
+	
+	if [ ${#input} -eq 0 ]; then
+		echo Please input yes/no
+		exitt	
+    elif [ $input == yes ]; then
             
             turn=1
             game_on=true
@@ -98,7 +102,7 @@ exitt () {
                 check_winner
             done  
     elif [ $input == no ]; then  
-            return        
+            return	
     else        
         echo Your input incorected
         exitt
