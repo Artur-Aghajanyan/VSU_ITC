@@ -20,7 +20,7 @@ class View{
 	void setX(int x);
 	void setY(int y);
 	void setColor(std::string color);
-
+	virtual void print();
 
 };
 
