@@ -7,7 +7,7 @@ then
     echo Error
     exit
 fi
-if ! [[ $num1 =~ ^[1-9]+$ ]] || ! [[ $num2 =~ ^[1-9]+$ ]]
+if ! [[ $num1 =~ ^[0-9]+$ ]] || ! [[ $num2 =~ ^[0-9]+$ ]]
 then
     echo $num1$num2
 else
