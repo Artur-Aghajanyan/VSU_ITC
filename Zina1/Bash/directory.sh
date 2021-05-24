@@ -6,12 +6,14 @@ function a {
 
     for x in $a
     do
+        echo "Size File"
         echo $(du -h $x)
     done
 
     for x1 in $b
     do
-        echo $x1
+        echo "Directory: Count of items" 
+        echo -n $x1': '
         echo $(find $x1 -type f | wc -l)
     done
 }
