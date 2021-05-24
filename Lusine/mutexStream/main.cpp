@@ -26,6 +26,7 @@ void* funcSearch1(void* str)
         {
             if(myString == candidate) ++count;
         }
+
         std::cout << "The word " << myString << " has been found " << count << " times.";
        // pthread_cond_wait(&cond, &myMutex1);
     } else {
@@ -33,6 +34,8 @@ void* funcSearch1(void* str)
     }
     myFile.close();
     pthread_cond_signal(&cond);
+
+     myFile.close();
     pthread_mutex_unlock(&myMutex1);
     pthread_mutex_destroy(&myMutex1);
     pthread_cond_signal(&cond);

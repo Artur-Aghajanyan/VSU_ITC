@@ -27,7 +27,9 @@ class Complex {
         Complex<T> operator * (const Complex<T> &obj);
 
         /* Friend Functions */
-        template <class T1>	friend std::ostream& operator << (std::ostream& cout, const  Complex<T1>& obj);
-	   	template <class T2> friend std::istream& operator >> (std::istream& cin, Complex<T2>& obj); 
+        template <class F> 
+	friend std::ostream& operator << (std::ostream& cout, const  Complex<F>& obj);
+	template <class F> 
+	friend std::istream& operator >> (std::istream& cin, Complex<F>& obj); 
 };
 
