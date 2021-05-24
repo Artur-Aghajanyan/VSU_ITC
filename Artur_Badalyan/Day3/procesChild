@@ -18,7 +18,7 @@ done
 
 function proctree {
     PID=$(pgrep $pName)
-    if [ -z $PID ]
+    if [ -z "$PID" ]
     then 
         echo "There is no process with this name"
         exit
