@@ -1,5 +1,5 @@
 #include <iomanip>
-#include "zina.h"
+#include "fib_fact.h"
 #include <iostream>
 
 double meannum (int *array, int s) {
