@@ -12,7 +12,7 @@ Write a Python function to check whether a number is perfect or not.
 
 Run the .py and write the number!
 
-#Fibonacci.py
+# Fibonacci.py
 This is 3 task:
 
 Print out the n-th Fibonacci item.
