@@ -1,0 +1,15 @@
+checkout
+1.git checkout -b {{branch_name}}
+stexcum e nor chyux ev mianum e nran
+2.git checkout {{branch_name}}  
+mianum e arden stexcvac chyux@
+3.git checkout .
+chexarkum e bolor chfixvac popoxutyunnere @ntacik directoriaum
+4.git checkout {{file_name}} 
+chexarkum e bolor chfixvac popoxakannere nshvac failum
+5.git checkout {{branch_name}}--{{file_name}} 
+@ntacik directoriai fail@ poxum e urish chyuxi ayd fili versiaov
+6.git checkout -B {{branch_name}}
+stexcum e {{branch_name}} chyux@ ev texadrum e (ustanovka), ayd chyuxi goyutyun$
+7.git checkout --orphan {{branch_name}}
+$eri u commitneri het
