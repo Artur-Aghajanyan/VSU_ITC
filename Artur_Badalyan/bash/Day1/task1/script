@@ -1,0 +1,34 @@
+#!/bin/bash
+
+
+#Swipe files
+
+file1=math_file_1.txt
+file2=math_gggg.txt
+
+echo This is a contents $file1
+cat $file1
+
+echo This is a contents $file2
+cat $file2
+
+mv $file1 tmp
+mv $file2 $file1
+mv tmp $file2
+
+echo This is a contents $file1
+cat $file1
+
+echo This is a contents $file2
+cat $file2
+
+printf "\n\n"
+
+#Delete comments in file
+printf "This is a comments file before\n"
+cat comments.txt
+sed -i 's:^#.*$::g' comments.txt
+sed -i 's:^//.*$::g' comments.txt
+printf "\n"
+printf "This is a comments file after\n"
+cat comments.txt

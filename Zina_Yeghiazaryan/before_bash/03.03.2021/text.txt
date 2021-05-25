@@ -1,0 +1,6 @@
+kill them all!!!
+<<<<<<< HEAD
+sdfgsfg
+=======
+fadsfsdf
+>>>>>>> 5415a50b9c873c7ac6a733bfc46d3fa888aa547e
