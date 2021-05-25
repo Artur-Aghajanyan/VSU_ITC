@@ -50,8 +50,7 @@ void dijkstra(int graph[size][size])
     }
 }
   
-int main()
-{
+int main(){
     int graph[size][size] = {
                         { 0, 2, 0, 0, 0, 0, 0 },
                         { 3, 0, 7, 0, 0, 2, 2 },
