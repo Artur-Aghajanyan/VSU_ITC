@@ -1,0 +1,40 @@
+#!/bin/bash
+
+echo "Please write 1 parm one of the following options : month,day,week,year,hour,minute,second"
+echo "Please write 2 parm number"
+
+nm='[0-9]'
+if ! [[ $2 =~ $nm ]] ; then
+   echo "error: 2 params not a number" >&2; 
+   exit
+fi
+
+
+case $1 in
+    "month" )
+          echo $(date +"Year: %Y, Month: %m, Day: %d TIME: %T" -d "+$2 month")
+          ;;
+    "day" )
+          echo $(date +"Year: %Y, Month: %m, Day: %d TIME: %T" -d "+$2 day")   
+          ;;
+    "week" )
+          echo $(date +"Year: %Y, Month: %m, Day: %d TIME: %T" -d "+$2 week")
+          ;;
+    "year" )
+          echo $(date +"Year: %Y, Month: %m, Day: %d TIME: %T" -d "+$2 year")
+          ;;
+    "hour" )
+          echo $(date +"Year: %Y, Month: %m, Day: %d TIME: %T" -d "+$2 hour")
+          ;;
+    "minute" )
+          echo $(date +"Year: %Y, Month: %m, Day: %d TIME: %T" -d "+$2 minute")
+          ;;
+    "second" )
+          echo $(date +"Year: %Y, Month: %m, Day: %d TIME: %T" -d "+$2 second")
+          ;;
+        *)
+          echo "Please write one of the following options : month,day,week,year,hour,minute,second"      
+esac          
+
+
+

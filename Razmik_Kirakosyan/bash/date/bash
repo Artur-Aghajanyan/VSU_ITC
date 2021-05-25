@@ -1,0 +1,58 @@
+#!/bin/bash
+date
+#date +%s
+date +"%FORMAT"
+var=$(date)
+var=`date`
+echo "$var"
+date +%s
+frequancy=' '
+value=' '
+read $frequancy 
+if [ "$frequancy"!=]
+read $value
+
+if [ "$frequancy"="month" ]; 
+	then
+	value=$((value*1814400))
+	date=$((date+value))
+
+	echo $date
+  	  
+elif [ "$frequancy"="week" ];
+	then
+	value=$((value*604800))
+	date=$((date+value))
+
+	echo $date
+
+elif [ "$frequancy"="day" ];
+	then
+	value=$((value*86400))
+	date=$((date+value))
+
+	echo $date
+
+elif [ "$frequancy"="hour" ];
+	then 
+	value=$((value*3600))
+	date=$((date+value))
+
+	echo $date
+
+elif [ "$frequancy"="minute" ]
+	then
+	value=$((value*60))
+	date=$((date+value))
+	
+	echo $date
+else 
+echo "not correct argument"
+break
+fi
+
+
+
+
+	
+
