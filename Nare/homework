@@ -1,5 +1,0 @@
-git checkout [Branch_name] - տեղափոխվել [Branch_name] անունով ճյուղ
-git checkout -b [Branch_name] - ստեղծել և տեղափոխվել [Branch_name] անունով ճյուղ
-git checkout [commit hash] [file_name] - տվյալ commit֊ը հետ բերելու համար
-git checkout -- [file_name] - [file_name] անունով add արած, բայց commit չարած ֆայլում  ոփոփխությունները հետ բերելու համար
-git checkout HEAD [file_name] - հետ է բարում [file_name] անունով ֆայլի վերջին commit արած տարբերակը 

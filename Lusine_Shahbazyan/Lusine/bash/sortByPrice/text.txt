@@ -1,5 +1,0 @@
-Mary apple 200 20.02.2021
-Ani banana 650 12.06.2021
-Davit pear 400 03.0i2.2021
-Mark orange 900 01.04.2021
-Alen grapefruit 860 15.03.2021
