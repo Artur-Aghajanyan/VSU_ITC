@@ -1,3 +1,3 @@
-Pascal.py file prints out the first n rows of Pascal's triangle. <br/>
-Perfect_Number.py file checks whether a number is perfect or not. <br/>
-Fibonacci.py prints out the n-th Fibonacci item. <br/>
+In Pascal.py you need to enter natural number, which will show from first to which row of Pascal's triangle to print.
+In Perfect_Number.py you need to enter natural number to check if it is perfect.
+In Fibonacci.py you need to enter natural number to get wanted Fibonacci item.
