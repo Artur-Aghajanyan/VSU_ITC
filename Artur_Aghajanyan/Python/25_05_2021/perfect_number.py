@@ -10,7 +10,7 @@ else:
             sum = sum + i
 
     if(sum == number):
-        print (number, "is a perfect number")
+        print(number, "is a perfect number")
     else:
-        print (number, "is not a perfect number")
+        print(number, "is not a perfect number")
 
