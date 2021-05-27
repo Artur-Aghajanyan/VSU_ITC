@@ -1,4 +1,4 @@
-def DivSum(n):
+def divSum(n):
     '''
         DivSum function has one argument, which should be a natural number.
         The function counts the sum of divisors of argument.
@@ -9,12 +9,12 @@ def DivSum(n):
             sum += i
     return sum
 
-def Check(n):
+def check(n):
     '''
         Check function has one argument, which should be a natural number.
         The function checks if the argumen is perfect.
     '''
-    if (DivSum(n) - n) == 0:
+    if n > 0 and (divSum(n) - n) == 0:
         print(str(n) + " is a perfect number.")
     else:
         print(str(n) + " is not a perfect number.")
@@ -22,7 +22,11 @@ def Check(n):
 while True:
     try:
         n = int(input("Enter the number: "))
-        Check(n)
+        if n < 0:
+            print("Entered number can't be perfect. Please enter positive number.")
+            n
+        else:
+            check(n)
     except ValueError:
-        print("Entered wrong value. Please enter a number.")
+        print("Entered wrong value. Please enter a positive number.")
         print()
