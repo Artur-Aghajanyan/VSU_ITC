@@ -1,4 +1,4 @@
-def Fib(n):
+def fib(n):
     '''
         Fib function has one argument, which should be a natural number (n).
         The function returns the n-th Fibonacci item.
@@ -15,6 +15,7 @@ def Fib(n):
             a = 0
             b = 1
             k = -1
+            
             for i in range(n):
                 k = a + b
                 a = b
@@ -24,7 +25,7 @@ def Fib(n):
 while True:
     try:
         n = int(input("Enter the number: "))
-        print(str(n) + " Fibonacci item is: " + str(Fib(n - 1)))
+        print(str(n) + " Fibonacci item is: " + str(fib(n-1)))
     except ValueError:
         print("Entered wrong value. Please enter positive number.")
         print()
