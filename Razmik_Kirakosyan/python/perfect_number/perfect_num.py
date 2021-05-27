@@ -7,6 +7,6 @@ def get_divisors(n):
 		print ("This number is perfect")
 	else:
 		print ("This number isn't perfect")
-
+print ("Please input any positive integer") 
 n = int(input())
 get_divisors(n)

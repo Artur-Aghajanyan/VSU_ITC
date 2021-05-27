@@ -14,6 +14,7 @@ def factorial(num):
 
 def counting_factorial(i, j):
 	return int(factorial(i)/(factorial(i-j)*factorial(j)))
-
+print( "input any positive integer number till 23")
 n = int(input())
 pascal_numbers(n)
+
