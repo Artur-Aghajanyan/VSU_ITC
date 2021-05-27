@@ -1,3 +1,5 @@
+import sys
+
 
 def perfectNum (num):
     sum=0
@@ -11,11 +13,18 @@ def perfectNum (num):
         print(num,"is not a perfect number")
 
 
+def checkInput(n):
+      if n.isdigit():
+          if int(n) > 2147483647:
+              print("User input big in int limit")
+              sys.exit()
+      else:
+          print("User input is string or small then 0")
+          sys.exit()
+
+
 print("Write number for check is a perfect number or not.")
 num=input()
 
-if num.isdigit():
-     perfectNum(int(num))
-else:
-     print("User input is string or small then 0")
-
+checkInput(num)
+perfectNum(int(num))
