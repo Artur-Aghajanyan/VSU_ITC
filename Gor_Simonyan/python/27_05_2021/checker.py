@@ -6,6 +6,8 @@ def checker(word, lines):
     if lines != 0:
         counter[0].append(word)
         counter[1].append(1)
+        return  True
+    return False
 
 
 def line_checker(word):
@@ -16,17 +18,17 @@ def line_checker(word):
     return True
 
 
-def if_count(count):
-    for i in counter[1]:
-        if i == count:
-            return True
-    return False
-
-
 def print_count(count):
-    for i in range(len(counter[0])):
-        if counter[1][i] >= count:
-            print(counter[0][i], ":", counter[1][i])
+    for i in range(count):
+        print(counter[0][i], ":", counter[1][i])
+
+
+def sort_list():
+    for i in counter[0]:
+        for j in range(len(counter[0])-1):
+            if counter[1][j] < counter[1][j+1]:
+                counter[0][j], counter[0][j+1] = counter[0][j+1], counter[0][j]
+                counter[1][j], counter[1][j + 1] = counter[1][j + 1], counter[1][j]
 
 
 def check(count):
@@ -37,20 +39,21 @@ def check(count):
             words = arr[i].split()[j]
             if (words[0].isupper() and words[1:].islower()) or words.isupper():
                 if line_checker(words.upper()):
-                    checker(words.upper(), j)
-    if if_count(count):
+                    if checker(words.upper(), j) is False:
+                        line.pop()
+    sort_list()
+    if not counter[0]:
+        print("No Result!")
+    elif count <= len(counter[0]):
         print_count(count)
-    elif not counter[0]:
-        print("No Result")
     else:
-        for i in range(len(counter[0])):
-            print(counter[0][i], ":", counter[1][i])
+        print_count(len(counter[0]))
 
 
 arr = []
 counter = [[], []]
 line = []
-print("Input your text(for end push ENTER and write end):")
+print("Input your text:")
 while True:
     arr.append(input())
     if arr[-1] == "end":
