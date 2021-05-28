@@ -1,42 +1,45 @@
-import itertools 
+import operator
 
-def printResult(dic):
-	sortedDic = {}
-	sortedDic = sorted(dic.items(), key=lambda x: x[1], reverse=True)
-	if ( n < len(sortedDic)):
-	    for i in range(n):
-	        print(sortedDic[i])
-	else:
-	    for i in range(len(sortedDic)):
-	        print(sortedDic[i])
-	        
-def checkWordInLine(line, word):
-    for i in range(len(line)):
-        if word == line[i]:
+def printResult(dic, n):
+     sortedDic = {}
+     sortedDic = dict(sorted(dic.items(), key=operator.itemgetter(1), reverse=True))
+     for key, value in dict(sortedDic).items():
+         if value == 1:
+             del sortedDic[key]
+     for key,value in sortedDic.items():
+         if n == 0:
+             break
+         print(key,':', value)
+         n -= 1
+
+def checkWordInLine(line, word, j):
+    for i in range(j-1, -1, -1):
+        if word == line[i] or word == line[i].upper():  
             return False
     return True
-    
+
 def checkWords():
-    for i in range(len(arr)):
-        lineForChecking = []
-        for j in range(len(arr[i].split())):
-            lineForChecking = arr[i].split()
+    for i in range(len(myList)):
+        lineForChecking = [] 
+        lineForChecking = myList[i].split()
+        for j in range(len(lineForChecking)):
             wordForChecking = lineForChecking[j]
-            if (wordForChecking[0].isupper() and wordForChecking[1:].islower()) or wordForChecking.isupper():
+            if((wordForChecking[0].isupper() and wordForChecking[1:].islower()) or wordForChecking.isupper()):
                 wordForChecking = wordForChecking.upper()
-                if(checkWordInLine(lineForChecking, wordForChecking)):
+                if(checkWordInLine(lineForChecking, wordForChecking, j)):
                     if wordForChecking not in dictionary.keys():
                         dictionary[wordForChecking] = 1
                     else:
                         dictionary[wordForChecking] += 1
-                    
-                
-arr = ["text:A Tux is a penguin character and the official brand",
-        "character of the LINUX kernel F first_three_items For  For ",
-       "Originally created as an entry to a Linux logo competition ",
-       "TUX is the most commonly TUX used Linux icon C Linux  although different Linux distributions ",
-       "depict TUx in various styles. The character is used in many other lInux programs and as",
-       "a general symbol of Linux "]
+
+myList = ["text:A Tux is a penguin character and the official brand",
+          "character of the LINUX kernel F first_three_items For For",
+          "Originally created as an entry to a Linux logo competition",
+          "TUX the Most commonly  used Linux icon C TUX",
+          "Linux  although Most Linux different Linux distributions",
+          "depict TUx  in various styles. The MOST character is used in",
+          "many other lInux programs and asa general symbol of Linux"]
+
 dictionary = {}
 print("Enter count of most repeated words:")
 n = input()
@@ -46,4 +49,5 @@ while  n.isdigit() == False:
 else:
     n = int(n)
     checkWords()
-printResult(dictionary)
+printResult(dictionary, n)
+
