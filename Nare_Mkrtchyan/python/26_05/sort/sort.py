@@ -72,6 +72,7 @@ def swap(i):
     """
     swap function waps strings of list.
     """
+    print("swap", list1[i], list1[i+1])
     helper = list1[i]
     list1[i] = list1[i+1]
     list1[i+1] = helper
@@ -83,11 +84,13 @@ def word(i,data1,data2):
     for j in range(1,3):
         if len(data1[j]) == len(data2[j]):
             if data1[j] > data2[j]:
+                print("Word1")
                 swap(i)
                 break
             elif data1[j] < data2[j]:
                 break
         elif len(data1[j]) > len(data2[j]):
+            print("Word2")
             swap(i)
             break
         else:
@@ -103,10 +106,12 @@ def letter():
             data1 = list1[i].split()
             data2 = list1[i+1].split()
             if(data1[0] > data2[0]):
+                print(">")
                 swap(i)
             elif (data1[0] < data2[0]):
                 continue
-            word(i,data1,data2)
+            else:
+                word(i,data1,data2)
 
 def number():
     """
@@ -141,7 +146,7 @@ while not list_len.isdigit():
     list_len = input()
 print("Enter strings.")
 print("Structure of string: a12 asd dfg    or   f12 45 456")
-i = list_len
+i = int(list_len)
 while i != 0:
     user_input = input()
     user_input = user_input.strip()
