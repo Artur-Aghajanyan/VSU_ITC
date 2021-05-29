@@ -56,9 +56,7 @@ def check():
                 else:
                     swap(i)
             else:
-                if is_num(i+1):
-                    continue
-                else:
+                if is_num(i+1) is False:
                     if let_sort(i, 0) is False:
                         if num_sort(i, 0) is False:
                             if let_sort(i, 1) is False:
