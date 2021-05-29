@@ -6,7 +6,7 @@ def checker(word, lines):
     if lines != 0:
         counter[0].append(word)
         counter[1].append(1)
-        return  True
+        return True
     return False
 
 
@@ -37,10 +37,10 @@ def check(count):
         line = []
         for j in range(len(arr[i].split())):
             words = arr[i].split()[j]
-            if (words[0].isupper() and words[1:].islower()) or words.isupper():
-                if line_checker(words.upper()):
-                    if checker(words.upper(), j) is False:
-                        line.pop()
+            if ((words[0].isupper() and words[1:].islower()) or words.isupper()) and line_checker(words.upper()) and \
+                    checker(words.upper(), j) is False:
+                line.pop()
+
     sort_list()
     if not counter[0]:
         print("No Result!")
@@ -61,9 +61,8 @@ while True:
 while True:
     try:
         a = int(input("Input count - "))
-    except(ValueError):
+    except ValueError:
         print("Pls, write number!")
         continue
     check(a)
     break
-
