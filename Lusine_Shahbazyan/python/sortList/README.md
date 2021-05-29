@@ -3,7 +3,7 @@
 This program tacks list of strings  and result is output sorted list.
 
 ##  **Input value**
-###   ***Structure of strins**
+###   ***Structure of strings***
 
 Entered values must have following structure
 key  word word    or   key  number  number
