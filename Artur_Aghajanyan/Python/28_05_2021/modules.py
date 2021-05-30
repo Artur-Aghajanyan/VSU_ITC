@@ -13,20 +13,28 @@ def finder(searchType, name, path, exclude):
     result = []
     if exclude != None:
         for root, dirs, files in os.walk(path):
-            for fileName in files:
-                for item in exclude:
-                    if searchType == "file" and name in fileName and item != fileName:
-                        result.append(os.path.join(root, fileName))
-                    elif searchType == "directory" and name in dirs and item != fileName:
-                        result.append(os.path.join(root, fileName))
+            if searchType == "file":
+                for fileName in files:
+                    for item in exclude:
+                        if name in fileName and item != fileName:
+                            result.append(os.path.join(root, fileName))
+                        
+            else:
+                for dir in dirs:
+                    for item in exclude:
+                        if name in dir and item != dir:
+                            result.append(os.path.join(root, dir))
         return result
     else:
         for root, dirs, files in os.walk(path):
-            for fileName in files:
-                if searchType == "file" and name in fileName:
-                    result.append(os.path.join(root, fileName))
-                elif searchType == "directory" and name in dirs:
-                    result.append(os.path.join(root, fileName))
+            if searchType == "file":
+                for fileName in files:
+                    if name in fileName:
+                        result.append(os.path.join(root, fileName))
+            else:
+                for dir in dirs:
+                    if name in dir:
+                        result.append(os.path.join(root, dir))
         return result
 
 def searchTextInFile(path, text, exclude):

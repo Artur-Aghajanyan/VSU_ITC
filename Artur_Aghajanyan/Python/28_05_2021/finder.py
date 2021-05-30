@@ -62,7 +62,7 @@ if includes != None and excludes != None:
 
 # find file with given name
 print("\n***************")
-print("Find file With Name\n")
+print('Find %ss With Name\n' %(fileOrDirectory))
 fileOrDirectoryNameList = finder(fileOrDirectory, fileOrDirectoryName[1], path[1], excludes)
 if len(fileOrDirectoryNameList) == 0:
     print("   *There is not File like that")
@@ -96,60 +96,25 @@ if search != None:
 searchList = list(searchList)
 
 #concat all results
-finalResult = searchList + includeList + fileOrDirectoryNameList
-
-counter = 0
-for i in range(len(finalResult)):
-    counter = 0
-    for j in range(i+1, len(finalResult)):
-        if finalResult[i] == finalResult[j]:
-            counter += 1;
-    if counter >= 3:
-        break
+temp = list(set(fileOrDirectoryNameList) & set(includeList))
+finalResult = list(set(temp) & set(searchList))
 
 print("\n\n\n---------------")
 print("Final Result")
 print("***************")
+
 if includes == None and search == None:
-    for i in range(len(fileOrDirectoryNameList)):
-        print("   ", i+1, ")", fileOrDirectoryNameList[i])
-else:
-    if counter == 0:
+    if len(fileOrDirectoryNameList) == 0:
         print("   *There is not File like that")
     else:
-        if includes == None or search == None:
-            counter = 1
-            index = 0
-            value = ""
-            for i in range(len(finalResult)):
-                counter = 1
-                for j in range(len(finalResult)):
-                    if finalResult[i] == finalResult[j]:
-                        #print(finalResult[j], "inqna")
-                        #print(counter)
-                        counter += 1;
-                if counter > 2 and value != finalResult[i]:
-                    value = finalResult[i]
-                    index += 1
-                    print("   ", index, ")", finalResult[i])
-            exit()
-
-
-
-        counter = 1
-        index = 0
-        value = ""
+        for i in range(len(fileOrDirectoryNameList)):
+            print("   ", i+1, ")", fileOrDirectoryNameList[i])
+else:
+    if len(finalResult) == 0:
+        print("   *There is not File like that")
+    else:
         for i in range(len(finalResult)):
-            counter = 1
-            for j in range(len(finalResult)):
-                if finalResult[i] == finalResult[j]:
-                    #print(finalResult[j], "inqna")
-                    #print(counter)
-                    counter += 1;
-            if counter > 3 and value != finalResult[i]:
-                value = finalResult[i]
-                index += 1
-                print("   ", index, ")", finalResult[i])
+            print("   ", i + 1, ")", finalResult[i])
 
 
 
