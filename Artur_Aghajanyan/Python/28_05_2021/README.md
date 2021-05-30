@@ -1,8 +1,8 @@
 # Search File
 
 ## How to install this program
-  -git clone https://github.com/Artur-Aghajanyan/VSU_ITC.git
-  -python finder.py <paramters...>
+  * git clone https://github.com/Artur-Aghajanyan/VSU_ITC.git
+  * python finder.py <paramters...>
 
 ## How to use this program
    ### Parametrs
