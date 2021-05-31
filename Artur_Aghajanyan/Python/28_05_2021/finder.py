@@ -93,11 +93,15 @@ if search != None:
             print("   ", i+1, ")", searchList[i])
 
 
-searchList = list(searchList)
-
+finalResult = []
 #concat all results
-temp = list(set(fileOrDirectoryNameList) & set(includeList))
-finalResult = list(set(temp) & set(searchList))
+if include != None and search != None:
+    temp = list(set(fileOrDirectoryNameList) & set(includeList))    
+    finalResult = list(set(temp) & set(searchList))
+elif include != None and search == None:
+    finalResult = list(set(fileOrDirectoryNameList) & set(includeList))    
+elif include == None and search != None:
+    finalResult = list(set(fileOrDirectoryNameList) & set(search)) 
 
 print("\n\n\n---------------")
 print("Final Result")
