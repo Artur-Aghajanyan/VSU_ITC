@@ -1,85 +1,87 @@
-import re
-
-
-def key_count(index):
-    count1 = 0
-    count2 = 0
-    for i in arr[index]:
-        if i.isalpha():
-            count1 += 1 
-    for j in arr[index+1]:
-        if j.isalpha():
-            count2 += 1
-    if count1 > count2:
-        arr[index], arr[index+1] = arr[index+1], arr[index]
-        return True
+def let_sort(index, word_index):
+    word1 = arr[index].split()[word_index]
+    word2 = arr[index + 1].split()[word_index]
+    for i in range(len(word1)):
+        if arr[index].split()[word_index][i].isalpha():
+            if i == 1 and len(word1) > len(word2):
+                swap(index)
+                return True
+            if arr[index].split()[word_index][i] > arr[index+1].split()[word_index][i]:
+                swap(index)
+                return True
+            if arr[index].split()[word_index][i] < arr[index+1].split()[word_index][i]:
+                return True
     return False
 
 
-def num_rows(index, i):
-    x1 = re.findall(r'\d+', arr[index].split()[i])
-    x2 = re.findall(r'\d+', arr[index+1].split()[i])
-    if x1 > x2:
-        arr[index], arr[index + 1] = arr[index + 1], arr[index]
-        return True
-    elif x1 < x2:
-        return True
-    return False
-
-
-def key_len(index, i):
-    if len(arr[index].split()[i]) > len(arr[index+1].split()[i]):
-        arr[index], arr[index + 1] = arr[index + 1], arr[index]
-        return True
-    elif len(arr[index].split()[i]) == len(arr[index+1].split()[i]):
-        return True
+def num_sort(index, word_index):
+    word1 = arr[index].split()[word_index]
+    word2 = arr[index+1].split()[word_index]
+    for i in range(len(word1)):
+        if arr[index].split()[word_index][i].isnumeric():
+            if i == 1 and len(word1) > len(word2):
+                swap(index)
+                return True
+            if arr[index].split()[word_index][i] > arr[index+1].split()[word_index][i]:
+                swap(index)
+                return True
+            if arr[index].split()[word_index][i] < arr[index+1].split()[word_index][i]:
+                return True
     return False
 
 
 def is_num(index):
-    for i in range(0, 3):
-        if arr[index].split()[i].isnumeric():
-            return True
-    return False
+    for i in range(1, 3):
+        if arr[index].split()[i].isnumeric() is False:
+            return False
+    return True
+
+
+def is_let(index):
+    for i in range(1, 3):
+        if arr[index].split()[i].isalpha() is False:
+            return False
+    return True
 
 
 def check():
-    for j in range(0, len(arr)-1):
-        for i in range(0, len(arr)-1):
+    for j in range(0, len(arr)):
+        for i in range(0, len(arr) - 1):
             if is_num(i):
                 if is_num(i+1):
-                    if num_rows(i, 1):
-                        continue
-                    else:
-                        if key_count(i):
-                            continue
-                        else:
-                            for h in range(0, 3):
-                                if key_len(i, h):
-                                    break
+                    if num_sort(i, 0) is False:
+                        if let_sort(i, 0) is False:
+                            if num_sort(i, 1) is False:
+                                num_sort(i, 2)
                 else:
-                    arr[i], arr[i + 1] = arr[i + 1], arr[i]
-                continue
-            elif is_num(i) is False and is_num(i+1):
-                continue
+                    swap(i)
             else:
-                if key_count(i):
-                    continue
-                else:
-                    for h in range(0, 3):
-                        if key_len(i, h):
-                            break
-    print(arr)
+                if is_num(i+1) is False:
+                    if let_sort(i, 0) is False:
+                        if num_sort(i, 0) is False:
+                            if let_sort(i, 1) is False:
+                                let_sort(i, 2)
+    for i in arr:
+        print(i)
+
+
+def swap(index):
+    arr[index], arr[index + 1] = arr[index + 1], arr[index]
 
 
 arr = []
+print("Keys examples: w32 34 5634, w12 asdfaf da")
+print("For sorting write sort")
 while True:
-    arr.append(input("Input text - "))
-    if arr[-1] == "exit":
+    arr.append(input("Input keys - "))
+    if arr[-1] == "sort":
         arr.pop()
         break
-    if len(arr[-1].split()) != 3 or arr[-1].split()[0].isalpha() is True or arr[-1].split()[0].isnumeric() is True or arr[-1][0].isalpha() is not True:
-        print("Error")
+    if len(arr[-1].split()) != 3 or len(arr[-1].split()[0]) != 3 or arr[-1].split()[0][0].isalpha() is False or \
+            arr[-1].split()[0][1:2].isnumeric() is False or (is_num(-1) is False and is_let(-1) is False):
+        print("Invalid keys!")
         arr.pop()
+        continue
+print('\n')
 check()
 
