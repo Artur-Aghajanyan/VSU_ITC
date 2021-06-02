@@ -1,0 +1,276 @@
+body {
+    margin: 0;
+
+    font-size: 1rem;
+    line-height: 1.55;
+    font-weight: 400;
+    text-align: left;
+    background: #f5f7fd;
+    font-style: normal;
+    color: #17161a;
+
+    box-sizing: border-box;
+
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+/* HEADER */
+.header{
+	width: 100%;
+    min-height: 120px !important;
+    position: static;
+    /*height: 15%;*/
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    margin: 0;	
+	display: block;
+	/*position: absolute;*/
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index:1000;
+
+}
+
+.header.fixed{
+	padding: 10px 0;
+	background-color: #eb8b8d;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+		
+	position: fixed;
+	top:0;
+	right: 0;
+		
+		
+	transform:translate3d(0,0,0);
+}
+
+.header_logo {
+    height: 3.3rem;
+    border: none;
+}
+
+.header_content {
+    display: flex;
+	justify-content: space-between;
+	align-items:center;
+
+    padding-top: 2%;
+}
+.head {
+    display: inline-block;
+}
+
+.head_num {
+    margin-bottom: 0;
+    padding: 0 !important;
+    line-height: 10px;
+    font-size: .6em;
+    text-align: right;
+}
+
+.head_text {
+    margin-top: 0;
+    padding: 0 !important;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+/* NAV */
+.nav {
+    width: 55%;
+}
+
+.nav_link {
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #341d74;
+    text-decoration: none;
+
+    margin-right: 5%;
+
+    transition: color .1s linear;
+}
+
+/* ABOUT */
+.section2{
+
+    display: block ; 
+    width: 100%;
+
+    /*min-height: 500px;*/
+    font-weight: 400;
+    position: relative;
+
+    word-wrap: break-word;
+
+
+    color: #17161a !important;
+    background-image: url(https://mobirise.com/extensions/conferencem4/festival_of_colors/assets/images/festival-of-colors-1920x1280.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    height: 780px;
+    word-wrap: break-word;
+
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 720px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.play {
+    padding-top: 5%;
+}
+
+#play {
+    font-weight: 700;
+}
+
+.fest_of_colors {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 720px;
+    width: 100%;
+    margin-top: 9%;
+    justify-content: space-between;
+}
+.left {
+    width: 70%;
+    border-top: 3px solid black;
+    display: block;
+}
+
+.hap_event {
+    font-weight: 500 !important;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
+.fest_color {
+    line-height: 1;
+    font-size: 4.0625rem;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+}
+
+.right {
+    width: 25%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 5%;
+}
+
+.r_text {
+    font-weight: 600 ;
+}
+
+.about1 {
+    display: flex;
+    position: relative;
+}
+
+.about_inner {
+    max-width: 50%;
+    position: absolute;
+    width: 90%;
+    background-color: rgba(52, 29, 116, 0.95);
+    padding: 40px 40px 70px;
+    top: 0;
+    margin-top: 12%;
+    margin-bottom: 0;
+    color: #ffffff !important;
+    font-weight: 400 !important;
+}
+
+.about_h3 {
+    font-weight: 400 !important;
+    margin-bottom: 0;
+}
+
+.about_p {
+    line-height: 25px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/* Section 3 */
+.section3 {
+    display: block ; 
+    width: 100%;
+    font-weight: 400;
+
+    overflow: hidden !important;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-image: url(https://mobirise.com/extensions/conferencem4/festival_of_colors/assets/images/festival-of-colors10-1200x800.jpg);
+
+    position: relative;
+
+    color: #17161a !important;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.s3_all {
+    background-color: rgb(255, 255, 255, 0.6);
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.s3_text {
+    padding-bottom: 40px;
+
+    text-align: center;
+}
+
+.s3_text_h2 {
+    color: #341d74;
+    font-size: 3.1875rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+
+    margin-bottom: 30px;
+}
+
+.s3_text_p {
+    color: #655495;
+    margin-bottom: 0;
+}
