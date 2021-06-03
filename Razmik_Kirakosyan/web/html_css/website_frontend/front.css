@@ -1,0 +1,18 @@
+.header {
+ background-color:white;
+ height:150px;
+ padding:1.5% 4% 0 2%;
+}
+
+.toolbar {
+ margin-top:-15px;
+ margin-left:-10px;
+ position: absolute;
+ 
+}
+
+.sat {
+ left: 100px;
+
+}
+
