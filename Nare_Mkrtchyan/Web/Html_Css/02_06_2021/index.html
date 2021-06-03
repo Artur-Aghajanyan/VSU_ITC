@@ -9,13 +9,12 @@
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <script src='main.js'></script>
 </head>
-
 <body>
     <!-- Header -->
     <header>
-        <div class="header">
+        <div class="header" id="myHeader">
             <div class="header_content">
-                <button class="header_logo" type="button"><img src="Pics/logo-festivale-120x120.png"
+                <button class="header_logo" type="button"><img src="https://mobirise.com/extensions/conferencem4/festival_of_colors/assets/images/logo-festivale-120x120.png"
                         class="header_logo"></button>
                 <nav class="nav">
                     <a class="nav_link" href="https://mobirise.com/extensions/conferencem4/">
@@ -68,28 +67,30 @@
     <section>
         <div class="section2">
             <div class="about">
-                <div>
-                    <p class="play"><button class="play_btn" type="button"></button><span id="play">Play Promo</span>
-                    </p>
-                </div>
+                <div class="about_and_play">
+                    <div class="about_play">
+                        <p class="play"><button class="play_btn" type="button"></button><span id="play">Play
+                                Promo</span>
+                        </p>
+                    </div>
 
-                <div class="fest_of_colors">
-                    <div>
-                        <div class="left">
-                            <h3 class="hap_event">World's Happiest Event</h3>
-                            <h1 class="fest_color">Festival of Colors</h1>
-                        </div>
-                        <div class="right">
-                            <p class="r_text">Saturday Sep 12th, 2020 Gate opens at 11am</p>
+                    <div class="fest_of_colors">
+                        <div>
+                            <div class="left">
+                                <h3 class="hap_event">World's Happiest Event</h3>
+                                <h1 class="fest_color">Festival of Colors</h1>
+                            </div>
+                            <div class="right">
+                                <p class="r_text">Saturday Sep 12th, 2020 Gate opens at 11am</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="about1">
                     <div class="about_inner">
                         <h3 class="about_h3">ABOUT</h3>
                         <p class="about_p">
-                            The Festival of Colors is a vibrant festival full of music, 
+                            The Festival of Colors is a vibrant festival full of music,
                             dancing and throwing organic color powders to foster love and friendship.
                         </p>
                     </div>
@@ -103,13 +104,29 @@
             <div class="s3_text_image">
                 <div class="s3_text">
                     <h2 class="s3_text_h2">As it was before</h2>
-                    <p class="s3_text_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quia sequi omnis error,
-                        porro obcaecati aut temporibus voluptates. Qui, rem!</p>
+                    <p class="s3_text_p">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quia sequi omnis
+                        error, <br>porro obcaecati <strong>aut temporibus voluptates</strong>. Qui, rem!
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+        </script>
 </body>
 
 </html>

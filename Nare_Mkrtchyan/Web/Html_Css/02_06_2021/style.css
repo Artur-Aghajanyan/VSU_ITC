@@ -23,37 +23,25 @@ body {
 }
 /* HEADER */
 .header{
-	width: 100%;
-    min-height: 120px !important;
-    position: static;
-    /*height: 15%;*/
+
 	padding-right: 15px;
     padding-left: 15px;
+    padding-bottom: 20px;
     margin-right: auto;
     margin-left: auto;
+    background: #f5f7fd;
+	
 
-    margin: 0;	
-	display: block;
-	/*position: absolute;*/
-	top: 0;
-	left: 0;
-	right: 0;
 	z-index:1000;
 
 }
 
-.header.fixed{
-	padding: 10px 0;
-	background-color: #eb8b8d;
-	box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-		
-	position: fixed;
-	top:0;
-	right: 0;
-		
-		
-	transform:translate3d(0,0,0);
-}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
 
 .header_logo {
     height: 3.3rem;
@@ -105,11 +93,8 @@ body {
 
 /* ABOUT */
 .section2{
-
     display: block ; 
     width: 100%;
-
-    /*min-height: 500px;*/
     font-weight: 400;
     position: relative;
 
@@ -118,49 +103,77 @@ body {
 
     color: #17161a !important;
     background-image: url(https://mobirise.com/extensions/conferencem4/festival_of_colors/assets/images/festival-of-colors-1920x1280.jpg);
-    background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
+
 .about {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-
-    justify-content: flex-start;
+    justify-content: space-between;
     height: 780px;
-    word-wrap: break-word;
 
     position: relative;
+    word-wrap: break-word;
+    max-width: 1140px;
+    width: 100%;
+
+    padding-right: 15px;
+    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 720px;
+
+}
+
+.about_and_play {
+    display: flex;
+    justify-content: flex-start !important;
+    flex-wrap: wrap;
+
+    padding-top: 80px;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.about_play {
+    flex: 0 0 50%;
+    max-width: 50%;
     width: 100%;
+    position: relative;
+
     padding-right: 15px;
     padding-left: 15px;
 }
 
-.play {
-    padding-top: 5%;
+.play_btn {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
 }
-
 #play {
     font-weight: 700;
 }
 
 .fest_of_colors {
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 720px;
+    flex: 0 0 50%;
+    max-width: 50%;
     width: 100%;
-    margin-top: 9%;
-    justify-content: space-between;
+    position: relative;
+
+    padding-right: 15px;
+    padding-left: 15px;
+
 }
 .left {
     width: 70%;
-    border-top: 3px solid black;
+    border-top: 2px solid black;
     display: block;
 }
 
@@ -184,11 +197,7 @@ body {
     right: 0;
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.5);
-
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 2%;
-    padding-right: 5%;
+    padding: 20px;
 }
 
 .r_text {
@@ -197,7 +206,10 @@ body {
 
 .about1 {
     display: flex;
-    position: relative;
+    flex-wrap: wrap;
+    position: static;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
 .about_inner {
@@ -206,8 +218,7 @@ body {
     width: 90%;
     background-color: rgba(52, 29, 116, 0.95);
     padding: 40px 40px 70px;
-    top: 0;
-    margin-top: 12%;
+    bottom: 0;
     margin-bottom: 0;
     color: #ffffff !important;
     font-weight: 400 !important;
@@ -230,21 +241,23 @@ body {
     width: 100%;
     font-weight: 400;
 
-    overflow: hidden !important;
+    /*overflow: hidden !important;*/
     padding-top: 5rem;
     padding-bottom: 5rem;
     background-image: url(https://mobirise.com/extensions/conferencem4/festival_of_colors/assets/images/festival-of-colors10-1200x800.jpg);
 
     position: relative;
+    min-height: 500px;
 
+    background-color: #eeeeee;
     color: #17161a !important;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .s3_all {
-    background-color: rgb(255, 255, 255, 0.6);
-    
+    background-color: rgba(255, 255, 255, 0.6);
+
     position: absolute;
     bottom: 0;
     left: 0;
@@ -252,6 +265,17 @@ body {
     top: 0;
     z-index: 0;
     pointer-events: none;
+}
+
+.s3_text_image {
+    position: relative;
+    word-wrap: break-word;
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .s3_text {
