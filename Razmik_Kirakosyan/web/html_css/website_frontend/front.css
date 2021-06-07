@@ -19,7 +19,7 @@
       width: 50px;
       height: 50px;
 	  margin-left:25px;
-	 /* margin-top:40px;*/
+	 
   }
  
 .header-menu{
@@ -29,7 +29,7 @@
 .header-menu>ul{
 	display: flex;
     margin-right:30px;
-  /*	margin-bottom:40px;*/
+  
 	 
  }
 
@@ -87,8 +87,7 @@
 	margin-right:75px;
     margin-top:85px;
 	height:1200px;
-	border: 3px solid yellow;
-	overflow:auto;
+    overflow:auto;
 	width:100%;
 }
 
