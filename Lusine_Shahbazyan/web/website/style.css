@@ -1,0 +1,479 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Be Vietnam', sans-serif;
+}
+header {
+    position: fixed; 
+}
+
+.menu {
+    position: fixed; 
+    background: rgb(244, 250, 249);
+    width: 100%;
+    height: 125px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    right: 0;
+    left: 0;
+    top: 0;
+    
+}
+
+dl {
+    display: flex;
+}
+
+#logo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+.nav_link {
+    text-decoration: none;
+    padding: 40px;
+    flex-wrap: wrap;
+    font-size: bold 15px;
+}
+
+.head p:nth-child(1){
+    float: right;
+    margin: 0 !important;
+}
+.head_num {
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.head_text {
+    font-size: 17px;
+    font-weight: bold;
+}
+.section1 {
+    position: relative;
+    margin-top: 125px;
+    height: 800px;
+    width: 100%;
+    background-image: url("./festival-of-colors-1920x1280.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 0;
+    left: 0;
+}
+
+.section2 {
+    position: relative;
+    margin-top: 0;
+    height: 700px;
+    width: 100%;
+    background-image: url("./festival-of-colors10-1200x800.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+.section3 {
+    right: 0;
+    left: 0;
+    position: relative;
+    margin-top: 0;
+    height: 580px;
+    width: 100%;
+    background: rgb(244, 250, 249);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.section4 {
+    right: 0;
+    left: 0;
+    position: relative;
+    margin-top: 0;
+    height: 700px;
+    width: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://goo.gl/maps/9yX5j9k8T6KeHCfM6");
+}
+.playbutton {
+    position: relative;
+    background-color: black;
+    border-radius: 50%;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.playbutton:before {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 8px 0 8px 15px;
+    border-color:  transparent transparent transparent rgb(0255, 255, 255);
+    position: absolute;
+    top: 37%;
+    left: 40%;
+   
+}
+
+.play {
+    display: flex;
+}
+.div1 {
+    position: absolute;
+    margin-top: 100px;
+    left: 190px;
+    width: 35%;
+    height: 80px;
+    
+}
+.div2 {
+    position: absolute;
+    margin-top: 100px;
+    background-color: #ffffff;
+    right: 150px;
+    width: 10%;
+    height: 180px;
+    opacity: 0.4;
+    color: black;
+}
+
+.div3 {
+    position: absolute;
+    left: 200px;
+    width: 35%;
+    height: 220px;
+    margin-top: 580px;
+    background-color: rgb(50, 7, 90);
+    color: white;
+
+}
+
+.div4 {
+    border-top: 2px solid black;
+    position: absolute;
+    margin-top: 100px;
+    right: 330px;
+    width: 25%;
+    height: 250px;
+    
+}
+.div5 {
+    position: absolute;
+    padding-top: 80px;
+    height: 200px;
+    width: 40%;
+    left: 30%;
+}
+.div6 {
+    position: absolute;
+    padding-top: 280px;
+    width: 100%;
+    height: 300px;
+    align-items: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.pre1 {
+    padding-top: 30px;
+    color: solid bold black;
+    line-height: 170%;
+}
+.title {
+    color: black;
+    font-weight: bold;
+    font-size: 17px;
+    padding-top: 30px;
+}
+.title1 {
+    
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: #331d72;
+    line-height: 170%;
+}
+.text1 {
+    padding-top: 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #331d72  !important;
+    line-height: 70%;
+}
+.text2 {
+    padding-top: 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #331d72  !important;
+    line-height: 40%;
+}
+.titlefestival {
+    line-height: 10%;
+    color: black;
+    font-weight: bold;
+    font-size: 60px;
+    padding-top: 60px;
+    
+}
+.promo {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.pictur1 {
+    border-radius: 3%;
+    width: 100%;
+    height: 100%;
+}
+.pictur2 {
+    border-radius: 3%;
+    width: 100%;
+    height: 100%;
+}
+.pictur3 {
+    border-radius: 3%;
+    width: 100%;
+    height: 100%;
+}
+.pic1 {
+    padding-left: 35px;
+    width: 30%;
+    height: 300px;
+    
+}
+.pic2 {
+    padding-left: 35px;
+    width: 30%;
+    height: 300px;
+    
+}
+.pic3 {
+    
+    padding-left: 35px;
+    width: 30%;
+    height: 300px;
+}
+.buyticket {
+    position: relative;
+    padding-top: 100px;
+    padding-left: 200px;
+    height: 200px;
+    width: 75%;
+    display: inline-flex;
+    flex-wrap: wrap;
+
+}
+.buyticket1 {
+    position: absolute;
+    height: 200px;
+    width: 50%;
+    padding-left: 0;
+
+}
+.buyticket2 {
+    position: absolute;
+    height: 200px;
+    width: 20%;
+    left: 800px;
+
+}
+.buyticket3 {
+    position: absolute;
+    height: 200px;
+    width: 25%;
+    left: 1100px;
+}
+.tickettext {
+    font-size: 50px;
+    color: #331d72  !important;
+    font-weight: bold;
+}
+.ticket-txt {
+    padding-top: 20px;
+    font-size: 17px;
+    color: #50456e  
+}
+.price {
+    font-size: 60px;
+    color: #331d72 ;
+    font-weight: bold;
+}
+.dollar {
+    font-size: 35px;
+    color: #331d72 ;
+    font-weight: bold;
+    top: 3px;
+    vertical-align: top;
+}
+.onsite {
+    font-size: 17px;
+    color: #564780 ;
+    padding-top: 10px;
+}
+.BUY-TIC {
+    top: 5px;
+    height: 50px;
+    width: 200px;
+    background-color: black;
+    border-radius: 5%;
+    text-decoration: none;
+}
+.BUY-TIC-TEXT {
+    padding-top: 14px;
+    color:white;
+    font-weight: bold;
+    font-size: 17px;
+    padding-left: 10px;
+    text-decoration: none;
+}
+.block{
+    padding-left: 20px;
+    padding-right: 20px;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+.head1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(52, 29, 116, 0.1);
+    padding-bottom: 15px;
+}
+.item1 {
+    font-weight: 700 !important;
+    color: #341d74;
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 1.5625rem;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+}
+.item2 {
+    font-weight: 500 !important;
+    line-height: 1.65;
+    border-radius: 4px;
+    padding: 0 10px;
+    background: #d90a2c;
+    max-height: 30px;
+    color: #ffffff;
+}
+.bot {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+}
+.border-radius {
+    margin-right: 25px;
+    border: 1px solid rgba(52, 29, 116, 0.3);
+    border-radius: 50%;
+    max-width: 60px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.iconfont {
+    display: inline-block;
+    font-family: FontAwesome !important;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.bot-text {
+    color: #655495;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+.bot-content {
+    margin: 10px 0;
+    width: 100%;
+}
+.div-block {
+    display: flex;
+    width: 80%;
+    margin-left: 130px;
+    margin-top: 80px;
+}
+.map {
+    position: relative;
+    height: 740px;
+    width:100%;
+    margin:0;
+}
+.map-text {
+    position: absolute;
+    z-index: 10;
+    right: 10%;
+    top: 150px;
+    width: 37%;
+    padding: 50px 20px 50px 50px;
+
+    background-color: rgba(52, 29, 116, 0.89);
+    color: white;
+}
+.addr {
+    font-weight: 700;
+    font-size: 1.5625rem;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.work-address {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.work-phone {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.section4 {
+    display: flex;
+    margin: 80px 0;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+.leftdiv {
+    flex: 0 0 42%;
+    max-width: 30%;
+}
+.rightdiv {
+    flex: 0 0 58%;
+
+}
+.h3 {
+    opacity: 0.8;
+    margin-bottom: 15px;
+    color: #655495;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+.h2 {
+    color: #341d74;
+    font-size: 2.4375rem;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+}
+.questions {
+    font-weight: 700;
+    font-size: 20px;
+    font-weight: bold;
+    color: #341d74;
+    position: relative;
+}
+
