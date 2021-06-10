@@ -1,0 +1,14 @@
+{
+  "investments":[
+    { id: 1, amount: 340},
+    { id: 2, amount: 356},
+    { id: 3, amount: 657},
+    { id: 4, amount: 2434},
+    { id: 5, amount: 824},
+    { id: 6, amount: 567},
+    { id: 7, amount: 123},
+    { id: 8, amount: 678},
+    { id: 9, amount: 576},
+    { id: 10, amount: 236},
+  ]
+}
