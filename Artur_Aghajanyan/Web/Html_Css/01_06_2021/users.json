@@ -9,6 +9,6 @@
     { "id": 4, "name": "Van", "age": 24, "height": 170 },
     { "id": 6, "name": "Zina", "age": 20, "height": 154 },
     { "id": 8, "name": "Anna", "age": 21, "height": 160 },
-    { "id": 9, "name": "Lusine", "age": 39, "height": 164 },
-  ],
+    { "id": 9, "name": "Lusine", "age": 39, "height": 164 }
+  ]
 }
