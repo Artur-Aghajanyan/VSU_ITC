@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+#table1 {
+    background-color: ghostwhite;
+    position: fixed;
+    top: 0;
+    padding: 30px;
+    width: 100%;
+}
+
+#image1 {
+    width: 55px;
+    height: 55px;
+}
+
+#tr1 {
+    height: 1%;
+}
+
+#td1 {
+    width: 50%;
+}
+
+.td2 {
+    width: 6.8%;
+}
+
+
+.bzz {
+    margin-top: 0px;
+}
+
+.bzzz {
+    font-size: 0.68em;
+    margin-bottom: 0px;
+}
+
+#table2 {
+    margin: 0;
+    background-image: url('https://mobirise.com/extensions/conferencem4/festival_of_colors/assets/images/festival-of-colors-1920x1280.jpg');
+    background-repeat: no-repeat;
+    background-size: 1350px 900px;
+    padding-top: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 86%;
+    width: 100%;
+}
+
+#tr2 {
+    height: 50%;
+}
+
+#bzik {
+    border: 1px solid black;
+    width: 100%;
+}
+
+#td3 {
+    text-align: left;
+    vertical-align: top;
+    width: 51%;
+}
+
+#td4 {
+    padding-top: 0px;
+    margin-top: 0px;
+    vertical-align: top;
+    
+    width: 31%;
+}
+
+a {
+    text-decoration:none;
+}
+
+#color {
+    color: #4D4646;
+}
+
+#size {
+    font-size: 400%;
+    font-weight: bolder;
+}
+
+#promoid {
+    font-size: 25%;
+    font-weight: bolder;
+}
+
+#td5 {
+    valign: top;
+    padding-top: 0px;
+    margin-top: 0px;
+    vertical-align: top;
+}
+
+#frame1 {
+    align-self: center !important;
+    padding-right: 20px !important;
+    margin-right: 60px !important;
+    background:rgba(255,255,255, 0.5);
+}
