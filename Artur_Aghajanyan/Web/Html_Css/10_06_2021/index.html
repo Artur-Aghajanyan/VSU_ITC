@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let urls = [
+      'https://raw.githubusercontent.com/Artur-Aghajanyan/VSU_ITC/html_css/Artur_Aghajanyan/Web/Html_Css/01_06_2021/investments.json',
+      'https://raw.githubusercontent.com/Artur-Aghajanyan/VSU_ITC/html_css/Artur_Aghajanyan/Web/Html_Css/01_06_2021/users.json',
+  ];
+  Promise.all(urls.map(url => fetch(url)
+      .then(response => response.json())
+      .then(responseBody => responseBody)))
+      .then(titles => {
+          const investments = titles[0].investments;
+          const users = titles[1].users;
+          let newInvestments = investments.filter(item => item.amount > 600).map(item =>  ({
+                  id: item.id,
+                  amount: item.amount,
+                  name: users.find(usr => usr.id === item.id).name
+              }
+          ))
+          console.log("Homework 1: ")
+          console.log(newInvestments)
+      })
+</script>
+</body>
+</html>
