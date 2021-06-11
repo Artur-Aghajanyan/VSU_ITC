@@ -4,7 +4,6 @@ Promise.all([url1.then(res => res.json()), url2.then(res => res.json())])
     .then(data => {
         const investments = data[0].investments;
         const users = data[1].users;
-        console.log(investments)
 
         /*list of names whose investments is over 600 */
         let ids = investments.filter(item => item.amount > 600).map(item => item.id);
@@ -25,6 +24,9 @@ Promise.all([url1.then(res => res.json()), url2.then(res => res.json())])
 
         console.log(newlist);
     })
+    .catch((err) => {
+        console.log(err);
+      });
 
 
 
