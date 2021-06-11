@@ -1,12 +1,9 @@
 Promise.all([fetch("https://raw.githubusercontent.com/Artur-Aghajanyan/VSU_ITC/html_css/Artur_Aghajanyan/Web/Html_Css/01_06_2021/investments.json"), fetch("https://raw.githubusercontent.com/Artur-Aghajanyan/VSU_ITC/html_css/Artur_Aghajanyan/Web/Html_Css/01_06_2021/users.json")])
-    .then(response => response.map(data => data.json()))
-    .then(async(data) => {
-        return[await data[0], await data[1]]
-    })
+    .then(response => Promise.all(response.map(data => data.json())))
     .then(arrays => {
         const investments = arrays[0].investments
         const users = arrays[1].users
-        
+
         const data = []
         investments.filter(value => value.amount > 600).map(value => value.id).forEach(value => data.push(users.find(val => val.id == value)))
 
