@@ -1,7 +1,7 @@
 Promise.all([fetch("https://raw.githubusercontent.com/Artur-Aghajanyan/VSU_ITC/html_css/Artur_Aghajanyan/Web/Html_Css/01_06_2021/investments.json"), fetch("https://raw.githubusercontent.com/Artur-Aghajanyan/VSU_ITC/html_css/Artur_Aghajanyan/Web/Html_Css/01_06_2021/users.json")])
     .then(response => response.map(data => data.json()))
-    .then(async(data) => {
-        return[await data[0], await data[1]]
+    .then(data => {
+        return[data[0], data[1]]
     })
     .then(arrays => {
         const investments = arrays[0].investments
