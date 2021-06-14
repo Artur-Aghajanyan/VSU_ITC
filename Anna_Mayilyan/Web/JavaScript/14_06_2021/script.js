@@ -5,8 +5,6 @@ f3 = _ => _ => _ => "user"
 
 var count = 0;
 var array = [f3, f1, f2];
-for(i =0; i < array.length; i++)
-{
  function sortFunc(a){
        if(typeof a =="function")
        {
@@ -15,7 +13,6 @@ for(i =0; i < array.length; i++)
         sortFunc(a);
         return count;
        }
-}
 }
 var myMap = new Map()
 for(i = 0; i < array.length; i++)
