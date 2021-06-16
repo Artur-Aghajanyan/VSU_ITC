@@ -1,4 +1,4 @@
-# Page Redirection
+# User class inheritance
   * Content
   * How to run
   * Classes
