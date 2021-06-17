@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script defer src="script.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #pagination {
+            width: 500px;
+            height: 400px;
+            margin: 0 auto;
+            background-color: #428cd5;
+            padding: 40px;
+        }
+
+        #data_container{
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        #data_container>ul>li{
+            background: #EEE;
+            margin-bottom: 3px;
+            padding: 8px;
+            line-height: 1em;
+            list-style: none;
+        }
+
+        #pages{
+            width: 40%;
+            margin-top: 20px;
+        }
+
+
+        .pages_ul{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .pages_ul>li ,.pages_items{
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            background-color: #c4c4c4;
+            border: 1px solid #ffffff;
+            border-right: none;
+            cursor: pointer;
+            list-style: none;
+            transition: 0.2s;
+        }
+
+        .pages_ul>li:hover, .pages_items:hover{
+            background-color: grey;
+            transition: 0.2s;
+        }
+
+        .active{
+            background-color: #428cd5 !important;
+            transition: 0.4s !important;
+        }
+
+        .pages_all_ul{
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="pagination">
+        <div id="data_container">
+            <ul class="data_ul">
+
+            </ul>
+        </div>
+
+        <div id="pages">
+            <ul class="pages_all_ul">
+                <li class="pages_items prev_page"><</li>
+                <ul class="pages_ul" id="pages_ul"></ul>
+                <li class="pages_items next_page">></li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
