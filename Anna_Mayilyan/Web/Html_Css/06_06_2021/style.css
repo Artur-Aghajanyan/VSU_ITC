@@ -1,0 +1,622 @@
+body {
+    
+    background: #f5f7fd;
+    font-style: normal;
+    color: #17161a;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1.55;
+    font-weight: 400;
+    text-align: left;
+}
+
+
+.container {
+    position: static;
+    min-height: 120px;
+    background: #f5f7fd;
+ 
+}
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    
+}
+.header__inner {
+    justify-content: space-between;
+    padding-left: 30px ;
+    padding-right: 30px ;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+
+}
+.head_text {
+    margin-top: 0;
+    padding: 0 !important;
+    font-weight: 500;
+    line-height: 20px;
+}
+.num {
+    margin-bottom: 0;
+    padding: 0 ss;
+    line-height: 10px;
+    font-size: .7em;
+    text-align: right;
+}
+.nav {
+    font-size: 20px;
+    justify-content: space-between;
+    
+   
+}
+.cid-rRCAwhHFKb button.navbar-toggler .hamburger span {
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 2px;
+    border-right: 5px;
+    background-color: #191f23;
+}
+button.navbar-toggler .hamburger span:nth-child(1) {
+    top: 0;
+    transition: all .2s;
+}
+
+.nav__link {
+    font-style: normal;
+    font-family: 'Be Vietnam', sans-serif;
+    font-weight: 500;
+       font-size: 1rem;
+    line-height: 1.;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    
+    color: #341d74;
+    
+    text-decoration: none;
+
+    transition: color .1s linear;
+}
+.nav__link:hover {
+    color: #df6925;
+}
+
+.picture {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.navbar-logo{
+    height: 3.6rem 
+    
+}
+.navbar-ul{
+    display: flex;
+    -ms-flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;}
+
+    
+.section-two{
+    display: block ; 
+    font-weight: 400;
+    color: #17161a !important;
+    background-image: url(https://mobirise.com/extensions/conferencem4/festival_of_colors/assets/images/festival-of-colors-1920x1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.info_about {
+    
+    position: relative;
+    word-wrap: break-word;
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 780px;
+}
+
+.info-play-about-part {    
+    padding-top: 80px;
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+    justify-content: flex-start !important;
+    flex-wrap: wrap;
+
+}
+.play-info {
+    flex: 0 0 50%;
+    max-width: 50%;
+    width: 100%;
+    position: relative;
+
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.play_promo {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 30px;
+}
+
+.colors-festival {
+    flex: 0 0 50%;
+    max-width: 50%;
+    width: 100%;
+    position: relative;
+
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+.event {
+    width: 60%;
+    border-top: 2px solid black;
+ 
+}
+
+.worlds-happiest_event {
+    font-weight: 500;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
+
+
+.date {
+    width: 25%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+}
+
+.date-text {
+    font-weight: 600 ;
+}
+
+.left-side-about {
+    display: flex;
+    flex-wrap: wrap;
+    position: static;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.content-about {
+    max-width: 50%;
+    position: absolute;
+    width: 90%;
+    background-color: rgba(52, 29, 116, 0.95);
+    padding: 40px 40px 70px;
+    bottom: 0;
+    margin-bottom: 0;
+    color: #ffffff !important;
+    font-weight: 400 !important;
+}
+
+.head-about {
+    font-weight: 400 !important;
+    margin-bottom: 0;
+}
+
+.text-part-about {
+    line-height: 25px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.section-three {
+    display: block ; 
+    width: 100%;
+    font-weight: 400;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-image: url(https://mobirise.com/extensions/conferencem4/festival_of_colors/assets/images/festival-of-colors10-1200x800.jpg);
+
+    position: relative;
+    min-height: 500px;
+
+    background-color: #eeeeee;
+    color: #17161a !important;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.before-text-and-images {
+    background-color: rgba(255, 255, 255, 0.6);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.before_image {
+    position: relative;
+    word-wrap: break-word;
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.text-part-before {
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.as-it-was-before-head {
+    color: #341d74;
+    font-size: 3.1875rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.before-text {
+    color: #655495;
+    margin-bottom: 0;
+}
+
+.images {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    left:10%;
+    right: 5%;
+    height:275px;
+    max-height: 275px;
+    max-width: 85%;
+    margin-right: 0;
+}
+.images > img {
+    border-radius: 5px;
+    width:49%;
+    height:100%;
+}
+
+
+.section-four {
+    color: #341d74;
+    position: relative;
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ticket-buy {
+    display: flex;
+    justify-content: space-between;
+
+}
+.ticket-buy1 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.ticket-buy3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.ticket-buy2 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.ticket-buy1-1 , .ticket-buy2-1 {
+
+    font-size: 3.1875rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+.ticket-buy2-1 {
+    margin-bottom: 0;
+    margin-top: 40px;
+    font-size: 4.0625rem;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    
+}
+.ticket-buy1-2, .ticket-buy2-2 {
+    line-height: 1.55;
+    color: #655495;
+    opacity: 0.8;
+}
+
+
+.ticket-buy3 > button{
+    background-color: #17161a;
+    border-color: #17161a;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    line-height: 20px;
+    vertical-align: middle;
+    letter-spacing: 0;
+    width: 200px;
+    padding: 10px;
+    margin-top: 65px;
+}
+
+
+
+.bag-of-point{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.bag1 {
+    flex: 0 0 30%;
+}
+.bag2 {
+    flex: 0 0 30%;
+}
+.bag3 {
+    flex: 0 0 30%;
+}
+.text-first {
+    border-bottom: 1px solid rgba(52, 29, 116, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-first-1 {
+    flex: 0 0 50%;
+    color: #341d74;
+    font-size: 1.5625rem;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+}
+
+.text-first-2 {
+    flex: 0 0 5%;
+    text-align: right;
+    padding: 0 10px;
+    background: #d90a2c;
+    max-height: 30px;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+.after {
+    color: #655495;
+    font-weight: 600;
+    opacity: 0.8;
+}
+.fas.fa-star {
+    color: rgb(243, 136, 129);
+    border: 1px solid rgba(52, 29, 116, 0.3);
+    border-radius: 50%;
+    padding: 12px;
+    margin-right: 18px;
+}
+.fab.fa-angellist {
+    color: rgb(243, 136, 129);
+    border: 1px solid rgba(52, 29, 116, 0.3);
+    border-radius: 50%;
+    padding: 12px;
+    margin-right: 18px;
+    fill: rgb(243, 136, 129); 
+}
+.fas.fa-heart {
+    color: rgb(243, 136, 129);
+    border: 1px solid rgba(52, 29, 116, 0.3);
+    border-radius: 50%;
+    padding: 12px;
+    margin-right: 18px;
+    fill: rgb(243, 136, 129); 
+}
+.map {
+    position: relative;
+    height: 740px;
+    width:100%;
+    margin:0;
+}
+.text_m {
+    position: absolute;
+    z-index: 10;
+    right: 10%;
+    top: 150px;
+    width: 37%;
+    padding: 50px 20px 50px 50px;
+
+    background-color: rgba(52, 29, 116, 0.89);
+    color: white;
+}
+.address {
+    font-weight: 700;
+    font-size: 1.5625rem;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.adress1 {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.phone-number {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cid-rRHGcuHwym {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #f5f7fd;
+}
+.card {
+    background-color: transparent;
+    border: none;
+}
+.cid-rRHGcuHwym .card .card-header {
+    border-radius: 0px;
+    border: 0px;
+    padding: 0;
+    background-color: transparent;
+}
+
+.col-lg-4{
+    -ms-flex:0 0 33.333333%;
+    
+    max-width:33.333333%
+}
+
+.col-md-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}
+
+.mbr-section-title{font-style:normal;margin-bottom:30px}
+display-4{margin-bottom:0;word-break:break-word;word-wrap:break-word}
+
+
+.cid-rRHGcuHwym .sign {
+    font-family: 'FontAwesome' !important;
+    padding: 20px 20px 20px 0;
+    font-weight: 300;
+    transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+}
+.cid-rRHGcuHwym .mbri-arrow-down:before {
+    content: "\f067";
+}
+
+.display-4 {
+    font-family: 'Be Vietnam', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.accordion > input[type="checkbox"] {
+    position: absolute;
+    left: -100vw;
+  }
+  
+  .accordion .content {
+    overflow-y: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+  }
+  
+  .accordion > input[type="checkbox"]:checked ~ .content {
+    height: auto;
+    overflow: visible;
+  }
+  
+  .accordion label {
+    display: block;
+  }
+  
+  .accordion {
+    margin-bottom: 1em;
+  }
+  
+  .accordion > input[type="checkbox"]:checked ~ .content {
+    padding: 15px;
+
+    border-top: 0;
+  }
+  
+  .accordion .handle {
+    margin: 0;
+    font-size: 1.125em;
+    line-height: 1.2em;
+  }
+  
+  .accordion label {
+    
+    cursor: pointer;
+    font-weight: normal;
+    padding: 15px;
+    
+  } 
+  .accordion .handle label:before {
+    font-family: 'fontawesome';
+    content: "\f054";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: .58em;
+    line-height: 1.556em;
+    vertical-align: middle;
+  }
+  
+  .accordion > input[type="checkbox"]:checked ~ .handle label:before {
+    content: "\f078";
+  }
+ 
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }  
+  a {
+    color: #06c;
+  }
+  
+  h1 {
+    margin: 0 0 1.5em;
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+  
+  .accordion {
+    max-width: 65em;
+   float: right;
+   display: inline-block;
+vertical-align: middle;
+margin-left: 50%;
+  }
+  
