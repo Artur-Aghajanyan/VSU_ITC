@@ -1,0 +1,53 @@
+h1 {
+     text-align: center;
+     margin-bottom: 40px;
+     margin-top: 40px;
+ }
+ /* pagination position styling */
+.all {
+    display: flex;
+    flex-direction: column;
+}
+.pics {
+    flex: 90%;
+}
+.img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.img > li {
+    flex: 0 0 30%;
+    margin-bottom: 50px;
+}
+.pagination_section {
+    flex: 10%;
+}
+/* pagination styling */
+.pagination {
+    text-align: center;
+}
+.pagination_section a {
+    color: black;
+    padding: 10px 18px;
+    text-decoration: none;
+}
+/* pagination hover effect on non-active */
+.pagination_section a:hover:not(.active) {
+    background-color: #031F3B;
+    color: white;
+}
+/* pagination hover effect on active*/
+.pagination_section > a:nth-child(2) {
+    background-color: green;
+    color: white;
+}
+a:nth-child(1) {
+    font-weight: bold;
+}
+a:nth-child(7) {
+    font-weight: bold;
+}
