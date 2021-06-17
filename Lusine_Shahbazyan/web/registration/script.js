@@ -6,6 +6,22 @@ class User
         this.password = passwd;
         this.age = age;
     }
+
+    writeComments()
+    {
+        if(this.role == "guests")
+            console.log("I am guest.");
+        else 
+            console.log("I am admin");
+    }
+
+    replyComments()
+    {
+        if(this.role == "guests")
+            console.log("Guests have no permission to reply.");
+        else 
+            console.log("Admin can reply to comments.");
+    }
 }
 
 class Guests extends User
@@ -16,10 +32,6 @@ class Guests extends User
         super(uname, passwd, age, firstname, lastname);
         this.firstname = firstname;
         this.lastname = lastname;
-    }
-    writeComments()
-    {
-        console.log("You can write comments.")
     }
 }
 
@@ -32,9 +44,10 @@ class Admin extends User
         this.firstname = firstname;
         this.lastname = lastname;
     }
-    answerComments()
+
+    writeArticles()
     {
-        console.log("You can  answer in comments.")
+        console.log("I am admin and i can write articles.")
     }
 }
 
@@ -62,6 +75,22 @@ function registration(array, obj)
     }
     console.log("Registration completed successfully")
     return true;
+}
+
+function authentication(array)
+{
+    let uname = prompt('Enter your username');
+    let passwd = prompt('Enter your password');
+    for(let i = 0; i < array.length; ++i)
+    {
+        if(array[i].username == uname && array[i].password == passwd)
+        {
+            console.log("Authentication was successful");
+            return;
+        }
+    }
+    console.log("There is no user with this password and username");
+    return;
 }
 
 let users = [];
@@ -92,3 +121,11 @@ console.log(user2);
 console.log(user3);
 console.log(user4);
 console.log(users);
+
+user1.writeComments();
+user3.writeComments();
+user1.replyComments();
+user3.replyComments();
+user1.writeArticles();
+
+authentication(users);
