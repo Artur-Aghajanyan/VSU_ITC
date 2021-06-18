@@ -35,7 +35,7 @@ class Pagination {
           if (lists[j].innerHTML === lists[i].innerHTML) {
             lists[j].classList.add('active');
             this.#pageNo = $event.target.innerText;
-            this.#display(this.#pageNo);
+            this.display(this.#pageNo);
           }
           if ((lists[j].innerHTML !== lists[i].innerHTML)
               && lists[j].classList.contains('active')) {
@@ -84,7 +84,7 @@ class Pagination {
     return pageArr;
   }
 
-  #display(pageNo) {
+  display(pageNo) {
     let previous = document.getElementById('previous');
     let next = document.getElementById('next');
 
@@ -124,13 +124,13 @@ class Pagination {
 
   prevPage() {
     if (this.#pageNo > 1) {
-      this.#display(this.#pageNo - 1);
+      this.display(this.#pageNo - 1);
     }
   }
 
   nextPage() {
     if (this.#pageNo < this.#numOfPages) {
-      this.#display(+(this.#pageNo) + 1);
+      this.display(+(this.#pageNo) + 1);
     }
   }
 }
@@ -143,6 +143,8 @@ fetch('https://jsonplaceholder.typicode.com/photos?_start=1&_limit=100').
           addEventListener('click', () => pagination.nextPage());
       document.getElementById('previous').
           addEventListener('click', () => pagination.prevPage());
+      
+      pagination.display(1)
     });
 
 function createCard(src, title) {
@@ -208,16 +210,3 @@ function createCard(src, title) {
   let row = document.getElementById('row');
   row.append(div1);
 }
-
-window.onload = () => {
-  createCard('https://via.placeholder.com/600/810b14', 'some Title');
-  createCard('https://via.placeholder.com/600/771796', 'some Title');
-  createCard('https://via.placeholder.com/600/810b14', 'some Title');
-  createCard('https://via.placeholder.com/600/771796', 'some Title');
-  createCard('https://via.placeholder.com/600/810b14', 'some Title');
-  createCard('https://via.placeholder.com/600/771796', 'some Title');
-  createCard('https://via.placeholder.com/600/810b14', 'some Title');
-  createCard('https://via.placeholder.com/600/771796', 'some Title');
-  createCard('https://via.placeholder.com/600/810b14', 'some Title');
-};
-
