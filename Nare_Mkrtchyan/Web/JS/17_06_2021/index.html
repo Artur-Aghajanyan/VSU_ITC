@@ -20,6 +20,7 @@
           <option value="15">15</option>
         </select>
     </form>
+
     <div class="first_last">
         <a href = "#" id = "first">first page</a>
         <a href = "#" id = "last">last page</a>
@@ -27,7 +28,7 @@
 
     <div class="all">
         <div class = "pics">
-            <ul class="img">
+            <ul class="img" id = "ul">
                 <li>
                     <img src = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIQEhAQEhAQEBAQDxAQDw8VEA8QEA8PFRUWFhUSFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OFQ8PGCsfHR4tLS0rKystLS0tLSstLS0tLSstKystLTUrLS0rNy0tKysrLSsrLS03Nzc3LS0tKystK//AABEIAMIBAwMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAACAwABBAUGB//EADoQAAIBAgIHBQcEAAYDAAAAAAABAgMRIWEEBRIxQVFxEyJSgZEGMmKhscHwFELR4SNDgqLx8jNTkv/EABkBAQEBAQEBAAAAAAAAAAAAAAABAgMEBf/EACIRAQEAAgICAgMBAQAAAAAAAAABAhEDEiExIkETMlFCFP/aAAwDAQACEQMRAD8A8ikGgUwj4z64WWRloihQxgJDGhRIhNC4IayKOBbKgWyAUHFgBxQFMhU2WmBGCggLgXIsGRIlFkRTZEBGCWygLsUEgZFRaBD4C7gE2U0SRQAsCYcgJFQtBJglmk2shSIRdjQUQUw4kFMiLkQiqQy2ApBpgFFBMGATIDgFYGATIBDTAYUWAEyyTKAtgthASKLZECWgIy0BcO4FSBLkwbgFcm8lwUygk8AEEA2EHIplMjYAgTLTAkyxKpBWBRbZoVcgDbINB6CQIUTIuSIgmVYjQQkCEgCiGwYBMguATBgEyAWi4lMkQLYITZVOLk1FJyk3aMUm229yS4ssEBkMnBxbjJOMlg4tOMk+TTxQuQFMlyi7FAhgBABJg3JJlIBjBRdgEyoZcC5YCANsFssFhFC5MIWzUQZUmWUwAbLJYhRp2GMjTZp7INQOHd16M3ZMnZM2JBqBnvV6uf2DCjo7N/ZhqmTvV6xgjo7D/Ts29mEqZO9OsYoaMw3ozNli8SdqvWMUNBlJqKV3JpJZm3TvZ2tQW1JKUX++D2orJ8i0md3VGtn7k8b4Y7pdczpx5S+KzlP48jLRWP1ZOej1IVYWcoPc90ovCUXyur4nq9ZajjNbdHB79jcm+S5M87UpuLaaaa3p70XLvhfKTrXr9d6rp6fShWg0qjjeFS29eGdt+N1k0/PwGk6BOnJwktmUXZr7rmsz2PsjrDZb0eT7s8aeU+MfPf1WZ09c6qVZeGpG+xPLwvL6fJ97PyY9sfblPjdV81dBg9kzsaRRcJOEo7MouzT4CWebtft26xzOxZHTfI6NkRpF7p1cmUHyB2XyOpKKFygi9zqwoBbzc6SFuiXsnVnYtM1ukL7E1tOtLTAY/shcqZZU1ShY+UBfZmpU1VpgsuxQTQSF2KKaddVGEpsBRGRR5bp6FphbTLUS9kgpTYxNgxwGKNyKraYW0y+yZOxZBFJlpsKNIbGACsS1cdsl2JsdXU+tGu7L/t/Z1tN0CnpEbvfbuzXvL+TyLOxqnWbT2ZY/f+z1cXLL8cnLLD7jnadq6pQabva94VFuusV0Z7HVmm/qKUZ4bce7UXxLe1k7388i1szW5Si1inin1MmhaD2FXbpv/Dn3alJ8McJR6fRs74YdL8fVc8su3i+w651VHSI8I1YruS5/DLLf09TxVehKDcZJxlF2afBn0mrGzyaujla51Wq6urKpFd2XCXwyyz4E5uLfmGGevFeF2AZRNVaDi3GUdlxdmmrNMUzxO7PZg2ZpsU0XYz7LKsPcQXAuxnk2LuzS4AOmzUqENsFsf2bBlTNbRmkxbkaZQFumalSkOYDkPdMHsy7gTdkHbJC7iO1sxDjGJksXE8unVtsi1FGRQfMbFWJpWiNJDoUUZNuwyNQzobezRNgyqqF23Umg90glSMyrMONRjQ0dmV2QCqFuoBboguJfaguuB1dV6ycXsyv/AD/Z6CE1JJp3TPFdvmjpar1o4u0mrPPeevh5v85OWeG/T09ygKdRSV07phHscNOdrjVirLaSXaJYPxLwv+Tys6FrpqzWDXFM92czW+ru0vOK763rxr+Tz83Fv5R0wz14ryjpA9katnICo7YnjdmVRxKkh6kmDJoDLKmwdk1YAbKKMzQuSNc4pCJWNbQiURbgaJWAaXM1KM+wVYe7AysXaE2INsQuxr7aPhIqsfCAohJZHF10aqq4oLto+EUmWnkTwaNjWj4Rirx8JnXQKxF0f20fCFCtHkzOEkQ00KrHkwnWSEKmdbV2pZVbSacIc7d59F9yyb9JbJ7YqdRN2Sbb3JJts6uiakqTxlams8Zeh29D0KlQVoqMXxk2tp9WaP1VNf5kP/pHWccnt58uW39Y59HUFFe8pTebsvRGuGh0IbqVJZuEW/Vpsa61OX+ZHykjLpGqo1N036mvE9Oe7fbV2lNcYL0X2Aqzoywl2b6qLPOad7MVMXCbeV3/ACeb0/Qa1L34ytzxYamMv29rWqqg9qM4uD3xvuOlRqqSundHyWdR836s7Ps97ROi1CbvB4KT4ZPLM74Z/Tdw3H0QgnR66mlKLuvoMud9uOtOLr7VzadWmsVjUgv3LxLP86+ZlWufQLnm9e6qUW60F3XjOK/a3+7oebm4v9R2wy+q4CqEbXMN0ylA80rroF8xUr80PdMW4l2aKu+aBTtvYbgLlAbNKlJc0LkXsAuNixNAYMuoTKfQ1DQMeZC75EKadBQIo5EVsxsUjg6FpPkGl1CuFtEAKDCUHzCU2RTyIJCDyHwpN+FJb5PBLqwNqNrv03N/0JrVXLjgty4LoWTaXJvjpsKTvCCqTX75+6n8MfuxOka4rz3zlbksF8jFiS7/ABnTWnO+VyrN7231uDtlbWTKckXwG3zDp15R3TkvO30EKwWygjp6PrvSIbqreUu8dCn7TOStVoxmua3+jPN2XNl2zCajt6Tq7Q9Kxpz7Gb4Sslf6HmdcahraPjKG1DxxxRru0bNF1nVp4J3jxhLvRfkzUy0eY5ns97Ry0dqE3enwfhyeR9G0PS41YqUWmrc7ng9N0HR9JxUf09V8VjSk81wMWg6fpGrZqNRPsm8Gu9G3OL4rI9GHJtLJk+ogtXVt64oxas1lDSIqUGndG07e3PVjy2uNWuk7xV6ct3wvk/sc1QfI9tVpqScWrpqzR5XWGgSpStduL9x4YrPM8XNxdbuO+Ge/FYnFg7D5DXGXN+gEk+dzg6Ezh1FOI+U3+IU5Z/IBUoMW4Gnz+TBkXYyuJUomjZAt0+ZqVGZpljmvy5C7o2JLgVdGdaWn7oSm2c9VTbhJZMCmxqlmRVeTIp5MamTtFzQCKsrvEWlm/U022sGmuXNCJ07O13c6Y1ipbP5F45MFJ816Mjv+MrK7vky9opSf4i9sCYZFqC/LkuvyxMAKcEVsZhOOZGnzCBs+ZMciYku+QFpvkMVd2cJJTg98JK8X/DFbWT9CtooTo8Z6LPtdHcpU73nQbvKOcXxPc6k1xDSYKUX3uK3O/HDg8jxqnnYBNwl2tJqNT9yvaNTryeZ2w5P6ln0+jsRpejqpFxfk+T5nO1HrqOkRs+7UWEovB35M6rPR4yjnZY8pXobEnF4NZ4Nc0JdNflzta8s9nniuCw/5OPLA+byYdctPRjluFSpipUsvmaJWzFO34zLWyHSAdDNmhyFyZYhE6NuLAdJ82Px5gs0jP2b5lht/lyF3QfZRW63oirIYprn8hbe/f8zG213SA28vqX6+gcI5MClRbxb8h0INbiQTXB/MZFPw2JaaSd7Ozx57zh6Xqyup9pCptS5PDytuZ6BU3yQVnxSLjyXH0lxlcjR6smu/GVKXFSXd6qW5j8ep06dOS8Po/sDPRk98Y9dm3zWJbyS30nVztojqJK7aS5vBeprraApKylKF/DJt/wC5M4um+xiqtt6VVbx/8jU7eWFjpheO/tlpjKZT1Nh0n2g0eGG3ty5QTl893zMMvaiN8KTtnUs/oDP2Eq/trUpZNTiZqvsnpUP2KS+F3PVjOD6rhby/x1tF17SlhJypvPvR9VuOpF3SaaaeKaeDPEVdWVoe9SqL/Sy9E06pRfdbXOLxi+qJlwY39as5LP2j213y+he0crV+vqdS0Z2pzzfdfR/ZnWUzz5Y3HxXWZS+lbZW0HdAtLIyJtEK2URxzKI7pqUXsTjulwa5Sy+h6jUeu1WThPu1YYNP8xWZ5OpNRTbkklxZxtM1neSlTunFNba3tcuh24rWbZ9vda1quU3bclZYrfxMTi+XzucXUutZzezJJ5neaW/8Ag83LuZXbrjrXgpprghcrv/g0OaXFi51Vyb8v7Mbqk7Lz8019iuzeYcp9AG+v55F8hU11BdO6528t4x1OnoBtrqPJovsVyIXfJkL5NHXXMB1M7huPK3oEorIy0XCqhsaizIorINUr8UvICKp1QxTXIpU3zXyCSfNeiILjJ8gnfPzbZdnzxCUmv3N/MgDtF4fR4FpvivmU3tcbeiDjNLB+T4EEg8tw+6t7tr5IVxvtYBJxXP1aAkHJcvqG2744vo726hxmuf8AtBa378txkF3vDL0i/qjFpGr6dX36MJW4uGJqS33eCyafqi1ZWsm873LMrPSWPP6Z7JaNP3VOm/heHo7i6Hs/XoYU9IjUh/66qat0ktx6luL4Y9MfqSNnwT6o7Tnzk1vbH45704X6Spxpu/wyjJeVnd+gqpDZ3px6pr6no5KNsF5Ky+wEdnwfMz+VerzrjyZydZa8hSvFNVJ8k8F1Z7CvotKWEqcGnzinfzOVpPs9obv/AIEU8nKP3OvHyYb+UrGWOX08HX1jOq7yl0ity6IuFQ9bP2Z0bhGUf9bf1AfsxSW6b88T1f8ATx/Tl+LP7K9m6N+9dep6SV+f1MuhaJCkrKzNMZJXt9TxcmfbLb0YzULk0C0hrq5AOSyMqX2azKnEuVRC3XKAkly+QD6MY6/QXOon+MoGy+IgDa5kKH4ZlqPUSqmbDjPNmWjoq/FhK3NmdVc2OjJc2QOis/VBxeYmNXNh7fJ3IH3zfWwVr8fkZ1K/Fh7aS3slU1LOPoFGl8SFXXBsNTzICrQ3Wd+iB2ZbtryIp/F8hna2tx8i7RNl+IOUfifS5UaqfXoNT5yXoZoGnBcXP7FbNnhO4Sa8SL2uTQFqC5vyYPcfi+oFWb4tMOLw9+18ggdhLi/oScVzflclR85J+QpTzwCrdJb7N9Smo7rDNpc2Jni/ew6FCq1FcFIV2VuDHyj8Ytz4O5YLhTRcoJftJtLgBKSzKAkl4SrIGVlzAvmaQx25IVN/CSUwZTXICkwX0QE7ZoBs0DfkQXt5ELpBxQwhDNaDxDZCEDIFyKIShtPcWQhFCnvG0yiEoKqXo5CAOYNyyEKhcuBCEAPiW3gQhQLYDIQgl8SSZCFCkw4kIUVLiJuQhpFyEMhCxAIshCgZiJkIUAWQhpH/2Q==" alt = "Yello flower">
                 </li>
@@ -110,19 +111,14 @@
                 <li>
                     <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt2Wo_fOHFdpgKBanwGRcDQP2DlUGLR247iA&usqp=CAU" alt = "">
                 </li>
-<!--    
-                <li>
-                    <img src = "" alt = "">
-                </li>
-            -->
             </ul>
         </div>
     
-    <div class="pagination">
-        <div class="pagination_section" id ="page">
+        <div class="pagination">
+            <div class="pagination_section" id ="page">
 
+            </div>
         </div>
     </div>
-</div>
 </body>
 </html>

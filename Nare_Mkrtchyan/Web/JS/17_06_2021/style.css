@@ -3,6 +3,9 @@ h1 {
      margin-bottom: 40px;
      margin-top: 40px;
  }
+ ul {
+    list-style-type: none;
+}
  /* pagination position styling */
 .all {
     display: flex;
@@ -45,9 +48,9 @@ h1 {
     background-color: green;
     color: white;
 }
-a:nth-child(1) {
+.pagination_section > a:nth-child(1) {
     font-weight: bold;
 }
-a:nth-child(7) {
+.pagination_section > a:last-child {
     font-weight: bold;
 }
