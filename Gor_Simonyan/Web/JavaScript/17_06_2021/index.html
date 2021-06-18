@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <script defer src="./index.js"></script>
+</head>
+<body>
+    <div id="form">
+        <label for="values">Input Array</label>
+        <input id="values">
+        <br>
+        <label for="size">Arrays size</label>
+        <input id="size"> 
+        <br>
+        <button id="button" onclick="page1.click()">Ok</button> 
+    </div>
+    <div id="general">
+        <div id="top">
+
+        </div>
+        
+        <div id="bottom">
+            <span id="first" onclick="page1.firstPage()">First</span>
+            <span id="prev" onclick="page1.prevPage()">Prev</span>
+            <span id="next" onclick="page1.nextPage()">Next</span>
+            <span id="last" onclick="page1.lastPage()">Last</span>
+        </div>
+    </div> 
+</body>
+</html>
