@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script defer src="script.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #pagination {
+            width: 500px;
+            height: 400px;
+            margin: 0 auto;
+            background-color:#1675d7;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0px 0px 71px 22px rgba(34, 60, 80, 0.2);
+        }
+
+        #data_container{
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        #data_container>ul>li{
+            background: #EEE;
+            border-radius: 10px;
+            margin-bottom: 3px;
+            color: #1675d7;
+            font-weight: bold;
+            padding: 8px;
+            line-height: 1em;
+            list-style: none;
+        }
+
+        #pages{
+            width: 40%;
+            margin-top: 20px;
+        }
+
+
+        .pages_ul{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .pages_ul>li ,.pages_items{
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, .27);
+            border: 1px solid rgba(226, 226, 226, 0.27);
+            border-right: none;
+            cursor: pointer;
+            list-style: none;
+            transition: 0.2s;
+        }
+
+        .pages_ul>li:hover, .pages_items:hover{
+            background-color: rgba(104, 104, 104, 0.27);;
+            transition: 0.2s;
+        }
+
+        .active{
+            background-color: rgba(104, 104, 104, 0.27) !important;
+            transition: 0.4s !important;
+        }
+
+        .pages_all_ul{
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="pagination">
+        <div id="data_container">
+            <ul class="data_ul">
+
+            </ul>
+        </div>
+
+        <div id="pages">
+            <ul class="pages_all_ul">
+                <li class="pages_items prev_page"><</li>
+                <ul class="pages_ul" id="pages_ul"></ul>
+                <li class="pages_items next_page">></li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
