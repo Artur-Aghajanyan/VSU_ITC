@@ -16,6 +16,14 @@ class Pagination{
     click(){
         this.array = document.getElementById("values").value.split(",")
         this.pageSize = parseInt(document.getElementById("size").value)
+        console.log()
+        if(isNaN(this.pageSize)){
+            alert("Error, wrong page size!")
+            return
+        }
+        if(this.pageSize > this.array.length){
+            this.pageSize = this.array.length
+        }
         
         for(let i = 0; i < Math.ceil(this.array.length / this.pageSize); i++){
             this.newarray[i] = this.array.slice(i * this.pageSize, i * this.pageSize + this.pageSize)
@@ -35,11 +43,14 @@ class Pagination{
             const span = document.createElement("span")
             span.id = i
             span.innerHTML = i
-            span.onclick = this.goToPage
+            span.onclick = (event) => {
+                this.index = event.target.innerText - 1
+                this.page(this.index)
+            }
             this.bottom.insertBefore(span, next)
         }
 
-        //this.check()
+        this.check()
 
     }
 
@@ -48,16 +59,24 @@ class Pagination{
             case 0:
                 this.first.style.display = "none"
                 this.prev.style.display = "none"
-                break
-            case Math.ceil(this.array.length / this.pageSize):
                 this.last.style.display = "none"
                 this.next.style.display = "none"
+                if(Math.ceil(this.array.length / this.pageSize) - 1 != 0){
+                    this.last.style.display = "inline"
+                    this.next.style.display = "inline"
+                }
+                break
+            case Math.ceil(this.array.length / this.pageSize) -1:
+                this.last.style.display = "none"
+                this.next.style.display = "none"
+                this.first.style.display = "inline"
+                this.prev.style.display = "inline"
                 break
             default:
-                this.first.style.display = "flex"
-                this.prev.style.display = "flex"
-                this.last.style.display = "flex"
-                this.next.style.display = "flex"
+                this.first.style.display = "inline"
+                this.prev.style.display = "inline"
+                this.last.style.display = "inline"
+                this.next.style.display = "inline"
         }
     }
 
@@ -70,7 +89,7 @@ class Pagination{
             }
             p.innerHTML = this.newarray[index][i-1]
         }
-        //this.check()
+        this.check()
     }
 
     nextPage(){
@@ -91,11 +110,6 @@ class Pagination{
     lastPage(){
         this.index = this.newarray.length - 1
         this.page(this.index)
-    }
-
-    goToPage(){
-        this.index = 1;
-        page1.page(this.index)
     }
 }
 
