@@ -14,22 +14,38 @@ class Pagination {
         this.next_page = document.querySelector('.next_page');
         this.prev_page = document.querySelector('.prev_page');
 
+        this.prev_page.style.background = 'rgb(220,93,93)';
+        this.next_page.style.background = 'rgb(58, 209, 161)';
+
         this.next_page.addEventListener('click', () => {
-            this.nextPage();
-            let lis = document.getElementsByClassName("page");
-            this.corPage++;
-            lis[this.corPage].classList.add("active");
-            lis[this.corPage - 1].classList.remove("active");
+            if (this.corPage + 1 < this.pageSize) {
+                this.prev_page.style.background = 'rgb(58, 209, 161)';
+                this.nextPage();
+                let lis = document.getElementsByClassName("page");
+                this.corPage++;
+                lis[this.corPage].classList.add("active");
+                lis[this.corPage - 1].classList.remove("active");
+            }
+
+            if (this.corPage + 1 == this.pageSize) {
+                this.next_page.style.background = 'rgb(220,93,93)';
+            }
         });
 
         this.prev_page.addEventListener('click', () => {
-            let lis = document.getElementsByClassName("page");
-            this.corPage--;
-            lis[this.corPage].classList.add("active");
-            lis[this.corPage + 1].classList.remove("active");
-            this.prevPage();
+            if (this.corPage > 0) {
+                this.next_page.style.background = 'rgb(58, 209, 161)';
+                this.prev_page.style.background = 'rgb(58, 209, 161)';
+                let lis = document.getElementsByClassName("page");
+                this.corPage--;
+                lis[this.corPage].classList.add("active");
+                lis[this.corPage + 1].classList.remove("active");
+                this.prevPage();
+            }
+            if (this.corPage <= 0) {
+                this.prev_page.style.background = 'rgb(220,93,93)';
+            }
         });
-
         this.appendDataElements(this.items);
         this.appendPagesElements(this.pagesItems);
         this.printData(this.start, this.last);
@@ -47,6 +63,15 @@ class Pagination {
         for (let i = 0; i < this.pageSize; i++) {
             this.pagesItems[i] = document.createElement('li');
             this.pagesItems[i].addEventListener("click", (event) => {
+                console.log(this.pagesItems[i].innerHTML);
+                this.next_page.style.background = 'rgb(58,209,161)';
+                this.prev_page.style.background = 'rgb(58,209,161)';
+                if (this.pagesItems[i].innerHTML == this.pageSize) {
+                    this.next_page.style.background = 'red';
+
+                } else if (this.pagesItems[i].innerHTML == 1) {
+                    this.prev_page.style.background = 'red';
+                }
                 this.goToPage(event.target.innerText);
                 let lis = document.getElementsByClassName("page");
                 lis[this.corPage].classList.remove("active");
@@ -69,7 +94,6 @@ class Pagination {
     }
 
     printPages(start, finish) {
-
         for (let i = start; i < finish; i++) {
             this.pages_ul.append(this.pagesItems[i]);
         }
@@ -78,18 +102,12 @@ class Pagination {
     nextPage() {
         this.start = this.lastItems;
         this.lastItems = this.start + this.last;
-        if (this.lastItems > this.pageCount) {
-            throw new Error("There is no such page");
-        }
         this.printData(this.start, this.lastItems);
     }
 
     prevPage() {
         this.start = this.start - this.last;
         this.lastItems = this.lastItems - this.last;
-        if (this.start < 0) {
-            throw new Error("There is no such page");
-        }
         this.printData(this.start, this.lastItems);
     }
 
@@ -115,5 +133,5 @@ class Pagination {
     }
 }
 
-let pageObj = new Pagination(150, 10);
+let pageObj = new Pagination(100, 10);
 
