@@ -1,0 +1,8 @@
+button:focus {
+	   background-color: black;
+    color: goldenrod;
+}
+
+button {
+    background-color: goldenrod;
+}
