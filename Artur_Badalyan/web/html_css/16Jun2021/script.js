@@ -1,7 +1,15 @@
 registrArray = [];
 
-class CreateRole {
-    constructor(login, password, role) {
+class User  {
+    firstName = '';
+    lastName = '';
+    age = null;
+
+    constructor() {
+        this.currRole = 'guest';
+    }
+
+    registration(login, password, role) {
         registrArray.forEach(item => {
             if (item.login === login) {
                 throw("This login already created");
@@ -13,16 +21,6 @@ class CreateRole {
         } else {
             console.log("The role can't be ", role);
         }
-    }
-}
-
-class User{
-    firstName = '';
-    lastName = '';
-    age = null;
-
-    constructor() {
-        this.currRole = 'guest';
     }
 
     login(login, password) {
@@ -91,12 +89,12 @@ class Admin extends User {
     }
 }
 
-console.log("Registration (fail)");
-let guest1 = new CreateRole("Karen", "pass", "usrrrr");
-console.log("Registration");
-let guest2 = new CreateRole("Karen", "pass", "user");
 // Creating user object
 let user = new User();
+console.log("Registration (fail)");
+user.registration("Karen","pass","userrrr")
+console.log("Registration");
+user.registration("Karen","pass","user")
 console.log("User login (fail)");
 user.login("Karens", "asd");
 console.log("User login");
