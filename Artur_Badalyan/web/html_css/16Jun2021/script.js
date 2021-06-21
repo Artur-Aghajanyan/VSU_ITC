@@ -1,15 +1,5 @@
 registrArray = [];
 
-class Role {
-    firstName = '';
-    lastName = '';
-    age = null;
-
-    readContent() {
-        console.log("This is a content");
-    }
-}
-
 class CreateRole {
     constructor(login, password, role) {
         registrArray.forEach(item => {
@@ -26,9 +16,12 @@ class CreateRole {
     }
 }
 
-class User extends Role {
+class User{
+    firstName = '';
+    lastName = '';
+    age = null;
+
     constructor() {
-        super();
         this.currRole = 'guest';
     }
 
