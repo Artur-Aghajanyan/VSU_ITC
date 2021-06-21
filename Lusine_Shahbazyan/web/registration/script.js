@@ -56,13 +56,13 @@ function registration(array, obj)
     if(obj.age < 15)
     {
         console.log("Only people over 15 can register");
-        return false;
+        return;
     }
 
     if(array.length === 0)
     {
+        array.push(obj);
         console.log("Registration completed successfully")
-        return true;
     }
 
     for(let i = 0; i < array.length; ++i)
@@ -70,22 +70,22 @@ function registration(array, obj)
         if(obj.username == array[i].username || obj.password == array[i].password)
         {
             console.log("There is user with this password and username");
-            return false;
+            return;
         }
     }
     console.log("Registration completed successfully")
-    return true;
+    array.push(obj);
 }
 
-function authentication(array)
+function authentication(uname, passwd, array)
 {
-    let uname = prompt('Enter your username');
-    let passwd = prompt('Enter your password');
     for(let i = 0; i < array.length; ++i)
     {
         if(array[i].username == uname && array[i].password == passwd)
         {
             console.log("Authentication was successful");
+            let userData = array[i].firstname + " " + array[i].lastname + " " + array[i].age;
+            console.log(userData);
             return;
         }
     }
@@ -93,34 +93,25 @@ function authentication(array)
     return;
 }
 
-let users = [];
+let usersDataBase = [];
 
 let user1 = new Admin("uname1", "password1", 30, "Mary", "Makaryan");
-if(registration(users, user1))
-{
-    users.push(user1);
-}
+registration(usersDataBase, user1);
+
 let user2 = new Guests("uname2", "password2", 12, "Ani", "Andreasyan");
-if(registration(users, user2)) 
-{
-    users.push(user2);
-}
+registration(usersDataBase, user2);
+
 let user3 = new Guests("uname3", "password9", 19, "Aren", "Arayan");
-if(registration(users, user3)) 
-{
-    users.push(user3);
-}
+registration(usersDataBase, user3);
+
 let user4 = new Guests("uname3", "password3", 20, "Davit", "Adunc");
-if(registration(users, user4)) 
-{
-    users.push(user4);
-}
+registration(usersDataBase, user4);
 
 console.log(user1);
 console.log(user2);
 console.log(user3);
 console.log(user4);
-console.log(users);
+console.log(usersDataBase);
 
 user1.writeComments();
 user3.writeComments();
@@ -128,4 +119,4 @@ user1.replyComments();
 user3.replyComments();
 user1.writeArticles();
 
-authentication(users);
+authentication("uname3", "password9", usersDataBase);
