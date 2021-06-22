@@ -1,4 +1,4 @@
-class pagination
+class Pagination
 {
     firstIndex;
     lastIndex;
@@ -15,21 +15,62 @@ class pagination
             li1.classList.add("li1ID");
             li1.style.cursor = "pointer"
             li1.innerHTML = i + 1;
-            li1.addEventListener("click", (event) => {
-                let res= this.goToPage(event.target.innerText)
+            if(i == 0) li1.classList.add("active");
+            li1.addEventListener("click", (event) =>
+            {
+                let res= this.goToPage(event.target.innerText);
+                let lis = document.getElementsByClassName("li1ID")
+                for(let i = 0; i < lis.length; ++i)
+                {
+                    if(lis[i].classList.contains("active"))
+                    {
+                        lis[i].classList.remove("active")
+                        lis[event.target.innerText - 1].classList.add("active")
+                        break;
+                    }
+                }
                 this.printIntoHtml(res);
             })
             div.append(li1)
         }
-        document.getElementById("next").addEventListener("click", () => {
-            let res= this.nextPage()
-            this.printIntoHtml(res);
+
+        document.getElementById("prev").addEventListener("click", () => 
+        {
+            let res1= this.prevPage()
+            let lis = document.getElementsByClassName("li1ID")
+            for(let i = 0; i < lis.length; ++i)
+            {
+                if(lis[i].classList.contains("active"))
+                {
+                    if(i - 1 >= 0){
+                        this.printIntoHtml(res1);
+                        lis[i].classList.remove("active")
+                        lis[i - 1].classList.add("active")
+                    }
+                    break;
+                }
+            }
         })
-        document.getElementById("prev").addEventListener("click", () => {
-            let res= this.prevPage()
-            this.printIntoHtml(res);
+
+        document.getElementById("next").addEventListener("click", () => 
+        {
+            let res= this.nextPage()
+            let lis = document.getElementsByClassName("li1ID")
+            for(let i = 0; i < lis.length; ++i)
+            {
+                if(lis[i].classList.contains("active"))
+                {
+                    if(i + 1 < this.pageSize){
+                        this.printIntoHtml(res);
+                        lis[i].classList.remove("active")
+                        lis[i + 1].classList.add("active")
+                    }
+                    break;
+                }
+            }
         })
     }
+
     printIntoHtml(value)
     {
         let var1 = document.getElementById("items");
@@ -38,7 +79,7 @@ class pagination
         {
             let li2 = document.createElement("li");
             li2.classList.add("li2ID");
-            li2.style.backgroundColor = "#d672bd";
+            li2.style.backgroundColor = "#D672BD";
             li2.style.height = "1px"
             li2.style.display = "block"
             li2.style.border = "1px solid blue"
@@ -47,7 +88,8 @@ class pagination
             var1.appendChild(li2);
         }
     }
-    print(first, last)
+    
+    currentPage(first, last)
     {
         let array = [];
         for(let i = first; i < last; ++i)
@@ -61,36 +103,21 @@ class pagination
     {
         this.firstIndex = this.lastIndex;
         this.lastIndex += this.pageSize;
-        return this.print(this.firstIndex, this.lastIndex);
+        return this.currentPage(this.firstIndex, this.lastIndex);
     }
 
     prevPage()
     {
         this.firstIndex -= this.pageSize;
         this.lastIndex -= this.pageSize;
-        return this.print(this.firstIndex, this.lastIndex);
-    }
-
-    firstPage()
-    {
-        this.firstIndex = 0;
-        this.lastIndex = this.pageSize;
-        return this.print(this.firstIndex, this.lastIndex);
-    }
-
-    lastPage()
-    {
-        this.firstIndex = this.pageSize * (Math.ceil(this.arrayPage.length / this.pageSize) - 1);
-        this.lastIndex = this.arrayPage.length;
-        return this.print(this.firstIndex, this.lastIndex);
+        return this.currentPage(this.firstIndex, this.lastIndex);
     }
 
     goToPage(n)
     {
-        console.log("hhhhhhh")
         this.lastIndex = n * this.pageSize;
         this.firstIndex = this.lastIndex - this.pageSize;
-        return this.print(this.firstIndex, this.lastIndex);
+        return this.currentPage(this.firstIndex, this.lastIndex);
     }
 }
 
@@ -100,6 +127,6 @@ for(let i = 0; i < 100; ++i)
 {
     array[i] = i;
 }
-let arrayOfPages = new pagination(array, pageSize);
+let arrayOfPages = new Pagination(array, pageSize);
 arrayOfPages.printIntoHtml(arrayOfPages.goToPage(1))
 
