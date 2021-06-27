@@ -54,7 +54,7 @@ select project.id, worker.name, worker.surname
 from project inner join worker
 on project.id = 1 and project.id = worker.pid;
 
-select sum(time_format(timediff(CURRENT_TIMESTAMP(), worker.start_date ),'%H:%i:%s') - time_format(timediff(CURRENT_TIMESTAMP(), worker.start_date ),'%H:%i:%s')/7*2)
+select sum(time_format(timediff(CURRENT_TIMESTAMP(), worker.start_date ),'%H:%i:%s') - 24 * time_format(timediff(CURRENT_TIMESTAMP(), worker.start_date ),'%H:%i:%s') / 84 - 15 * (time_format(timediff(CURRENT_TIMESTAMP(), worker.start_date ),'%H:%i:%s') - 24 * time_format(timediff(CURRENT_TIMESTAMP(), worker.start_date ),'%H:%i:%s') / 84) / 24)
 from project inner join worker where project.id = 2 and project.id = worker.pid;
 
 select count(isActive) from project where project.isActive = 'yes';
