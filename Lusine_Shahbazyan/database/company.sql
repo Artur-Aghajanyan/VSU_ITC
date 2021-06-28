@@ -16,11 +16,16 @@ create Table Employees(
 
 create Table Projects(
     id int not null auto_increment primary key,
-    empl_id int not null,
     projectName varchar(20),
     projStatus boolean,
     startDate DATETIME,
-    foreign key(empl_id) references Employees(id)
+    endDate DATETIME
+);
+create Table Employee_project(
+    emp_id int, 
+    prj_id int,
+    foreign key (emp_id) references Employees(id),
+    foreign key (prj_id) references Projects(id)
 );
 
 insert into Categories(categName) values
@@ -34,32 +39,40 @@ insert into Employees(name, surname, categ_id) values
     ('Aren', 'Caturyan', 1),
     ('Marine', 'Davtyan', 2);
 
-insert into Projects(projectName, projStatus, startDate, empl_id) values
-    ('market', true, "2021-06-25 13:10:11", 1),
-    ('tourCompany', false, "2021-06-10 12:15:11", 3),
-    ('bookinist', true, "2021-06-12 15:05:11", 2),
-    ('onlineSchool', true, "2021-06-20 16:45:11", 1),
-    ('Market', true, "2021-06-25 13:10:11", 2),
-    ('tourCompany', false, "2021-06-10 12:15:11", 3),
-    ('bookinist', true, "2021-06-12 15:05:11", 4),
-    ('onlineSchool', true, "2021-06-01 16:45:11", 5),
-    ('fasebook', false, "2021-05-03 17:20:11", 5),
-    ('fasebook', false, "2021-05-03 17:20:11", 5);
+insert into Projects(projectName, projStatus, startDate, endDate) values
+    ('taxservice', true, "2021-06-25 13:10:11", CURRENT_TIMESTAMP()),
+    ('tourCompany', false, "2021-06-10 12:15:11", "2021-06-18 13:10:11"),
+    ('bookinist', false, "2021-06-12 15:05:11", "2021-06-16 13:10:11"),
+    ('onlineSchool', true, "2021-06-25 16:45:11", CURRENT_TIMESTAMP());
 
+insert into Employee_project(emp_id, prj_id) values
+    (1, 1),
+    (1, 4),
+    (2, 2),
+    (2, 3),
+    (2, 4),
+    (3, 3),
+    (3, 3),
+    (4, 1),
+    (4, 3),
+    (4, 4);
 
-/* Employees working on the project 'bookinist' */
-select Employees.name, Employees.surname, Projects.projectName
-    from Employees 
-    inner join  Projects  where Employees.id = Projects.empl_id and Projects.id = 3;
+/* Employees working on the project 'taxservice' */
+select Employee_project.prj_id, Projects.projectName, Employees.name, Employees.surname
+    from  Employee_project  
+    inner join  Projects on Projects.id = Employee_project.prj_id
+    inner join Employees on Employees.id = Employee_project.emp_id
+    where Projects.id = 1;
 
 /* The time spent on program */
-select timediff(CURRENT_TIMESTAMP(), Projects.startDate) 
-    as "Working time of Ani Andreasyan on program 'onlineSchool'"
+select timediff(Projects.endDate, Projects.startDate) 
+    as "Working time  on program 'onlineSchool'"
     from Projects where Projects.id = 4;
 
 /* Active projects */
 select * from Projects where Projects.projStatus = true;
 
+drop Table Employee_project;
 drop Table Projects;
 drop Table Employees;
 drop Table Categories;
