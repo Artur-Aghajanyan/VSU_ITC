@@ -1,2 +1,3 @@
 #pythone module confige file
 __pycache__
+**/node_modules
