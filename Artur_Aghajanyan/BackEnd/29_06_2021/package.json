@@ -1,0 +1,18 @@
+{
+  "name": "emitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint index.js"
+  },
+  "author": "Artur Aghajanyan",
+  "license": "ISC",
+  "dependencies": {
+    "find-in-files": "^0.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0"
+  }
+}
