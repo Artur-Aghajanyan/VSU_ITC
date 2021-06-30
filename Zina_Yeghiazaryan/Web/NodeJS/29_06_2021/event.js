@@ -2,14 +2,16 @@ var events = require('events');
 var eventEmitter = new events.EventEmitter();
 var fs = require('fs');
 
-var listner1 = function listner1() {
-    fs.readFile('a.txt', function (err, data) {
-        if (err) throw err;
-        if(data.includes('hello')){
-            console.log(data.toString('utf8'))
-        }
-    });
-}
+eventEmitter.on('find', () => {
+    console.log('succed');
+    return 0;
+});
 
-eventEmitter.addListener('find', listner1);
-eventEmitter.emit('find');
+fs.readFile('a.txt', function (err, data) {
+    if (err) throw err;
+    if(data.includes('hello')){
+        eventEmitter.emit('find');
+    } else {
+        console.log("String not found");
+    }
+});
