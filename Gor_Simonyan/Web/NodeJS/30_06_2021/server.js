@@ -10,8 +10,10 @@ http.createServer(function (request, response){
             console.log("Even")
             response.end("Even")
         }
-        console.log("Odd")
-        response.end("Odd")
+        else {
+            console.log("Odd")
+            response.end("Odd")
+        }    
     }
     else if (request.method === "POST"){
         let body = ""
