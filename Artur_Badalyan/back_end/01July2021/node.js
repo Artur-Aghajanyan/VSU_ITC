@@ -5,7 +5,7 @@ const port = 8080;
 const file = 'data.txt';
 const fs = require("fs");
 
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
     console.log('Got request GET');
@@ -28,7 +28,7 @@ app.post('/', (req, res) => {
             if (err)
                 throw err;
 
-            console.log("\nFile Contents of file after append:\n\n",
+            console.log("\nFile Contents of file after post:\n\n",
                 fs.readFileSync(file, "utf8"));
         });
         res.send('The text is added to the file and saved');
@@ -48,32 +48,54 @@ app.put('/put', (req, res) => {
         }
         let result = data.toString().replace(/\r\n/g, '\n').split('\n');
         if (bodyValue[1] < result.length) {
-            for (let i = 0; i < result.length; ++i) {
-                if (i = bodyValue[1]) {
-                    result[i] = bodyValue[0];
+            res.status(200);
+            result.forEach((item,index) => {
+                if (index == bodyValue[1]){
+                    item = bodyValue[0];
                 }
-            }
-            fs.writeFile(file, result, function (err) {
+                result[index] = item + '\n';
+            })
+
+            fs.writeFile(file, result.join(""), function (err) {
                 if (err)
                     throw err;
                 console.log("\nFile Contents of file after put:\n\n",
-                    fs.readFileSync(file, "utf8"));
+                    fs.readFileSync(file, "utf-8"));
             });
 
             res.send('The text is replaced to the file and saved');
         } else {
+            res.status(400);
             res.send('There were no such lines found');
         }
     });
 });
 
-app.delete('/', (req, res) => {
-    console.log('Got request delete');
-    res.send('Send request Delete!');
+app.delete('/delete', (req, res) => {
+    const body = req.body;
+    const bodyValue = Object.values(body);
+
+    let result = fs.readFileSync(file,"utf-8").split('\n');
+    if (bodyValue[1] < result.length) {
+        res.status(200);
+        for (let i = 0; i < result.length; ++i) {
+            if (i == bodyValue[1]) {
+                result.splice(i, 1);
+            }
+            result[i] = result[i] + '\n';
+        }
+        res.send('The line is deleted to the file and saved');
+    } else {
+        res.status(400);
+        res.send('There were no such lines found');
+    }
+    fs.writeFile(file,result.join(), function (err) {
+        if(err)
+            throw err;
+    })
 });
 
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });
-
