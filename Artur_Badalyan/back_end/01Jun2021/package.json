@@ -1,0 +1,22 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "ITC HOMEWORK",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint index.js"
+  },
+  "keywords": [
+    "node",
+    "npm"
+  ],
+  "author": "Artur_Badalyan",
+  "license": "ISC"
+}
