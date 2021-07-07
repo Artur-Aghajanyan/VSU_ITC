@@ -16,7 +16,7 @@ const secret = "secret-key-111"
 const buff = new Buffer(JSON.stringify(header)).toString("base64")
 const buff2 = new Buffer(JSON.stringify(payload)).toString("base64")
 
-const hash = crypto.createHmac("sha256",secret).update(buff + "." + buff2 + ".").digest("hex")
+const hash = crypto.createHmac("sha256",secret).update(buff + "." + buff2).digest("hex")
 
 const buff3 = new Buffer(JSON.stringify(hash)).toString("base64")
 
