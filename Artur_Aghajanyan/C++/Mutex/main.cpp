@@ -49,7 +49,6 @@ void countPrinterWithoutThread(std::string* arr){
 	std::string text = "";
     std::ifstream readFile;
 	readFile.open(arr[1]);
-	
 	int counter = 0;
 	std::string search = arr[0];
 
