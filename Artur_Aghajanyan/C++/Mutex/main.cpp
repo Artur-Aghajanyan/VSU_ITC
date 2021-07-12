@@ -44,6 +44,7 @@ void* countPrinter(void* arr) {
 }
 /* End Function with Thread */
 
+
 /* Start Function without thread */
 void countPrinterWithoutThread(std::string* arr){
 	std::string text = "";
