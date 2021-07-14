@@ -1,0 +1,6 @@
+1..Node.js is an open-source and cross-platform JavaScript runtime environment. It is a popu
+2..lar tool for almost any kind of project!
+3..Node.js runs the V8 JavaScript engine, the core of Google Chrome, outside of the browser. 
+4..When Node.js performs an I/O operation, like reading from the network, accessing a database 
+5..This allows Node.js to handle thousands of concurrent connections with a single server 
+6..In Node.js the new ECMAScript standards can be used without problems, as you don't have to

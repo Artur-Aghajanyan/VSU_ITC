@@ -1,0 +1,283 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Project Name APIs",
+        "description": "This is description for our API doc",
+        "license":{
+            "name": "MIT",
+            "url": "https://itc-vsu.am"
+        }
+    },
+    "host": "localhost:8030",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "Users",
+            "description": "API for users in the system"
+        },
+        {
+            "name": "Admin",
+            "description": "API for admin in the system"
+        },
+        {
+            "name": "Guests",
+            "description": "API for guests in the system"
+        },
+        {
+            "name": "Customers",
+            "description": "API for customers in the system"
+        }
+    ],
+    "schemes": [
+        "http",
+        "https",
+        "smtp"
+    ],
+    "produces": [
+        "application/json",
+        "application/xml"
+    ],
+    "paths": {
+        "/users": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "description": "Create new user",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "New user is created",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Users"
+                ],
+                "description": "Create new user",
+                "parameters": [
+                    {
+                        "name": "User",
+                        "in": "body",
+                        "description": "User that we want to create",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "produces": [
+                  "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "New user is created",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+            }
+        },
+        "/admin": {
+            "get": {
+                "tags": [
+                    "Admin"
+                ],
+                "description": "Create new admin",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "New admin is created",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete admin",
+                "tags": [
+                    "Admin"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Admin is deleted",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+            }
+        },
+        "/guests": {
+            "delete": {
+                "summary": "Delete guest",
+                "tags": [
+                    "Guests"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Guest is deleted",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Guests"
+                ],
+                "description": "Create new guest",
+                "parameters": [
+                    {
+                        "name": "Guest",
+                        "in": "body",
+                        "description": "Guest that we want to create",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "produces": [
+                  "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "New guest is created",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+            }
+        },
+        "/customers": {
+            "put": {
+                "summary": "Update cutomers",
+                "tags": [
+                    "Customers"
+                ],
+                "parameters": [
+                    {
+                        "name": "customer",
+                        "in": "body",
+                        "description": "Customer with new values of properties",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Customers is updated",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete customer",
+                "tags": [
+                    "Customers"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Customer is deleted",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Users": {
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "uniqueItems": true
+                }
+            }
+        },
+        "Admin": {
+            "required": [
+                "id",
+                "firstName",
+                "lastName"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "uniqueItems": true
+                },
+                "firstName": {
+                    "type": "string",
+                    "uniqueItems": false
+                },
+                "lastName": {
+                    "type": "string",
+                    "uniqueItems": false
+                }
+            }
+        },
+        "Guests": {
+            "required": [
+                "id",
+                "firstName",
+                "lastName"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "uniqueItems": true
+                },
+                "firstName": {
+                    "type": "string",
+                    "uniqueItems": false
+                },
+                "lastName": {
+                    "type": "string",
+                    "uniqueItems": false
+                }
+            }
+        },
+        "Customers": {
+            "required": [
+                "id",
+                "firstName",
+                "lastName"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "uniqueItems": true
+                },
+                "firstName": {
+                    "type": "string",
+                    "uniqueItems": false
+                },
+                "lastName": {
+                    "type": "string",
+                    "uniqueItems": false
+                }
+            }
+        }
+    }
+}
