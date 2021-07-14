@@ -1,0 +1,264 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "My new project APIs",
+    "description": "This is new project",
+    "license": {
+      "name": "MIT",
+      "url": "https://itc.vsu.am"
+    }
+  },
+  "host": "localhost:7000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Users",
+      "description": "API for Users in the system"
+    },
+    {
+      "name": "Animals",
+      "description": "API for Animals in the system"
+    },
+    {
+      "name": "Cars",
+      "description": "API for Cars in the system"
+    },
+    {
+      "name": "Fruits",
+      "description": "API for Cars in the system"
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json",
+    "application/xml"
+  ],
+  "paths": {
+    "/api/users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Get All users",
+        "responses": {
+          "200": {
+            "$ref": "#/definitions/User"
+          }
+        }
+      }
+    },
+    "/api/post/user": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "description": "Post new User",
+        "responses": {
+          "200": {
+            "$ref": "#/definitions/User"
+          }
+        }
+      }
+    },
+    "/api/put/car": {
+      "put": {
+        "tags": [
+          "Cars"
+        ],
+        "description": "Update car",
+        "responses": {
+          "200": {
+            "$ref": "#/definitions/Car"
+          }
+        }
+      }
+    },
+    "/api/delete/car": {
+      "delete": {
+        "tags": [
+          "Cars"
+        ],
+        "description": "Delete car",
+        "responses": {
+          "200": {
+            "$ref": "#/definitions/Car"
+          }
+        }
+      }
+    },
+    "/api/put/fruit": {
+      "put": {
+        "tags": [
+          "Fruits"
+        ],
+        "description": "Update Fruit",
+        "responses": {
+          "200": {
+            "$ref": "#/definitions/Fruit"
+          }
+        }
+      }
+    },
+    "/api/delete/fruit": {
+      "delete": {
+        "tags": [
+          "Fruits"
+        ],
+        "description": "Delete fruit",
+        "responses": {
+          "200": {
+            "$ref": "#/definitions/Fruit"
+          }
+        }
+      }
+    },
+    "/api/put/animal": {
+      "put": {
+        "tags": [
+          "Animals"
+        ],
+        "description": "Update animal",
+        "responses": {
+          "200": {
+            "$ref": "#/definitions/User"
+          }
+        }
+      }
+    },
+    "/api/post/animal": {
+      "post": {
+        "tags": [
+          "Animals"
+        ],
+        "description": "Create new animal",
+        "responses": {
+          "200": {
+            "$ref": "#/definitions/User"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "required": [
+        "email",
+        "_id"
+      ],
+      "properties": {
+        "_id": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "email": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        }
+      }
+    },
+    "Car": {
+      "required": [
+        "name",
+        "type",
+        "_id"
+      ],
+      "properties": {
+        "_id": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      }
+    },
+    "Fruit": {
+      "required": [
+        "type",
+        "_id"
+      ],
+      "properties": {
+        "_id": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "type": {
+          "type": "string"
+        }
+      }
+    },
+    "Animal": {
+      "required": [
+        "name",
+        "_id",
+        "type"
+      ],
+      "properties": {
+        "_id": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "name": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      }
+    },
+    "Users": {
+      "type": "array",
+      "$ref": "#/definitions/User"
+    },
+    "Cars": {
+      "type": "array",
+      "$ref": "#/definitions/Car"
+    },
+    "Fruits": {
+      "type": "array",
+      "$ref": "#/definitions/Fruit"
+    },
+    "Animals": {
+      "type": "array",
+      "$ref": "#/definitions/Animal"
+    },
+    "serverError": {
+      "required": [
+        "status",
+        "message"
+      ],
+      "properties": {
+        "status": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 509
+        },
+        "message": {
+          "type": "string"
+        },
+        "stackTrace": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
