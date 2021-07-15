@@ -16,23 +16,21 @@
             "name": "Intern",
             "description": "API for intern worker"
         },
-		{
-			"name": "Junior",
-			"description": "API for juniot worker"
-		},
-		{
+        {
+            "name": "Junior",
+            "description": "API for juniot worker"
+        },
+        {
             "name": "Middle",
             "description": "API for middle worker"
         },
-		{
-			"name": "Senior",
-			"description": "API for senior worker"
-		}
+        {
+            "name": "Senior",
+            "description": "API for senior worker"
+        }
     ],
     "schemes": [
-        "http",
-        "https",
-        "sftp"
+        "http"
     ],
     "produces": [
         "application/json",
@@ -44,39 +42,29 @@
                 "tags": [
                     "Senior"
                 ],
-                "description": "Get senior  methodes",
-				"produces": [
-				    "application/json"
-				],
-                "parameters": [
-                    {
-                        "schema": {
-                            "$ref": "#/definitions/Seniors"
-                        }
-                    }
-                ],
+                "summary": "Get senior worker methods",
                 "responses": {
                     "200": {
-						"description": "OK",
+                        "description": "Senior worker is found",
                         "schema": {
                             "$ref": "#/definitions/Seniors"
                         }
                     }
                 }
             },
-			"delete": {
-				"tags": [
+            "delete": {
+                "tags": [
                     "Senior"
                 ],
                 "description": "Get senior methodes",
-				"produces": [
-				    "application/json"
-				],
+                "produces": [
+                    "application/json"
+                ],
                 "parameters": [
                     {
-						"name": "Seniors",
-						"in": "body",
-						"required": true,
+                        "name": "Seniors",
+                        "in": "body",
+                        "required": true,
                         "schema": {
                             "$ref": "#/definitions/Seniors"
                         }
@@ -84,23 +72,23 @@
                 ],
                 "responses": {
                     "200": {
-						"description": "OK",
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/Seniors"
                         }
                     }
                 }
-			}
+            }
         },
-		"/middle": {
+        "/middle": {
             "put": {
                 "tags": [
                     "Middle"
                 ],
                 "description": "Get middle worker methodes",
-				"produces": [
-				    "application/json"
-				],
+                "produces": [
+                    "application/json"
+                ],
                 "parameters": [
                     {
                         "schema": {
@@ -110,26 +98,26 @@
                 ],
                 "responses": {
                     "200": {
-						"description": "OK",
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/Middles"
                         }
                     }
                 }
             },
-			"delete": {
-				"tags": [
+            "delete": {
+                "tags": [
                     "Middle"
                 ],
                 "description": "Get middle worker  methodes",
-				"produces": [
-				    "application/json"
-				],
+                "produces": [
+                    "application/json"
+                ],
                 "parameters": [
                     {
-						"name": "Middles",
-						"in": "body",
-						"required": true,
+                        "name": "Middles",
+                        "in": "body",
+                        "required": true,
                         "schema": {
                             "$ref": "#/definitions/Middles"
                         }
@@ -137,52 +125,42 @@
                 ],
                 "responses": {
                     "200": {
-						"description": "OK",
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/Middles"
                         }
                     }
                 }
-			}
+            }
         },
-		"/junior": {
+        "/junior": {
             "get": {
                 "tags": [
                     "Junior"
                 ],
-                "description": "Get junior worker  methodes",
-				"produces": [
-				    "application/json"
-				],
-                "parameters": [
-                    {
-                        "schema": {
-                            "$ref": "#/definitions/Juniors"
-                        }
-                    }
-                ],
+                "summary": "Get junior worker methods",
                 "responses": {
                     "200": {
-						"description": "OK",
+                        "description": "Juniorworker is found",
                         "schema": {
                             "$ref": "#/definitions/Juniors"
                         }
                     }
                 }
             },
-			"post": {
-				"tags": [
+            "post": {
+                "tags": [
                     "Junior"
                 ],
                 "description": "Get junior worker methodes",
-				"produces": [
-				    "application/json"
-				],
+                "produces": [
+                    "application/json"
+                ],
                 "parameters": [
                     {
-						"name": "Juiniors",
-						"in": "body",
-						"required": true,
+                        "name": "Juiniors",
+                        "in": "body",
+                        "required": true,
                         "schema": {
                             "$ref": "#/definitions/Juniors"
                         }
@@ -190,23 +168,23 @@
                 ],
                 "responses": {
                     "200": {
-						"description": "OK",
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/Juniors"
                         }
                     }
                 }
-			}
+            }
         },
-		"/intern": {
+        "/intern": {
             "post": {
                 "tags": [
                     "Intern"
                 ],
                 "description": "Get intern workers  methodes",
-				"produces": [
-				    "application/json"
-				],
+                "produces": [
+                    "application/json"
+                ],
                 "parameters": [
                     {
                         "schema": {
@@ -216,26 +194,26 @@
                 ],
                 "responses": {
                     "200": {
-						"description": "OK",
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/Interns"
                         }
                     }
                 }
             },
-			"put": {
-				"tags": [
+            "put": {
+                "tags": [
                     "Intern"
                 ],
                 "description": "Get intern workers  methodes",
-				"produces": [
-				    "application/json"
-				],
+                "produces": [
+                    "application/json"
+                ],
                 "parameters": [
                     {
-						"name": "Interns",
-						"in": "body",
-						"required": true,
+                        "name": "Interns",
+                        "in": "body",
+                        "required": true,
                         "schema": {
                             "$ref": "#/definitions/Interns"
                         }
@@ -243,13 +221,13 @@
                 ],
                 "responses": {
                     "200": {
-						"description": "OK",
+                        "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/Interns"
                         }
                     }
                 }
-			}
+            }
         }
     },
     "definitions": {
@@ -262,55 +240,15 @@
                     "type": "number",
                     "uniqueItems": true
                 },
-
-				"lastName": {
-					"type": "string"
-				},
-				"firstName": {
-					"type": "string"
-				}
-            }
-        },
-        "Middles": {
-			"required": [
-                "_id"
-            ],
-            "properties": {
-                "_id": {
-                    "type": "number",
-                    "uniqueItems": true
-                },
-
-				"lastName": {
-					"type": "string"
-				},
-
-				"firstName": {
-					"type": "string"
-				}
-            }
-        },
-        "Juniors": {
-			"required": [
-                "_id"
-            ],
-            "properties": {
-                "_id": {
-                    "type": "number",
-                    "uniqueItems": true
-                },
-
                 "lastName": {
                     "type": "string"
                 },
-
                 "firstName": {
                     "type": "string"
                 }
             }
         },
-		
- "Interns": {
+        "Middles": {
             "required": [
                 "_id"
             ],
@@ -319,17 +257,50 @@
                     "type": "number",
                     "uniqueItems": true
                 },
-
                 "lastName": {
                     "type": "string"
                 },
-
+                "firstName": {
+                    "type": "string"
+                }
+            }
+        },
+        "Juniors": {
+            "required": [
+                "_id"
+            ],
+            "properties": {
+                "_id": {
+                    "type": "number",
+                    "uniqueItems": true
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string"
+                }
+            }
+        },
+        "Interns": {
+            "required": [
+                "_id"
+            ],
+            "properties": {
+                "_id": {
+                    "type": "number",
+                    "uniqueItems": true
+                },
+                "lastName": {
+                    "type": "string"
+                },
                 "firstName": {
                     "type": "string"
                 }
             }
         }
-
-        
     }
 }
+
+
+
