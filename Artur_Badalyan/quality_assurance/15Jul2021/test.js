@@ -1,7 +1,7 @@
 const chai = require('chai');
 const assert = chai.assert;
 const expect = chai.expect;
-const {pow} = require('../Testing/index');
+const {pow} = require('./index');
 
 describe("pow", function() {
 
