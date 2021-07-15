@@ -1,0 +1,325 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Online lib APIs",
+        "description": "...",
+        "license": {
+            "name": "MIT",
+            "url": "https://itc-vsu.am"
+        }
+    },
+    "host": "localhost:8083",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "Users",
+            "description": "API for users in the system"
+        },
+		{
+		    "name": "Admins",
+			  "description": "API for admins in the system"
+		},
+		{
+        "name": "Authors",
+        "description": "API for authors in the system"
+    },
+		{
+			  "name": "Books",
+			  "description": "API for bookss in the system"
+		}
+    ],
+    "schemes": [
+        "http",
+        "https",
+        "sftp",
+        "smtp"
+    ],
+    "produces": [
+        "application/json",
+        "application/xml"
+    ],
+    "paths": {
+        "/users": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "description": "Get users methodes",
+				        "produces": [
+				            "application/json"
+				        ],
+                "parameters": [
+                {
+                    "schema": {
+                        "$ref": "#/definitions/User"
+                    }
+                }],
+                "responses": {
+                    "200": {
+						            "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+            },
+			      "delete": {
+				        "tags": [
+                    "Users"
+                ],
+                "description": "Get users methodes",
+				        "produces": [
+				            "application/json"
+				        ],
+                "parameters": [
+                {
+						        "name": "User",
+						        "in": "body",
+						        "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/User"
+                    }
+                }],
+                "responses": {
+                    "200": {
+						            "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+			      }
+        },
+		    "/admins": {
+            "put": {
+                "tags": [
+                    "Admins"
+                ],
+                "description": "Get admins methodes",
+				        "produces": [
+				            "application/json"
+				        ],
+                "parameters": [
+                {
+                    "schema": {
+                        "$ref": "#/definitions/Admin"
+                    }
+                }],
+                "responses": {
+                    "200": {
+						            "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Admin"
+                        }
+                    }
+                }
+            },
+			      "delete": {
+				        "tags": [
+                    "Admins"
+                ],
+                "description": "Get admins methodes",
+				        "produces": [
+				            "application/json"
+				        ],
+                "parameters": [
+                {
+						        "name": "Admin",
+						        "in": "body",
+						        "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/Admin"
+                    }
+                }],
+                "responses": {
+                    "200": {
+						            "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Admin"
+                        }
+                    }
+                }
+			      }
+        },
+		    "/authors": {
+            "get": {
+                "tags": [
+                    "Authors"
+                ],
+                "description": "Get authors methodes",
+				        "produces": [
+				            "application/json"
+				        ],
+                "parameters": [
+                {
+                    "schema": {
+                        "$ref": "#/definitions/Author"
+                    }
+                }],
+                "responses": {
+                    "200": {
+						            "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Author"
+                        }
+                    }
+                }
+            },
+			      "post": {
+				        "tags": [
+                    "Authors"
+                ],
+                "description": "Get users methodes",
+				        "produces": [
+				            "application/json"
+				        ],
+                "parameters": [
+                {
+						        "name": "Author",
+						        "in": "body",
+						        "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/User"
+                    }
+                }],
+                "responses": {
+                    "200": {
+						            "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                }
+			      }
+        },
+		    "/books": {
+            "post": {
+                "tags": [
+                    "Books"
+                ],
+                "description": "Get books methodes",
+				        "produces": [
+				            "application/json"
+				        ],
+                "parameters": [
+                {
+                    "schema": {
+                        "$ref": "#/definitions/Book"
+                    }
+                }],
+                "responses": {
+                    "200": {
+						            "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Book"
+                        }
+                    }
+                }
+            },
+			      "put": {
+				        "tags": [
+                    "Books"
+                ],
+                "description": "Get books methodes",
+				        "produces": [
+				            "application/json"
+				        ],
+                "parameters": [
+                {
+						        "name": "Book",
+						        "in": "body",
+						        "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/Book"
+                    }
+                }],
+                "responses": {
+                    "200": {
+						            "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Book"
+                        }
+                    }
+                }
+			      }
+        },
+    },
+    "definitions": {
+        "User": {
+            "required": [
+                "email",
+                "_id"
+            ],
+            "properties": {
+                "_id": {
+                    "type": "string",
+                    "uniqueItems": true
+                },
+                "email": {
+                    "type": "string",
+                    "uniqueItems": true
+                },
+				        "lastName": {
+					          "type": "string",
+				        },
+				        "firstName": {
+					          "type": "string",
+				        }
+            }
+        },
+        "Admin": {
+			      "required": [
+                "email",
+                "_id"
+            ],
+            "properties": {
+                "_id": {
+                    "type": "string",
+                    "uniqueItems": true
+                },
+                "email": {
+                    "type": "string",
+                    "uniqueItems": true
+                },
+				        "lastName": {
+					          "type": "string",
+				        },
+                "firstName": {
+					          "type": "string",
+				        }
+            }
+        },
+        "Author": {
+			      "required": [
+                "lastName",
+				        "firstName",
+                "book"
+            ],
+            "properties": {
+                "lastName": {
+                    "type": "string",
+                },
+				        "firstName": {
+                    "type": "string",
+                },
+                "book": {
+                    "type": "string",
+                }
+            }
+        },
+		    "Book": {
+			      "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                },
+				        "author": {
+					          "type": "string",
+				        },
+            }
+        }
+    }
+}
