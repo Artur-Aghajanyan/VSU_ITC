@@ -30,8 +30,7 @@
     }
   ],
   "schemes": [
-    "http",
-    "https"
+    "http"
   ],
   "consumes": [
     "application/json"
@@ -49,7 +48,7 @@
         "summary": "Get All users",
         "responses": {
           "200": {
-            "$ref": "#/definitions/User"
+            "$ref": "#/definitions/Users"
           }
         }
       }
@@ -63,6 +62,19 @@
         "responses": {
           "200": {
             "$ref": "#/definitions/User"
+          }
+        }
+      }
+    },
+    "/api/get/cars": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "description": "Get cars",
+        "responses": {
+          "200": {
+            "$ref": "#/definitions/Cars"
           }
         }
       }
@@ -93,6 +105,19 @@
         }
       }
     },
+    "/api/get/fruits": {
+      "get": {
+        "tags": [
+          "Fruits"
+        ],
+        "description": "Get Fruits",
+        "responses": {
+          "200": {
+            "$ref": "#/definitions/Fruits"
+          }
+        }
+      }
+    },
     "/api/put/fruit": {
       "put": {
         "tags": [
@@ -119,6 +144,19 @@
         }
       }
     },
+    "/api/get/animals": {
+      "get": {
+        "tags": [
+          "Animals"
+        ],
+        "description": "Get animals",
+        "responses": {
+          "200": {
+            "$ref": "#/definitions/Animals"
+          }
+        }
+      }
+    },
     "/api/put/animal": {
       "put": {
         "tags": [
@@ -127,7 +165,7 @@
         "description": "Update animal",
         "responses": {
           "200": {
-            "$ref": "#/definitions/User"
+            "$ref": "#/definitions/Animal"
           }
         }
       }
@@ -140,7 +178,7 @@
         "description": "Create new animal",
         "responses": {
           "200": {
-            "$ref": "#/definitions/User"
+            "$ref": "#/definitions/Animal"
           }
         }
       }

@@ -24,6 +24,13 @@ app.post('/api/post/user', (req, res) => {
     }
 });
 
+app.get('/api/get/cars', (req, res) => {
+    if(req) {
+        res.send('All ok, Get all Cars');
+    } else{
+        res.end('I think something wrong ok');
+    }
+});
 app.put('/api/put/car', (req, res) => {
     if(req) {
         res.send('All ok, Updated Car');
@@ -39,6 +46,13 @@ app.delete('/api/delete/car', (req, res) => {
     }
 });
 
+app.put('/api/get/fruits', (req, res) => {
+    if(req) {
+        res.send('All ok, Get all fruits');
+    } else{
+        res.end('I think something wrong ok');
+    }
+});
 app.put('/api/put/fruit', (req, res) => {
     if(req) {
         res.send('All ok, Updated fruit');
@@ -54,6 +68,13 @@ app.delete('/api/delete/fruit', (req, res) => {
     }
 });
 
+app.get('/api/get/animals', (req, res) => {
+    if(req) {
+        res.send('All ok, Get new Animal');
+    } else{
+        res.end('I think something wrong ok');
+    }
+});
 app.put('/api/put/animal', (req, res) => {
     if(req) {
         res.send('All ok, Updated Animal');
@@ -63,7 +84,7 @@ app.put('/api/put/animal', (req, res) => {
 });
 app.delete('/api/post/animal', (req, res) => {
     if(req) {
-        res.send('All ok, Added new Animal');
+        res.send('All ok, Deleted Animal');
     } else{
         res.end('I think something wrong ok');
     }
