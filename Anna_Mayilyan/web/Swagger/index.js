@@ -6,7 +6,7 @@ var app = express();
 
 app.get('/senior', (req, res) => {
     res.send({
-		id: 2,
+	id: 2,
         lastName: "Walker",
         firstName: "John"
     });
