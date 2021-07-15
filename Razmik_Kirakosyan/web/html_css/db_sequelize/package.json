@@ -1,0 +1,21 @@
+{
+  "name": "db_sequelize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "lint": "eslint ./"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "eslint-plugin-node": "^11.1.0"
+  }
+}

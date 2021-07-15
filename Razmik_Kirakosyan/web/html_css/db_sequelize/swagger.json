@@ -1,0 +1,172 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Project name",
+        "description": "express server"
+    },
+    "host": "localhost:8081",
+    "basePath": "/",
+    "tags": [
+        {
+        "name": "database_table_content",
+        "description": "database"
+        }
+    ],
+    "schemes": [
+        "http",
+        "https",
+        "sftp",
+        "smtp"
+    ],
+    "produces": [
+        "application/json",
+        "application/xml"
+    ],
+    "paths": {
+        "/users": {
+            "get": {
+                "tags": ["UserTable"],
+                "description": "to get content of database table" ,
+                "parameters": [{
+                    "schema": {
+                        "$ref": "#/defination/User"
+                    } 
+                }
+            
+            ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/User"
+              }
+            }
+            
+            }   
+        },
+             "post": {
+                "tags": ["Send data to UserTable"],
+                "description": "to add data in database table" ,
+                "parameters": [{
+                    "schema": {
+                        "$ref": "#/defination/User"
+                    } 
+                }
+        
+        ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "OK",
+          "schema": {
+            "$ref": "#/definitions/User"
+          }
+        }
+        
+        }   
+    }
+
+
+    },
+    "definitions user": {
+      "User": {
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "uniqueItems": true
+          },
+          "name": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        }
+      }
+    },
+
+    "/cars": {
+        "get": {
+            "tags": ["CarTable"],
+            "description": "to get content of database table" ,
+            "parameters": [{
+                "schema": {
+                    "$ref": "#/defination/Car"
+                } 
+            }
+        
+        ],
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "OK",
+          "schema": {
+            "$ref": "#/definitions/Car"
+          }
+        }
+        
+        }   
+    },
+         "post": {
+            "tags": ["Send data to CarTable"],
+            "description": "to add data in database table" ,
+            "parameters": [{
+                "schema": {
+                    "$ref": "#/defination/User"
+                } 
+            }
+    
+    ],
+  "produces": [
+    "application/json"
+  ],
+  "responses": {
+    "200": {
+      "description": "OK",
+      "schema": {
+        "$ref": "#/definitions/Car"
+      }
+    }
+    
+    }   
+}
+
+
+},
+"definitions car": {
+  "Car": {
+    "required": [
+      "id",
+      "name"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "uniqueItems": true
+      },
+      "name": {
+        "type": "string",
+        "uniqueItems": false
+      }
+    }
+  }
+}
+}
+}           
+
+            
+        
+    
+
+   
+  
