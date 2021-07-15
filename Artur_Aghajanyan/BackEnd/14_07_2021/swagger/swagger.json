@@ -48,7 +48,16 @@
         "summary": "Get All users",
         "responses": {
           "200": {
-            "$ref": "#/definitions/Users"
+            "schema": {
+              "$ref": "#/definitions/Users"
+            },
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/serverError"
+            }
           }
         }
       }
@@ -61,7 +70,16 @@
         "description": "Post new User",
         "responses": {
           "200": {
-            "$ref": "#/definitions/User"
+            "schema": {
+              "$ref": "#/definitions/User"
+            },
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/serverError"
+            }
           }
         }
       }
@@ -74,7 +92,16 @@
         "description": "Get cars",
         "responses": {
           "200": {
-            "$ref": "#/definitions/Cars"
+            "schema": {
+              "$ref": "#/definitions/Car"
+            },
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/serverError"
+            }
           }
         }
       }
@@ -87,7 +114,16 @@
         "description": "Update car",
         "responses": {
           "200": {
-            "$ref": "#/definitions/Car"
+            "schema": {
+              "$ref": "#/definitions/Car"
+            },
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/serverError"
+            }
           }
         }
       }
@@ -100,7 +136,16 @@
         "description": "Delete car",
         "responses": {
           "200": {
-            "$ref": "#/definitions/Car"
+            "schema": {
+              "$ref": "#/definitions/Car"
+            },
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/serverError"
+            }
           }
         }
       }
@@ -113,7 +158,16 @@
         "description": "Get Fruits",
         "responses": {
           "200": {
-            "$ref": "#/definitions/Fruits"
+            "schema": {
+              "$ref": "#/definitions/Fruits"
+            },
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/serverError"
+            }
           }
         }
       }
@@ -126,7 +180,16 @@
         "description": "Update Fruit",
         "responses": {
           "200": {
-            "$ref": "#/definitions/Fruit"
+            "schema": {
+              "$ref": "#/definitions/Fruit"
+            },
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/serverError"
+            }
           }
         }
       }
@@ -139,7 +202,16 @@
         "description": "Delete fruit",
         "responses": {
           "200": {
-            "$ref": "#/definitions/Fruit"
+            "schema": {
+              "$ref": "#/definitions/Fruit"
+            },
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/serverError"
+            }
           }
         }
       }
@@ -152,7 +224,16 @@
         "description": "Get animals",
         "responses": {
           "200": {
-            "$ref": "#/definitions/Animals"
+            "schema": {
+              "$ref": "#/definitions/Animals"
+            },
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/serverError"
+            }
           }
         }
       }
@@ -165,7 +246,16 @@
         "description": "Update animal",
         "responses": {
           "200": {
-            "$ref": "#/definitions/Animal"
+            "schema": {
+              "$ref": "#/definitions/Animals"
+            },
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/serverError"
+            }
           }
         }
       }
@@ -178,7 +268,16 @@
         "description": "Create new animal",
         "responses": {
           "200": {
-            "$ref": "#/definitions/Animal"
+            "schema": {
+              "$ref": "#/definitions/Animal"
+            },
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/serverError"
+            }
           }
         }
       }
