@@ -49,12 +49,6 @@
 		"produces": [
 		    "application/json"
 		],
-                "parameters": [
-                {
-                    "schema": {
-                        "$ref": "#/definitions/User"
-                    }
-                }],
                 "responses": {
                     "200": {
 			"description": "OK",
@@ -151,12 +145,6 @@
 		"produces": [
 		    "application/json"
 		],
-                "parameters": [
-                {
-                    "schema": {
-                        "$ref": "#/definitions/Author"
-                    }
-                }],
                 "responses": {
                     "200": {
 			"description": "OK",
