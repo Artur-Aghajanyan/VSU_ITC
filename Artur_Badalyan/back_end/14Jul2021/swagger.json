@@ -1,0 +1,464 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Mega-shop APIs",
+    "description": "This is information about the following project APIs",
+    "license": {
+      "name": "MIT",
+      "url": "https://itc-vsu.am"
+    }
+  },
+  "host": "localhost:5005",
+  "basePath": "/",
+  "tags": [{
+    "name": "Users",
+    "description": "API for users in the system"
+    },
+    {
+      "name": "Admins",
+      "description": "API for admins in the system"
+    },
+    {
+      "name": "Products",
+      "description": "API for products in the system"
+    },
+    {
+      "name": "Companies",
+      "description": "API for companies in the system"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json",
+    "application/xml"
+  ],
+  "paths": {
+    "/users?{id}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "description": "Get user in system",
+        "parameters": [
+          {
+            "name": "User",
+            "in": "query",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Users",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "400 Error",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "description": "Create new user in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "User that we want to create",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "New user is created",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "400 Error",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        }
+      }
+    },
+
+    "/admin?{id}": {
+      "get": {
+        "tags": [
+          "Admins"
+        ],
+        "description": "Get admins in system",
+        "parameters": [
+          {
+            "name": "Admin",
+            "in": "query",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Admins",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "400 Error",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Admins"
+        ],
+        "description": "Create new admin in system",
+        "parameters": [
+          {
+            "name": "Admin",
+            "in": "body",
+            "description": "Admin that we want to create",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "New admin is created",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "400 Error",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        }
+      }
+    },
+
+    "/products?{id}": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "description": "Get product in system",
+        "parameters": [
+          {
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Product",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          },
+          "400": {
+            "description": "400 Error",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Products"
+        ],
+        "description": "Create new product in system",
+        "parameters": [
+          {
+            "name": "Product",
+            "in": "body",
+            "description": "Product that we want to create",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "New product is created",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          },
+          "400": {
+            "description": "400 Error",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Products"
+        ],
+        "description": "Update product in system",
+        "parameters": [
+          {
+            "name": "Product",
+            "in": "body",
+            "description": "Product that we want to update",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Product is updated",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          },
+          "400": {
+            "description": "400 Error",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Products"
+        ],
+        "description": "Delete product in system",
+        "parameters": [
+          {
+            "name": "Product",
+            "in": "query",
+            "description": "Product that we want to delete(example ` id=5)"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Product is deleted",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          },
+          "400": {
+            "description": "400 Error",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        }
+      }
+    },
+    "/company?{id}": {
+      "get": {
+        "tags": [
+          "Companies"
+        ],
+        "description": "Get companies in system",
+        "parameters": [
+          {
+            "name": "Company",
+            "in": "query",
+            "schema": {
+              "$ref": "#/definitions/Company-importers"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Company",
+            "schema": {
+              "$ref": "#/definitions/Company-importers"
+            }
+          },
+          "400": {
+            "description": "400 Error",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Companies"
+        ],
+        "description": "Create new company in system",
+        "parameters": [
+          {
+            "name": "Company",
+            "in": "body",
+            "description": "Company that we want to create",
+            "schema": {
+              "$ref": "#/definitions/Company-importers"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "New company is created",
+            "schema": {
+              "$ref": "#/definitions/Company-importers"
+            }
+          },
+          "400": {
+            "description": "400 Error",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Companies"
+        ],
+        "description": "Delete product in system",
+        "parameters": [
+          {
+            "name": "Company",
+            "in": "query",
+            "description": "Company that we want to delete(example ` id=5)"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Company is deleted",
+            "schema": {
+              "$ref": "#/definitions/Company-importers"
+            }
+          },
+          "400": {
+            "description": "400 Error",
+            "schema": {
+              "$ref": "#/definitions/Errors"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "required": [
+        "id",
+        "firstName"
+      ],
+      "properties":{
+        "id": {
+          "type": "INTEGER",
+          "uniqueItems": true
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "age": {
+          "type": "INTEGER",
+          "minimum": 1,
+          "maximum": 100
+        }
+      }
+    },
+    "Product": {
+      "required": [
+        "id",
+        "productName"
+      ],
+      "properties":{
+        "id": {
+          "type": "INTEGER",
+          "uniqueItems": true
+        },
+        "productName": {
+          "type": "string"
+        },
+        "count": {
+          "type": "INTEGER",
+          "minimum": 0
+        }
+      }
+    },
+    "Company-importers": {
+      "required": [
+        "id",
+        "companyName"
+      ],
+      "properties":{
+        "id": {
+          "type": "INTEGER",
+          "uniqueItems": true
+        },
+        "companyName": {
+          "type": "string"
+        }
+      }
+    },
+    "Errors": {
+      "properties": {
+          "status": {
+            "type": "string"
+          },
+          "code": {
+            "type": "INTEGER"
+          },
+          "message": {
+            "type": "string"
+          }
+      }
+    }
+  }
+}
