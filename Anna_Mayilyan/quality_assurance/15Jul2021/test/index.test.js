@@ -1,5 +1,5 @@
 const should = require('chai').should();
-const app = require('../app');
+const app = require('../index');
 describe('# App test', function () {
     describe('# sayHello', function () {
         it('should return hello', function () {
