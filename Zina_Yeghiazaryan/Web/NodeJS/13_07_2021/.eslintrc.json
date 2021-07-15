@@ -1,4 +1,4 @@
-odule.exports = {
+{
     "env": {
         "browser": true,
         "commonjs": true,
@@ -38,4 +38,4 @@ odule.exports = {
         "no-undef": 2
     }
 
-};
+}
