@@ -1,0 +1,537 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "My Project API",
+    "description": "My Description",
+    "license": {
+      "name": "MIT",
+      "url": ""
+    }
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Users",
+      "description": "Description for tag` Users"
+    },
+    {
+      "name": "Animals",
+      "description": "Description for tag` Animals"
+    },
+    {
+      "name": "Cars",
+      "description": "Description for tag` Cars"
+    },
+    {
+      "name": "Companies",
+      "description": "Description for tag` Companies"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json",
+    "application/xml"
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "description": "View users",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "description": "View users",
+        "parameters": [
+          {
+            "name": "User",
+            "in": "body",
+            "description": "User desc",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "description": "View users",
+        "parameters": [
+          {
+            "name": "User",
+            "in": "body",
+            "description": "User desc",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "description": "View users",
+        "parameters": [
+          {
+            "name": "User",
+            "in": "body",
+            "description": "User desc",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    },
+    "/animals": {
+      "get": {
+        "tags": [
+          "Animals"
+        ],
+        "description": "View animals",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Animal"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Animals"
+        ],
+        "description": "View animals",
+        "parameters": [
+          {
+            "name": "Animal",
+            "in": "body",
+            "description": "Animal desc",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Animal"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Animal"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Animals"
+        ],
+        "description": "View animals",
+        "parameters": [
+          {
+            "name": "Animal",
+            "in": "body",
+            "description": "Animal desc",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Animal"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Animal"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Animals"
+        ],
+        "description": "View animals",
+        "parameters": [
+          {
+            "name": "Animal",
+            "in": "body",
+            "description": "Animal desc",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Animal"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Animal"
+            }
+          }
+        }
+      }
+    },
+    "/cars": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "description": "View cars",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Car"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cars"
+        ],
+        "description": "View cars",
+        "parameters": [
+          {
+            "name": "Car",
+            "in": "body",
+            "description": "Car desc",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Car"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Car"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Cars"
+        ],
+        "description": "View cars",
+        "parameters": [
+          {
+            "name": "Car",
+            "in": "body",
+            "description": "Car desc",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Car"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Car"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cars"
+        ],
+        "description": "View cars",
+        "parameters": [
+          {
+            "name": "Car",
+            "in": "body",
+            "description": "Car desc",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Car"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Car"
+            }
+          }
+        }
+      }
+    },
+    "/company": {
+      "get": {
+        "tags": [
+          "Companies"
+        ],
+        "description": "View companies",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Company"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Companies"
+        ],
+        "description": "View companies",
+        "parameters": [
+          {
+            "name": "Company",
+            "in": "body",
+            "description": "Company desc",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Company"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Company"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Companies"
+        ],
+        "description": "View companies",
+        "parameters": [
+          {
+            "name": "Company",
+            "in": "body",
+            "description": "Company desc",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Company"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Company"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Companies"
+        ],
+        "description": "View companies",
+        "parameters": [
+          {
+            "name": "Company",
+            "in": "body",
+            "description": "Company desc",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Company"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Company"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "uniqueItems": true
+        },
+        "name": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      }
+    },
+    "Animal": {
+      "required": [
+        "id",
+        "name",
+        "age"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "uniqueItems": true
+        },
+        "name": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "age": {
+          "type": "integer",
+          "uniqueItems": false
+        }
+      }
+    },
+    "Car": {
+      "required": [
+        "id",
+        "mark",
+        "year"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "uniqueItems": true
+        },
+        "mark": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "year": {
+          "type": "integer",
+          "uniqueItems": false
+        }
+      }
+    },
+    "Company": {
+      "required": [
+        "id",
+        "company",
+        "budget"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "uniqueItems": true
+        },
+        "company": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "budget": {
+          "type": "integer",
+          "uniqueItems": false
+        }
+      }
+    }
+  }
+}
