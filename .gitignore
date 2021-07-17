@@ -1,2 +1,4 @@
 #pythone module confige file
+**/.idea
+**/node_modules
 __pycache__
