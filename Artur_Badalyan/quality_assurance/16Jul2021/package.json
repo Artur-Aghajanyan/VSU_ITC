@@ -1,0 +1,24 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "smoke": "jest --detectOpenHandles"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "jest": "^27.0.6",
+    "mocha": "^9.0.2",
+    "selenium-webdriver": "^4.0.0-beta.4"
+  },
+  "dependencies": {
+    "jest-runner-groups": "^2.1.0"
+  },
+  "jest": {
+    "runner": "groups"
+  }
+}
