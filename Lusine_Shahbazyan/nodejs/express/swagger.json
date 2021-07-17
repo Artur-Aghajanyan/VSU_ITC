@@ -50,7 +50,7 @@
                     "200": {
                         "description": "New user is created",
                         "schema": {
-                            "$ref": "#/definitions/User"
+                            "$ref": "#/definitions/Users"
                         }
                     }
                 }
@@ -67,7 +67,7 @@
                         "description": "User that we want to create",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/User"
+                            "$ref": "#/definitions/Users"
                         }
                     }
                 ],
@@ -97,7 +97,7 @@
                     "200": {
                         "description": "New admin is created",
                         "schema": {
-                            "$ref": "#/definitions/User"
+                            "$ref": "#/definitions/Admin"
                         }
                     }
                 }
@@ -111,7 +111,7 @@
                     "200": {
                         "description": "Admin is deleted",
                         "schema": {
-                            "$ref": "#/definitions/User"
+                            "$ref": "#/definitions/Admin"
                         }
                     }
                 }
@@ -127,7 +127,7 @@
                     "200": {
                         "description": "Guest is deleted",
                         "schema": {
-                            "$ref": "#/definitions/User"
+                            "$ref": "#/definitions/Guests"
                         }
                     }
                 }
@@ -144,7 +144,7 @@
                         "description": "Guest that we want to create",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/User"
+                            "$ref": "#/definitions/Guests"
                         }
                     }
                 ],
@@ -155,7 +155,7 @@
                     "200": {
                         "description": "New guest is created",
                         "schema": {
-                            "$ref": "#/definitions/User"
+                            "$ref": "#/definitions/Guests"
                         }
                     }
                 }
@@ -173,7 +173,7 @@
                         "in": "body",
                         "description": "Customer with new values of properties",
                         "schema": {
-                            "$ref": "#/definitions/User"
+                            "$ref": "#/definitions/Customers"
                         }
                     }
                 ],
@@ -181,7 +181,7 @@
                     "200": {
                         "description": "Customers is updated",
                         "schema": {
-                            "$ref": "#/definitions/User"
+                            "$ref": "#/definitions/Customers"
                         }
                     }
                 }
@@ -195,7 +195,7 @@
                     "200": {
                         "description": "Customer is deleted",
                         "schema": {
-                            "$ref": "#/definitions/User"
+                            "$ref": "#/definitions/Customers"
                         }
                     }
                 }
