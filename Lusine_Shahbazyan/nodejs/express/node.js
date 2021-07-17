@@ -1,5 +1,4 @@
 const express = require('express');
-
 const app = express();
 const swaggerUI = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
@@ -22,7 +21,7 @@ app.delete('/admin', (req, res) => {
 app.get('/admin', (req, res) => {
     res.send({
         id: "1",
-        firstName: "Mari",
+        firstName: "Mery",
         lastName: "Pogosyan"
     });
 });

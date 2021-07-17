@@ -30,9 +30,7 @@
         }
     ],
     "schemes": [
-        "http",
-        "https",
-        "smtp"
+        "http"
     ],
     "produces": [
         "application/json",
