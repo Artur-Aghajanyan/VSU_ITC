@@ -1,0 +1,12 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1626806722498,21870,localhost CPU,,,,,true,,0,0,0,0,null,0,0,0
+1626806723503,55526,localhost CPU,,,,,true,,0,0,0,0,null,0,0,0
+1626806724503,48963,localhost CPU,,,,,true,,0,0,0,0,null,0,0,0
+1626806725504,48724,localhost CPU,,,,,true,,0,0,0,0,null,0,0,0
+1626806726504,45614,localhost CPU,,,,,true,,0,0,0,0,null,0,0,0
+1626806727505,45864,localhost CPU,,,,,true,,0,0,0,0,null,0,0,0
+1626806728506,38461,localhost CPU,,,,,true,,0,0,0,0,null,0,0,0
+1626806729507,40954,localhost CPU,,,,,true,,0,0,0,0,null,0,0,0
+1626806730507,31840,localhost CPU,,,,,true,,0,0,0,0,null,0,0,0
+1626806731508,45476,localhost CPU,,,,,true,,0,0,0,0,null,0,0,0
+1626806732509,38709,localhost CPU,,,,,true,,0,0,0,0,null,0,0,0

@@ -1,0 +1,37 @@
+2021-07-20 23:01:42,571 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2021-07-20 23:01:42,600 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2021-07-20 23:01:42,601 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2021-07-20 23:01:42,609 INFO o.a.j.JMeter: Copyright (c) 1998-2021 The Apache Software Foundation
+2021-07-20 23:01:42,609 INFO o.a.j.JMeter: Version 5.4.1
+2021-07-20 23:01:42,610 INFO o.a.j.JMeter: java.version=11.0.11
+2021-07-20 23:01:42,610 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2021-07-20 23:01:42,610 INFO o.a.j.JMeter: os.name=Linux
+2021-07-20 23:01:42,610 INFO o.a.j.JMeter: os.arch=amd64
+2021-07-20 23:01:42,610 INFO o.a.j.JMeter: os.version=5.8.0-59-generic
+2021-07-20 23:01:42,610 INFO o.a.j.JMeter: file.encoding=UTF-8
+2021-07-20 23:01:42,610 INFO o.a.j.JMeter: java.awt.headless=null
+2021-07-20 23:01:42,611 INFO o.a.j.JMeter: Max memory     =1073741824
+2021-07-20 23:01:42,611 INFO o.a.j.JMeter: Available Processors =4
+2021-07-20 23:01:42,621 INFO o.a.j.JMeter: Default Locale=English (EN)
+2021-07-20 23:01:42,622 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2021-07-20 23:01:42,622 INFO o.a.j.JMeter: JMeterHome=/home/fantom/Documents/apache-jmeter-5.4.1
+2021-07-20 23:01:42,622 INFO o.a.j.JMeter: user.dir  =/home/fantom/ITC/VSU_ITC/Artur_Badalyan/quality_assurance/20Jul2021/apache-jmeter-5.4.1/bin
+2021-07-20 23:01:42,622 INFO o.a.j.JMeter: PWD       =/home/fantom/ITC/VSU_ITC/Artur_Badalyan/quality_assurance/20Jul2021/apache-jmeter-5.4.1/bin
+2021-07-20 23:01:42,623 INFO o.a.j.JMeter: IP: 127.0.1.1 Name: Thinkpad FullName: Thinkpad
+2021-07-20 23:01:43,179 INFO o.a.j.JMeter: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2021-07-20 23:01:43,594 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2021-07-20 23:01:45,399 INFO o.j.r.JARSourceHTTP: Found cached repo
+2021-07-20 23:01:45,724 INFO o.j.r.PluginManager: Plugins Status: [jpgc-graphs-basic=2.0, jpgc-cmd=2.2, jpgc-functions=2.1, jpgc-casutg=2.9, jpgc-dummy=0.4, jpgc-ffw=2.0, jpgc-fifo=0.2, jpgc-perfmon=2.1, jpgc-plugins-manager=1.6, jpgc-tst=2.5, jmeter-core=5.4.1, jmeter-ftp=5.4.1, jmeter-http=5.4.1, jmeter-jdbc=5.4.1, jmeter-jms=5.4.1, jmeter-junit=5.4.1, jmeter-java=5.4.1, jmeter-ldap=5.4.1, jmeter-mail=5.4.1, jmeter-mongodb=5.4.1, jmeter-native=5.4.1, jmeter-tcp=5.4.1, jmeter-components=5.4.1, jpgc-standard=2.0]
+2021-07-20 23:02:05,851 INFO o.a.j.s.FileServer: Default base='/home/fantom/ITC/VSU_ITC/Artur_Badalyan/quality_assurance/20Jul2021/apache-jmeter-5.4.1/bin'
+2021-07-20 23:02:05,854 INFO o.a.j.g.a.Load: Loading file: /home/fantom/ITC/VSU_ITC/Artur_Badalyan/quality_assurance/20Jul2021/apache-jmeter-5.4.1/result/Thread Group.jmx
+2021-07-20 23:02:05,854 INFO o.a.j.s.FileServer: Set new base='/home/fantom/ITC/VSU_ITC/Artur_Badalyan/quality_assurance/20Jul2021/apache-jmeter-5.4.1/result'
+2021-07-20 23:02:06,034 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2021-07-20 23:02:06,046 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2021-07-20 23:02:06,048 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2021-07-20 23:02:06,050 INFO o.a.j.s.SaveService: Loading file: /home/fantom/ITC/VSU_ITC/Artur_Badalyan/quality_assurance/20Jul2021/apache-jmeter-5.4.1/result/Thread Group.jmx
+2021-07-20 23:02:06,345 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2021-07-20 23:02:06,345 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2021-07-20 23:02:06,351 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2021-07-20 23:02:06,351 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2021-07-20 23:02:06,540 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2021-07-20 23:02:06,609 INFO o.a.j.s.FileServer: Set new base='/home/fantom/ITC/VSU_ITC/Artur_Badalyan/quality_assurance/20Jul2021/apache-jmeter-5.4.1/result'
