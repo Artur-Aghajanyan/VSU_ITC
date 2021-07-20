@@ -2,9 +2,9 @@
 
 1.Open test.py file
 
-2.give your jmeter path(.../jmeter/bin) on variable jmeter_path
+2.set your jmeter path(.../jmeter/bin) on variable jmeter_path
 
-3.give your server agent path on variable server_agent_path
+3.set your server agent path on variable server_agent_path
 
 4.save and run
 
