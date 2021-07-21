@@ -1,0 +1,15 @@
+2021-07-21 10:41:38,481 WARN o.a.j.u.JMeterUtils: Exception 'null' occurred when fetching String property:'sampleresult.default.encoding', defaulting to: ISO-8859-1
+2021-07-21 10:41:38,492 WARN o.a.j.u.JMeterUtils: Exception 'null' occurred when fetching String property:'jmeterPlugin.prefixPlugins'
+2021-07-21 10:41:38,493 INFO k.a.j.PluginsCMDWorker: Using JMeterPluginsCMD v. N/A
+2021-07-21 10:41:38,496 INFO o.a.j.u.JMeterUtils: Setting Locale to en_US
+2021-07-21 10:41:38,512 INFO k.a.j.JMeterPluginsUtils: Loading user properties from: /home/fantom/Documents/apache-jmeter-5.4.1/bin/user.properties
+2021-07-21 10:41:38,513 INFO k.a.j.JMeterPluginsUtils: Loading system properties from: /home/fantom/Documents/apache-jmeter-5.4.1/bin/system.properties
+2021-07-21 10:41:39,102 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2021-07-21 10:41:39,130 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2021-07-21 10:41:39,135 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2021-07-21 10:41:39,150 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2021-07-21 10:41:39,151 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2021-07-21 10:41:39,151 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2021-07-21 10:41:39,151 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2021-07-21 10:41:39,154 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-07-21 10:41:39,179 INFO k.a.c.GraphPanelChart: Saving PNG to /home/fantom/WebstormProjects/ITC/Testing/jmeter/apache-jmeter-5.4.1/result/./image.png
