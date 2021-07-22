@@ -1,0 +1,15 @@
+2021-07-22 15:04:36,341 WARN o.a.j.u.JMeterUtils: Exception 'null' occurred when fetching String property:'sampleresult.default.encoding', defaulting to: ISO-8859-1
+2021-07-22 15:04:36,350 WARN o.a.j.u.JMeterUtils: Exception 'null' occurred when fetching String property:'jmeterPlugin.prefixPlugins'
+2021-07-22 15:04:36,351 INFO k.a.j.PluginsCMDWorker: Using JMeterPluginsCMD v. N/A
+2021-07-22 15:04:36,352 INFO o.a.j.u.JMeterUtils: Setting Locale to en_AU
+2021-07-22 15:04:36,364 INFO k.a.j.JMeterPluginsUtils: Loading user properties from: /home/razmik/Downloads/apache-jmeter-5.4.1/bin/user.properties
+2021-07-22 15:04:36,365 INFO k.a.j.JMeterPluginsUtils: Loading system properties from: /home/razmik/Downloads/apache-jmeter-5.4.1/bin/system.properties
+2021-07-22 15:04:36,884 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2021-07-22 15:04:36,902 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2021-07-22 15:04:36,906 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2021-07-22 15:04:36,912 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2021-07-22 15:04:36,913 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2021-07-22 15:04:36,913 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2021-07-22 15:04:36,913 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2021-07-22 15:04:36,915 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-07-22 15:04:36,951 INFO k.a.c.GraphPanelChart: Saving PNG to /home/razmik/image.png
